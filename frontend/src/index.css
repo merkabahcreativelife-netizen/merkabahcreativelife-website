@@ -68,6 +68,23 @@ body {
 /* Selection */
 ::selection { background: #7c3aed; color: #ffffff; }
 
+/* Button micro-interactions */
+.bg-terracotta-500, .bg-violet-700, .bg-violet-600 {
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 300ms cubic-bezier(0.16, 1, 0.3, 1), background-color 300ms ease, color 300ms ease, border-color 300ms ease;
+}
+.bg-terracotta-500:hover, .bg-violet-700:hover, .bg-violet-600:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -10px rgba(124, 58, 237, 0.45);
+}
+
+/* Card image zoom smoothing */
+img { user-select: none; }
+
+/* Smooth focus rings */
+input:focus, textarea:focus, select:focus {
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.12);
+}
+
 /* Hide scrollbar in marquees */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }

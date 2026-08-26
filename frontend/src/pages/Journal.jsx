@@ -16,7 +16,7 @@ export default function Journal() {
         {items.length === 0 ? <p className="text-ink-mute">First articles coming soon.</p> : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {items.map(a => (
-              <Link to={`/journal/${a.id}`} key={a.id} data-testid={`article-${a.id}`} className="block border border-cream-200 hover:border-terracotta-500 transition-colors group">
+              <Link to={`/journal/${a.id}`} key={a.id} data-testid={`article-${a.id}`} className="block border border-silver-200 hover:border-terracotta-500 transition-colors group">
                 <img src={a.cover || JOURNAL_IMG} alt={a.title} className="aspect-[4/3] w-full object-cover"/>
                 <div className="p-6">
                   <div className="overline mb-2">{a.category}</div>

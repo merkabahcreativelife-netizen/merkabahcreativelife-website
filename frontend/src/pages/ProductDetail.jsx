@@ -20,7 +20,7 @@ export default function ProductDetail() {
     <section className="pt-24 pb-24 max-w-7xl mx-auto px-6 lg:px-8">
       <Link to="/store" data-testid="back-store" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-terracotta-400 hover:text-terracotta-300"><ArrowLeft size={14}/> Store</Link>
       <div className="mt-10 grid lg:grid-cols-2 gap-12 lg:gap-20">
-        <div className="border border-cream-200 overflow-hidden">
+        <div className="border border-silver-200 overflow-hidden">
           {p.image ? <img src={p.image} alt={p.name} className="w-full aspect-square object-cover" /> : <div className="w-full aspect-square bg-cream-100" />}
         </div>
         <div className="flex flex-col justify-center">

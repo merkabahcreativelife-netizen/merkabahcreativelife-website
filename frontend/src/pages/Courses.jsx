@@ -17,7 +17,7 @@ export default function Courses() {
       </section>
       <section className="pb-8 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex flex-wrap gap-2">
-          {CATS.map(c => <button key={c} onClick={() => setCat(c)} data-testid={`courses-cat-${c}`} className={`px-4 py-2 text-xs uppercase tracking-[0.2em] border transition-colors ${cat === c ? "bg-terracotta-500 border-terracotta-500 text-white" : "border-cream-200 text-ink-mute hover:border-terracotta-500"}`}>{c}</button>)}
+          {CATS.map(c => <button key={c} onClick={() => setCat(c)} data-testid={`courses-cat-${c}`} className={`px-4 py-2 text-xs uppercase tracking-[0.2em] border transition-colors ${cat === c ? "bg-terracotta-500 border-terracotta-500 text-white" : "border-silver-200 text-ink-mute hover:border-terracotta-500"}`}>{c}</button>)}
         </div>
       </section>
       <section className="pb-24 max-w-7xl mx-auto px-6 lg:px-8">

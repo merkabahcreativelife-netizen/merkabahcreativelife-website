@@ -34,12 +34,12 @@ export default function AdminDashboard() {
   if (!me) return <div className="min-h-screen bg-cream-50" />;
   return (
     <div className="min-h-screen bg-cream-50 text-ink">
-      <header className="border-b border-cream-200 px-6 lg:px-10 py-6 flex justify-between items-center">
+      <header className="border-b border-silver-200 px-6 lg:px-10 py-6 flex justify-between items-center">
         <div><div className="overline">Merkabah Admin</div><div className="font-display text-2xl">Welcome, {me.name}</div></div>
-        <button onClick={logout} data-testid="admin-logout" className="text-xs uppercase tracking-[0.2em] border border-cream-200 hover:border-terracotta-500 px-4 py-2">Sign Out</button>
+        <button onClick={logout} data-testid="admin-logout" className="text-xs uppercase tracking-[0.2em] border border-silver-200 hover:border-terracotta-500 px-4 py-2">Sign Out</button>
       </header>
       <div className="grid lg:grid-cols-[240px_1fr]">
-        <aside className="border-r border-cream-200 p-6 lg:min-h-[calc(100vh-88px)]">
+        <aside className="border-r border-silver-200 p-6 lg:min-h-[calc(100vh-88px)]">
           <div className="overline mb-4">Collections</div>
           <nav className="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-visible">
             {TABS.map(t => (
@@ -52,7 +52,7 @@ export default function AdminDashboard() {
         </aside>
         <main className="p-6 lg:p-10">
           <div className="flex justify-between items-center mb-8"><h2 className="font-display text-3xl">{TABS.find(t => t.key === tab)?.label} ({items.length})</h2></div>
-          <div className="border border-cream-200 divide-y divide-cream-200">
+          <div className="border border-silver-200 divide-y divide-silver-200">
             {items.length === 0 ? <div className="p-6 text-ink-mute text-sm">No records yet.</div> :
               items.map(i => (
                 <div key={i.id} className="p-5 grid md:grid-cols-4 gap-3 text-sm hover:bg-cream-100/40 transition-colors">

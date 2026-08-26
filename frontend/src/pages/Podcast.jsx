@@ -21,7 +21,7 @@ export default function Podcast() {
         {eps.length === 0 ? <p className="text-ink-mute">First episodes coming soon. Stay tuned.</p> : (
           <div className="space-y-4">
             {eps.map(e => (
-              <Link to={`/podcast/${e.id}`} key={e.id} data-testid={`episode-${e.id}`} className="block border border-cream-200 p-8 hover:border-terracotta-500 transition-colors md:flex md:items-center gap-6 group">
+              <Link to={`/podcast/${e.id}`} key={e.id} data-testid={`episode-${e.id}`} className="block border border-silver-200 p-8 hover:border-terracotta-500 transition-colors md:flex md:items-center gap-6 group">
                 <div className="font-display text-4xl text-terracotta-500 md:w-20">#{e.episode_number}</div>
                 <div className="flex-1"><div className="font-display text-2xl text-ink mb-1 group-hover:text-terracotta-400 transition-colors">{e.title}</div><p className="text-ink-mute text-sm">{e.description}</p></div>
               </Link>

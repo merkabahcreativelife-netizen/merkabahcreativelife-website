@@ -23,7 +23,7 @@ export default function Home() {
               Explore Our Worlds
             </Link>
             <Link to="/creative-agency#enquiry" data-testid="hero-cta-project"
-              className="border border-cream-300 hover:border-terracotta-500 hover:text-terracotta-400 text-ink px-8 py-4 text-xs uppercase tracking-[0.25em] transition-colors">
+              className="border border-silver-300 hover:border-terracotta-500 hover:text-terracotta-400 text-ink px-8 py-4 text-xs uppercase tracking-[0.25em] transition-colors">
               Start a Project
             </Link>
           </div>

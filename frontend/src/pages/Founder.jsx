@@ -40,11 +40,11 @@ export default function Founder() {
         </blockquote>
       </section>
 
-      <section className="border-y border-cream-200 py-24 bg-cream-100/30">
+      <section className="border-y border-silver-200 py-24 bg-cream-100/30">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="overline mb-4">Areas of Creative Expertise</div>
           <div className="mt-8 flex flex-wrap gap-3">
-            {EXPERTISE.map(e => <span key={e} className="border border-cream-200 px-4 py-2 text-sm text-ink-soft hover:border-terracotta-500 hover:text-terracotta-400 transition-colors">{e}</span>)}
+            {EXPERTISE.map(e => <span key={e} className="border border-silver-200 px-4 py-2 text-sm text-ink-soft hover:border-terracotta-500 hover:text-terracotta-400 transition-colors">{e}</span>)}
           </div>
           <div className="overline mt-16 mb-4">His Approach</div>
           <div className="flex flex-wrap gap-x-8 gap-y-2 font-display text-2xl text-ink">
@@ -61,7 +61,7 @@ export default function Founder() {
             ["Media", ["Radio Production", "Promo & Content Production", "Creative Direction", "Brand Storytelling"]],
             ["Merkabah", ["Music + Media + Creativity", "Learning + Experiences", "Merkabah Creative Life"]],
           ].map(([title, steps]) => (
-            <div key={title} className="border border-cream-200 p-8">
+            <div key={title} className="border border-silver-200 p-8">
               <div className="font-display text-3xl text-ink mb-6">{title}</div>
               <ul className="space-y-3">
                 {steps.map(s => <li key={s} className="text-ink-mute text-sm before:content-['→'] before:text-terracotta-500 before:mr-3">{s}</li>)}

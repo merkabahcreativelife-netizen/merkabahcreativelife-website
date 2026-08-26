@@ -123,6 +123,10 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 ## Implemented (v27, Aug 2026 — homepage styling)
 - Homepage reorganized: scrolling brand marquee (Beyond Imagination · Create · Learn · Experience · Grow) under hero, stats strip (09 divisions / 12+ years / 21+ brands / 07 programs), violet closing CTA band ("Your journey starts with one step") before footer
 
+## Implemented (v28, Aug 2026 — global polish pass)
+- Site-wide consistency: all card/form borders unified to silver scale; buttons get lift + violet glow on hover; input focus rings; image select disabled
+- Homepage: marquee, stats strip, closing CTA band; journey icons; Our Worlds boxed grid
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players

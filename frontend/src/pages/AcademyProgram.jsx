@@ -42,10 +42,10 @@ export default function AcademyProgram() {
         <p className="font-display text-2xl lg:text-3xl text-ink leading-snug italic font-light">{ins.intro}</p>
       </section>
 
-      <section className="py-16 border-y border-cream-200 bg-cream-100/30">
+      <section className="py-16 border-y border-silver-200 bg-cream-100/30">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid md:grid-cols-2 gap-6">
           {ins.highlights.map(([t, d]) => (
-            <div key={t} className="border border-cream-200 p-8 hover:border-terracotta-500 transition-colors">
+            <div key={t} className="border border-silver-200 p-8 hover:border-terracotta-500 transition-colors">
               <div className="font-display text-2xl text-ink mb-3">{t}</div>
               <p className="text-ink-mute leading-relaxed">{d}</p>
             </div>
@@ -57,7 +57,7 @@ export default function AcademyProgram() {
         <div className="overline mb-4">Program Structure</div>
         <div className="grid md:grid-cols-3 gap-6 mt-8">
           {ins.levels.map(([lvl, desc]) => (
-            <div key={lvl} className="border border-cream-200 p-8">
+            <div key={lvl} className="border border-silver-200 p-8">
               <div className="overline mb-2 text-terracotta-500">{lvl}</div>
               <p className="text-ink-soft">{desc}</p>
             </div>
@@ -121,15 +121,15 @@ export default function AcademyProgram() {
             </div>
           ) : (
             <form onSubmit={submit} className="grid md:grid-cols-2 gap-5">
-              <input required placeholder="Full name*" value={form.name} onChange={(e) => setForm(f => ({ ...f, name: e.target.value }))} data-testid="trial-name" className="md:col-span-2 bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
-              <input required type="email" placeholder="Email*" value={form.email} onChange={(e) => setForm(f => ({ ...f, email: e.target.value }))} data-testid="trial-email" className="bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
-              <input required placeholder="Phone*" value={form.phone} onChange={(e) => setForm(f => ({ ...f, phone: e.target.value }))} data-testid="trial-phone" className="bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
-              <input placeholder="Age (student)" value={form.age} onChange={(e) => setForm(f => ({ ...f, age: e.target.value }))} data-testid="trial-age" className="bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
-              <select value={form.experience_level} onChange={(e) => setForm(f => ({ ...f, experience_level: e.target.value }))} data-testid="trial-level" className="bg-cream-100 border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm text-ink">
+              <input required placeholder="Full name*" value={form.name} onChange={(e) => setForm(f => ({ ...f, name: e.target.value }))} data-testid="trial-name" className="md:col-span-2 bg-transparent border border-silver-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
+              <input required type="email" placeholder="Email*" value={form.email} onChange={(e) => setForm(f => ({ ...f, email: e.target.value }))} data-testid="trial-email" className="bg-transparent border border-silver-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
+              <input required placeholder="Phone*" value={form.phone} onChange={(e) => setForm(f => ({ ...f, phone: e.target.value }))} data-testid="trial-phone" className="bg-transparent border border-silver-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
+              <input placeholder="Age (student)" value={form.age} onChange={(e) => setForm(f => ({ ...f, age: e.target.value }))} data-testid="trial-age" className="bg-transparent border border-silver-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
+              <select value={form.experience_level} onChange={(e) => setForm(f => ({ ...f, experience_level: e.target.value }))} data-testid="trial-level" className="bg-cream-100 border border-silver-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm text-ink">
                 {["Beginner","Intermediate","Advanced"].map(l => <option key={l} value={l} className="bg-cream-100">{l}</option>)}
               </select>
-              <input placeholder="Preferred day/time" value={form.preferred_time} onChange={(e) => setForm(f => ({ ...f, preferred_time: e.target.value }))} data-testid="trial-time" className="md:col-span-2 bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
-              <textarea placeholder="Anything else we should know?" rows={3} value={form.message} onChange={(e) => setForm(f => ({ ...f, message: e.target.value }))} data-testid="trial-message" className="md:col-span-2 bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
+              <input placeholder="Preferred day/time" value={form.preferred_time} onChange={(e) => setForm(f => ({ ...f, preferred_time: e.target.value }))} data-testid="trial-time" className="md:col-span-2 bg-transparent border border-silver-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
+              <textarea placeholder="Anything else we should know?" rows={3} value={form.message} onChange={(e) => setForm(f => ({ ...f, message: e.target.value }))} data-testid="trial-message" className="md:col-span-2 bg-transparent border border-silver-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
               <button disabled={loading} data-testid="trial-submit" className="md:col-span-2 mt-4 bg-terracotta-500 hover:bg-terracotta-600 text-white py-4 text-xs uppercase tracking-[0.25em] transition-colors disabled:opacity-60">
                 {loading ? "Sending…" : "Request Free Trial"}
               </button>

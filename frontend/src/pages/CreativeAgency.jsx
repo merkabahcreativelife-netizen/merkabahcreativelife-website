@@ -74,7 +74,7 @@ export default function CreativeAgency() {
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <a href="#enquiry" data-testid="agency-cta-start" className="bg-terracotta-500 hover:bg-terracotta-600 text-white px-8 py-4 text-xs uppercase tracking-[0.25em] transition-colors">Start a Project</a>
-            <a href="#services" data-testid="agency-cta-services" className="border border-cream-300 hover:border-terracotta-500 hover:text-terracotta-400 text-ink px-8 py-4 text-xs uppercase tracking-[0.25em] transition-colors">Explore Services</a>
+            <a href="#services" data-testid="agency-cta-services" className="border border-silver-300 hover:border-terracotta-500 hover:text-terracotta-400 text-ink px-8 py-4 text-xs uppercase tracking-[0.25em] transition-colors">Explore Services</a>
           </div>
         </div>
       </section>
@@ -105,7 +105,7 @@ export default function CreativeAgency() {
         </div>
       </section>
 
-      <section className="py-24 border-y border-cream-200 bg-cream-100/30">
+      <section className="py-24 border-y border-silver-200 bg-cream-100/30">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="overline mb-4">Why Merkabah</div>
           <div className="grid md:grid-cols-3 gap-6 mt-12">
@@ -136,7 +136,7 @@ export default function CreativeAgency() {
         </div>
       </section>
 
-      <section className="py-24 border-t border-cream-200">
+      <section className="py-24 border-t border-silver-200">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="overline mb-4">Who We Work With</div>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -205,7 +205,7 @@ export default function CreativeAgency() {
         </div>
       </section>
 
-      <section id="enquiry" className="py-24 lg:py-32 border-t border-cream-200 bg-cream-100/30">
+      <section id="enquiry" className="py-24 lg:py-32 border-t border-silver-200 bg-cream-100/30">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="overline mb-4">Start a Project</div>
           <h2 className="font-display text-4xl lg:text-6xl text-ink font-light tracking-tight leading-[1.05] mb-10">Let's build something meaningful.</h2>
@@ -219,22 +219,22 @@ export default function CreativeAgency() {
               {[["name","Name*"],["company","Company / Brand"],["email","Email*","email"],["phone","Phone"],["website","Website"],["industry","Industry"]].map(([k, l, type]) => (
                 <input key={k} required={l.endsWith("*")} type={type || "text"} placeholder={l} value={form[k]} onChange={(e) => setForm(f => ({ ...f, [k]: e.target.value }))}
                   data-testid={`agency-field-${k}`}
-                  className="bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm text-ink" />
+                  className="bg-transparent border border-silver-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm text-ink" />
               ))}
               <div className="md:col-span-2">
                 <div className="overline mb-3">Services Required (multi-select)</div>
                 <div className="flex flex-wrap gap-2">
                   {Object.values(CATS).flat().slice(0, 30).map(s => (
                     <button type="button" key={s} onClick={() => toggle(s)} data-testid={`agency-svc-${s}`}
-                      className={`text-xs px-3 py-2 border transition-colors ${form.services.includes(s) ? "bg-terracotta-500 border-terracotta-500 text-white" : "border-cream-200 text-ink-mute hover:border-terracotta-500"}`}>{s}</button>
+                      className={`text-xs px-3 py-2 border transition-colors ${form.services.includes(s) ? "bg-terracotta-500 border-terracotta-500 text-white" : "border-silver-200 text-ink-mute hover:border-terracotta-500"}`}>{s}</button>
                   ))}
                 </div>
               </div>
               <textarea required placeholder="Project description*" value={form.description} onChange={(e) => setForm(f => ({ ...f, description: e.target.value }))}
-                data-testid="agency-field-description" rows={4} className="md:col-span-2 bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm text-ink" />
-              <input placeholder="Budget range" value={form.budget} onChange={(e) => setForm(f => ({ ...f, budget: e.target.value }))} data-testid="agency-field-budget" className="bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
-              <input placeholder="Timeline" value={form.timeline} onChange={(e) => setForm(f => ({ ...f, timeline: e.target.value }))} data-testid="agency-field-timeline" className="bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
-              <input placeholder="How did you hear about us?" value={form.heard_from} onChange={(e) => setForm(f => ({ ...f, heard_from: e.target.value }))} data-testid="agency-field-heard" className="md:col-span-2 bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
+                data-testid="agency-field-description" rows={4} className="md:col-span-2 bg-transparent border border-silver-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm text-ink" />
+              <input placeholder="Budget range" value={form.budget} onChange={(e) => setForm(f => ({ ...f, budget: e.target.value }))} data-testid="agency-field-budget" className="bg-transparent border border-silver-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
+              <input placeholder="Timeline" value={form.timeline} onChange={(e) => setForm(f => ({ ...f, timeline: e.target.value }))} data-testid="agency-field-timeline" className="bg-transparent border border-silver-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
+              <input placeholder="How did you hear about us?" value={form.heard_from} onChange={(e) => setForm(f => ({ ...f, heard_from: e.target.value }))} data-testid="agency-field-heard" className="md:col-span-2 bg-transparent border border-silver-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
               <button disabled={loading} data-testid="agency-submit" className="md:col-span-2 mt-4 bg-terracotta-500 hover:bg-terracotta-600 text-white py-4 text-xs uppercase tracking-[0.25em] transition-colors disabled:opacity-60">
                 {loading ? "Sending…" : "Send Enquiry"}
               </button>

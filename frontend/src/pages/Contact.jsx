@@ -30,14 +30,14 @@ export default function Contact() {
             <p className="text-ink-soft">Your message has been received. Our team will get back to you shortly.</p>
           </div>
         ) : (
-          <form onSubmit={submit} className="grid md:grid-cols-2 gap-5 border border-cream-200 p-8 lg:p-12">
-            <input required placeholder="Name*" value={form.name} onChange={e => setForm(f => ({ ...f, name: e.target.value }))} data-testid="contact-name" className="md:col-span-2 bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
-            <input required type="email" placeholder="Email*" value={form.email} onChange={e => setForm(f => ({ ...f, email: e.target.value }))} data-testid="contact-email" className="bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
-            <input placeholder="Phone" value={form.phone} onChange={e => setForm(f => ({ ...f, phone: e.target.value }))} data-testid="contact-phone" className="bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
-            <select value={form.enquiry_type} onChange={e => setForm(f => ({ ...f, enquiry_type: e.target.value }))} data-testid="contact-type" className="md:col-span-2 bg-cream-100 border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm">
+          <form onSubmit={submit} className="grid md:grid-cols-2 gap-5 border border-silver-200 p-8 lg:p-12">
+            <input required placeholder="Name*" value={form.name} onChange={e => setForm(f => ({ ...f, name: e.target.value }))} data-testid="contact-name" className="md:col-span-2 bg-transparent border border-silver-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
+            <input required type="email" placeholder="Email*" value={form.email} onChange={e => setForm(f => ({ ...f, email: e.target.value }))} data-testid="contact-email" className="bg-transparent border border-silver-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
+            <input placeholder="Phone" value={form.phone} onChange={e => setForm(f => ({ ...f, phone: e.target.value }))} data-testid="contact-phone" className="bg-transparent border border-silver-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
+            <select value={form.enquiry_type} onChange={e => setForm(f => ({ ...f, enquiry_type: e.target.value }))} data-testid="contact-type" className="md:col-span-2 bg-cream-100 border border-silver-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm">
               {CATS.map(c => <option key={c} value={c} className="bg-cream-100">{c}</option>)}
             </select>
-            <textarea required placeholder="Message*" rows={5} value={form.message} onChange={e => setForm(f => ({ ...f, message: e.target.value }))} data-testid="contact-message" className="md:col-span-2 bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
+            <textarea required placeholder="Message*" rows={5} value={form.message} onChange={e => setForm(f => ({ ...f, message: e.target.value }))} data-testid="contact-message" className="md:col-span-2 bg-transparent border border-silver-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
             <button disabled={loading} data-testid="contact-submit" className="md:col-span-2 mt-2 bg-terracotta-500 hover:bg-terracotta-600 text-white py-4 text-xs uppercase tracking-[0.25em] transition-colors disabled:opacity-60">{loading ? "Sending…" : "Send Message"}</button>
           </form>
         )}

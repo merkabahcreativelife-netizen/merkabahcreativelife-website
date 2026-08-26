@@ -19,9 +19,9 @@ export default function JobDetail() {
         <div className="overline mt-8">{j.department} · {j.employment_type}</div>
         <h1 className="font-display font-light text-4xl sm:text-6xl lg:text-7xl leading-[0.95] tracking-tighter text-ink mt-4 max-w-4xl">{j.title}</h1>
         <div className="mt-6 flex flex-wrap gap-3 text-sm text-ink-mute">
-          <span className="border border-cream-200 px-4 py-2">{j.location}</span>
-          <span className="border border-cream-200 px-4 py-2">{j.work_mode}</span>
-          <span className="border border-cream-200 px-4 py-2">{j.experience_level}</span>
+          <span className="border border-silver-200 px-4 py-2">{j.location}</span>
+          <span className="border border-silver-200 px-4 py-2">{j.work_mode}</span>
+          <span className="border border-silver-200 px-4 py-2">{j.experience_level}</span>
         </div>
       </section>
       <section className="pb-24 max-w-4xl mx-auto px-6 lg:px-8 space-y-12">

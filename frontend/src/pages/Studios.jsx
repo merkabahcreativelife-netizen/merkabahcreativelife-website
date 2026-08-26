@@ -27,7 +27,7 @@ export default function Studios() {
         </div>
         <Link to="/creative-agency/services/audio-voice-and-music" data-testid="studios-audio-link" className="mt-8 inline-block text-xs uppercase tracking-[0.2em] font-semibold text-terracotta-600 hover:text-terracotta-500">Need audio for your brand? See Agency Audio Services →</Link>
       </section>
-      <section className="py-24 border-t border-cream-200 max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="py-24 border-t border-silver-200 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="overline mb-4">Featured Work</div>
         <h2 className="font-display text-4xl lg:text-6xl text-ink font-light tracking-tight leading-[1.05] mb-12">Selected productions from our studio.</h2>
         {projects.length > 0 && (
@@ -43,7 +43,7 @@ export default function Studios() {
         )}
         <div className="grid md:grid-cols-2 gap-6">
           {[["Brand Anthem — Cinematic Series","Music composition, arrangement & mixing"],["Podcast Production","Full-cycle audio production for editorial podcasts"],["Radio Promo Package","Voice-over, sound design and mastering"],["Jingle Collection","Short-form musical identities for brands"]].map(([t, d]) => (
-            <div key={t} className="border border-cream-200 p-8 hover:border-terracotta-500 transition-colors">
+            <div key={t} className="border border-silver-200 p-8 hover:border-terracotta-500 transition-colors">
               <div className="overline mb-2">Case Study</div>
               <div className="font-display text-2xl text-ink mb-2">{t}</div>
               <p className="text-ink-mute text-sm">{d}</p>

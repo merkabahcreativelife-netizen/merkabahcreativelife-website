@@ -20,20 +20,20 @@ export default function ServiceDetail() {
       <section className="py-20 max-w-4xl mx-auto px-6 lg:px-8">
         <p className="font-display text-2xl lg:text-3xl text-ink italic font-light leading-snug">{svc.intro}</p>
       </section>
-      <section className="py-16 border-y border-cream-200 bg-cream-100/30">
+      <section className="py-16 border-y border-silver-200 bg-cream-100/30">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="overline mb-6">What We Deliver</div>
           <div className="flex flex-wrap gap-3">
-            {svc.offerings.map(o => <span key={o} className="border border-cream-200 px-5 py-3 text-sm text-ink-soft hover:border-terracotta-500 hover:text-terracotta-400 transition-colors">{o}</span>)}
+            {svc.offerings.map(o => <span key={o} className="border border-silver-200 px-5 py-3 text-sm text-ink-soft hover:border-terracotta-500 hover:text-terracotta-400 transition-colors">{o}</span>)}
           </div>
         </div>
       </section>
       <section className="py-20 max-w-7xl mx-auto px-6 lg:px-8 grid md:grid-cols-2 gap-10">
-        <div className="border border-cream-200 p-10">
+        <div className="border border-silver-200 p-10">
           <div className="overline mb-4">Our Approach</div>
           <p className="text-ink-soft text-lg leading-relaxed">{svc.approach}</p>
         </div>
-        <div className="border border-cream-200 p-10">
+        <div className="border border-silver-200 p-10">
           <div className="overline mb-4">Who It's For</div>
           <p className="text-ink-soft text-lg leading-relaxed">{svc.who}</p>
         </div>

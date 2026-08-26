@@ -30,7 +30,7 @@ export default function Wellness() {
         <h2 className="font-display text-4xl lg:text-6xl text-ink font-light tracking-tight leading-[1.05] mb-14 max-w-3xl">Ancient practices, held with a modern heart.</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {MODALITIES.map(([t, d]) => (
-            <div key={t} className="border border-cream-200 p-8 hover:border-terracotta-500 transition-colors" data-testid={`wellness-modality-${t.toLowerCase().replace(/ /g, "-")}`}>
+            <div key={t} className="border border-silver-200 p-8 hover:border-terracotta-500 transition-colors" data-testid={`wellness-modality-${t.toLowerCase().replace(/ /g, "-")}`}>
               <div className="font-display text-2xl text-ink mb-4">{t}</div>
               <p className="text-ink-mute leading-relaxed text-sm">{d}</p>
             </div>
@@ -38,7 +38,7 @@ export default function Wellness() {
         </div>
       </section>
 
-      <section className="py-24 border-y border-cream-200 bg-cream-100/30">
+      <section className="py-24 border-y border-silver-200 bg-cream-100/30">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="relative max-w-md mx-auto lg:mx-0 w-full">
             <div className="aspect-[4/5] overflow-hidden border border-silver-200 bg-silver-100">

@@ -18,19 +18,19 @@ export default function Careers() {
       <section className="pb-16 max-w-7xl mx-auto px-6 lg:px-8 grid md:grid-cols-2 gap-8">
         <div>
           <div className="overline mb-3">Employment Types</div>
-          <div className="flex flex-wrap gap-2">{TYPES.map(t => <span key={t} className="text-xs border border-cream-200 px-3 py-2 text-ink-soft">{t}</span>)}</div>
+          <div className="flex flex-wrap gap-2">{TYPES.map(t => <span key={t} className="text-xs border border-silver-200 px-3 py-2 text-ink-soft">{t}</span>)}</div>
         </div>
         <div>
           <div className="overline mb-3">Departments</div>
-          <div className="flex flex-wrap gap-2">{DEPTS.map(d => <span key={d} className="text-xs border border-cream-200 px-3 py-2 text-ink-soft">{d}</span>)}</div>
+          <div className="flex flex-wrap gap-2">{DEPTS.map(d => <span key={d} className="text-xs border border-silver-200 px-3 py-2 text-ink-soft">{d}</span>)}</div>
         </div>
       </section>
-      <section className="py-16 border-t border-cream-200 max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="py-16 border-t border-silver-200 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="overline mb-6">Open Positions</div>
         {jobs.length === 0 ? (
-          <div className="border border-cream-200 p-10 text-center"><p className="text-ink-mute">We're between hires. Interested in joining anyway? <Link to="/careers/internships" className="text-terracotta-400 hover:text-terracotta-300 underline">Send us your details</Link>.</p></div>
+          <div className="border border-silver-200 p-10 text-center"><p className="text-ink-mute">We're between hires. Interested in joining anyway? <Link to="/careers/internships" className="text-terracotta-400 hover:text-terracotta-300 underline">Send us your details</Link>.</p></div>
         ) : (
-          <ul className="divide-y divide-cream-200">
+          <ul className="divide-y divide-silver-200">
             {jobs.map(j => (
               <li key={j.id}>
                 <Link to={`/careers/job/${j.id}`} data-testid={`job-${j.id}`} className="py-6 flex items-center justify-between group">

@@ -25,7 +25,7 @@ export default function EpisodeDetail() {
       </div>
       <p className="mt-12 font-display text-xl lg:text-2xl text-ink italic font-light leading-snug">{ep.description}</p>
       {ep.notes && (
-        <div className="mt-12 border border-cream-200 p-8">
+        <div className="mt-12 border border-silver-200 p-8">
           <div className="overline mb-4">Episode Notes</div>
           <p className="text-ink-soft leading-relaxed">{ep.notes}</p>
         </div>

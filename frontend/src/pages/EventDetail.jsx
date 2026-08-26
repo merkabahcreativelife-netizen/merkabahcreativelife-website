@@ -27,7 +27,7 @@ export default function EventDetail() {
         <div className="lg:col-span-2">
           <p className="text-ink-soft text-lg leading-relaxed">{e.description}</p>
         </div>
-        <div className="border border-cream-200 p-8 h-fit space-y-5">
+        <div className="border border-silver-200 p-8 h-fit space-y-5">
           <div className="flex items-center gap-3 text-ink-soft"><Calendar size={16} className="text-terracotta-500"/>{e.date}</div>
           <div className="flex items-center gap-3 text-ink-soft"><Clock size={16} className="text-terracotta-500"/>{e.time}</div>
           <div className="flex items-center gap-3 text-ink-soft"><MapPin size={16} className="text-terracotta-500"/>{e.venue}{e.location ? `, ${e.location}` : ""}</div>

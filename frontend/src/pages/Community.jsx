@@ -17,10 +17,10 @@ export default function Community() {
       <p className="mt-8 text-ink-soft text-lg max-w-2xl">Artists, musicians, students, creators, educators, professionals, entrepreneurs, wellness practitioners and curious minds — join our community.</p>
       {done ? <div data-testid="community-success" className="mt-10 border border-terracotta-500/40 p-8"><p className="text-ink font-display text-2xl">Welcome home.</p></div> :
         <form onSubmit={submit} className="mt-10 grid md:grid-cols-2 gap-4">
-          <input required placeholder="Name*" value={f.name} onChange={e => setF({ ...f, name: e.target.value })} data-testid="community-name" className="bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
-          <input required type="email" placeholder="Email*" value={f.email} onChange={e => setF({ ...f, email: e.target.value })} data-testid="community-email" className="bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
-          <input placeholder="Interest" value={f.interest} onChange={e => setF({ ...f, interest: e.target.value })} data-testid="community-interest" className="bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
-          <input placeholder="City" value={f.city} onChange={e => setF({ ...f, city: e.target.value })} data-testid="community-city" className="bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
+          <input required placeholder="Name*" value={f.name} onChange={e => setF({ ...f, name: e.target.value })} data-testid="community-name" className="bg-transparent border border-silver-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
+          <input required type="email" placeholder="Email*" value={f.email} onChange={e => setF({ ...f, email: e.target.value })} data-testid="community-email" className="bg-transparent border border-silver-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
+          <input placeholder="Interest" value={f.interest} onChange={e => setF({ ...f, interest: e.target.value })} data-testid="community-interest" className="bg-transparent border border-silver-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
+          <input placeholder="City" value={f.city} onChange={e => setF({ ...f, city: e.target.value })} data-testid="community-city" className="bg-transparent border border-silver-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
           <button data-testid="community-submit" className="md:col-span-2 mt-4 bg-terracotta-500 hover:bg-terracotta-600 text-white py-4 text-xs uppercase tracking-[0.25em]">Become Part of Merkabah</button>
         </form>}
     </section>

@@ -38,7 +38,7 @@ export default function Navbar() {
     <>
       <header
         data-testid="site-navbar"
-        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ${scrolled ? "bg-cream-50/85 backdrop-blur-xl border-b border-cream-200" : "bg-cream-50/40 backdrop-blur-md"}`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ${scrolled ? "bg-cream-50/85 backdrop-blur-xl border-b border-silver-200" : "bg-cream-50/40 backdrop-blur-md"}`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-20">
           <Link to="/" data-testid="nav-logo" className="flex flex-col leading-none">
@@ -51,7 +51,7 @@ export default function Navbar() {
               <button data-testid="nav-worlds-toggle" className="nav-link text-sm text-ink-soft tracking-wide font-body">Our Worlds</button>
               {worlds && (
                 <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 w-[880px]">
-                  <div className="bg-cream-50 border border-cream-200 p-8 grid grid-cols-3 gap-6">
+                  <div className="bg-cream-50 border border-silver-200 p-8 grid grid-cols-3 gap-6">
                     {WORLDS.map((w) => (
                       <Link key={w.key} to={w.href} data-testid={`mega-${w.key}`}
                         className="group block">
@@ -95,7 +95,7 @@ export default function Navbar() {
 
       {open && (
         <div data-testid="mobile-menu" className="fixed inset-0 z-[60] bg-cream-50 overflow-y-auto">
-          <div className="flex items-center justify-between px-6 h-20 border-b border-cream-200">
+          <div className="flex items-center justify-between px-6 h-20 border-b border-silver-200">
             <span className="font-display text-lg text-ink">Merkabah</span>
             <button data-testid="nav-mobile-close" onClick={() => setOpen(false)} className="text-ink p-2"><X size={24}/></button>
           </div>

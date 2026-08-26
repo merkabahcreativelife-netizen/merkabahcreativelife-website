@@ -23,7 +23,7 @@ export default function Store() {
           <h1 className="font-display font-light text-5xl sm:text-7xl lg:text-8xl leading-[0.95] tracking-tighter text-ink mt-4">Objects of the creative life.</h1>
           <p className="mt-6 max-w-xl text-ink-mute text-lg">Merchandise, learning materials, digital products and tickets — every piece made or chosen by the Merkabah team.</p>
         </div>
-        <button onClick={() => setOpen(true)} data-testid="store-cart-open" className="shrink-0 flex items-center gap-2 border border-cream-200 hover:border-terracotta-500 px-4 py-3 text-sm text-ink transition-colors">
+        <button onClick={() => setOpen(true)} data-testid="store-cart-open" className="shrink-0 flex items-center gap-2 border border-silver-200 hover:border-terracotta-500 px-4 py-3 text-sm text-ink transition-colors">
           <ShoppingBag size={16}/> Cart ({count})
         </button>
       </section>
@@ -32,7 +32,7 @@ export default function Store() {
         <div className="flex flex-wrap gap-2">
           {CATS.map(c => (
             <button key={c} onClick={() => setCat(c)} data-testid={`store-cat-${c}`}
-              className={`px-4 py-2 text-xs uppercase tracking-[0.2em] border transition-colors ${cat === c ? "bg-terracotta-500 border-terracotta-500 text-white" : "border-cream-200 text-ink-mute hover:border-terracotta-500"}`}>
+              className={`px-4 py-2 text-xs uppercase tracking-[0.2em] border transition-colors ${cat === c ? "bg-terracotta-500 border-terracotta-500 text-white" : "border-silver-200 text-ink-mute hover:border-terracotta-500"}`}>
               {c}
             </button>
           ))}
@@ -41,11 +41,11 @@ export default function Store() {
 
       <section className="pb-24 max-w-7xl mx-auto px-6 lg:px-8">
         {filtered.length === 0 ? (
-          <div className="border border-cream-200 p-12 text-center"><p className="text-ink-mute">New pieces are being curated for this collection.</p></div>
+          <div className="border border-silver-200 p-12 text-center"><p className="text-ink-mute">New pieces are being curated for this collection.</p></div>
         ) : (
           <div className="grid md:grid-cols-3 gap-6">
             {filtered.map(p => (
-              <div key={p.id} className="border border-cream-200 hover:border-terracotta-500 transition-colors bg-white">
+              <div key={p.id} className="border border-silver-200 hover:border-terracotta-500 transition-colors bg-white">
                 <Link to={`/store/${p.id}`} data-testid={`product-${p.id}`}>
                   {p.image && <img src={p.image} alt={p.name} className="aspect-square w-full object-cover" />}
                 </Link>
@@ -66,25 +66,25 @@ export default function Store() {
 
       {open && (
         <div className="fixed inset-0 z-[70] bg-cream-50/80 backdrop-blur-sm flex justify-end" onClick={() => setOpen(false)}>
-          <div onClick={e => e.stopPropagation()} className="w-full max-w-md bg-cream-50 border-l border-cream-200 h-full p-8 overflow-y-auto" data-testid="store-cart-panel">
+          <div onClick={e => e.stopPropagation()} className="w-full max-w-md bg-cream-50 border-l border-silver-200 h-full p-8 overflow-y-auto" data-testid="store-cart-panel">
             <div className="flex justify-between items-center mb-8"><div className="font-display text-2xl text-ink">Your Cart</div><button onClick={() => setOpen(false)} className="text-ink-mute hover:text-ink">Close</button></div>
             {items.length === 0 ? <p className="text-ink-mute">Cart is empty.</p> : (
               <>
                 <ul className="space-y-5">
                   {items.map(i => (
                     <li key={i.id} className="flex items-center gap-4">
-                      {i.image && <img src={i.image} alt="" className="w-12 h-12 object-cover border border-cream-200" />}
+                      {i.image && <img src={i.image} alt="" className="w-12 h-12 object-cover border border-silver-200" />}
                       <div className="flex-1"><div className="text-sm text-ink">{i.name}</div><div className="text-xs text-ink-mute">₹{i.price}</div></div>
                       <div className="flex items-center gap-2">
-                        <button onClick={() => setQty(i.id, i.qty - 1)} className="p-1 border border-cream-200 hover:border-terracotta-500"><Minus size={12}/></button>
+                        <button onClick={() => setQty(i.id, i.qty - 1)} className="p-1 border border-silver-200 hover:border-terracotta-500"><Minus size={12}/></button>
                         <span className="text-sm w-6 text-center">{i.qty}</span>
-                        <button onClick={() => setQty(i.id, i.qty + 1)} className="p-1 border border-cream-200 hover:border-terracotta-500"><Plus size={12}/></button>
+                        <button onClick={() => setQty(i.id, i.qty + 1)} className="p-1 border border-silver-200 hover:border-terracotta-500"><Plus size={12}/></button>
                         <button onClick={() => remove(i.id)} className="p-1 text-ink-mute hover:text-terracotta-600"><Trash2 size={14}/></button>
                       </div>
                     </li>
                   ))}
                 </ul>
-                <div className="mt-8 pt-4 border-t border-cream-200 flex justify-between text-ink font-display text-xl"><span>Total</span><span>₹{total}</span></div>
+                <div className="mt-8 pt-4 border-t border-silver-200 flex justify-between text-ink font-display text-xl"><span>Total</span><span>₹{total}</span></div>
                 <button onClick={() => { setOpen(false); nav("/store/checkout"); }} data-testid="store-checkout" className="mt-6 w-full bg-terracotta-500 hover:bg-terracotta-600 py-4 text-xs uppercase tracking-[0.25em] text-white transition-colors">Proceed to Checkout</button>
               </>
             )}

@@ -20,11 +20,11 @@ export default function AdminLogin() {
   };
   return (
     <div className="min-h-screen bg-cream-50 flex items-center justify-center px-6">
-      <form onSubmit={submit} className="w-full max-w-md border border-cream-200 p-10">
+      <form onSubmit={submit} className="w-full max-w-md border border-silver-200 p-10">
         <div className="overline mb-2">Merkabah</div>
         <h1 className="font-display text-4xl text-ink mb-8 font-light">Admin Login</h1>
-        <input required type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} data-testid="admin-email" className="w-full mb-4 bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm text-ink" />
-        <input required type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} data-testid="admin-password" className="w-full mb-6 bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm text-ink" />
+        <input required type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} data-testid="admin-email" className="w-full mb-4 bg-transparent border border-silver-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm text-ink" />
+        <input required type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} data-testid="admin-password" className="w-full mb-6 bg-transparent border border-silver-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm text-ink" />
         <button disabled={loading} data-testid="admin-submit" className="w-full bg-terracotta-500 hover:bg-terracotta-600 text-white py-4 text-xs uppercase tracking-[0.25em] transition-colors disabled:opacity-60">{loading ? "Signing in…" : "Sign In"}</button>
       </form>
     </div>

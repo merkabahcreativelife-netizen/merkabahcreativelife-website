@@ -22,7 +22,7 @@ export default function Live() {
         {upcoming.length === 0 ? <p className="text-ink-mute">No upcoming events yet. Watch this space.</p> : (
           <div className="grid md:grid-cols-2 gap-6">
             {upcoming.map(e => (
-              <Link to={`/live/${e.id}`} key={e.id} data-testid={`event-${e.id}`} className="block border border-cream-200 p-8 hover:border-terracotta-500 transition-colors">
+              <Link to={`/live/${e.id}`} key={e.id} data-testid={`event-${e.id}`} className="block border border-silver-200 p-8 hover:border-terracotta-500 transition-colors">
                 <div className="overline mb-2 text-terracotta-500">{e.date} · {e.time}</div>
                 <div className="font-display text-3xl text-ink mb-2">{e.name}</div>
                 <p className="text-ink-mute mb-3">{e.venue} · {e.location}</p>
@@ -33,9 +33,9 @@ export default function Live() {
         )}
       </section>
       {past.length > 0 && (
-        <section className="py-16 border-t border-cream-200 max-w-7xl mx-auto px-6 lg:px-8">
+        <section className="py-16 border-t border-silver-200 max-w-7xl mx-auto px-6 lg:px-8">
           <div className="overline mb-6">Past Events</div>
-          <ul className="divide-y divide-cream-200">
+          <ul className="divide-y divide-silver-200">
             {past.map(e => <li key={e.id} className="py-6 flex justify-between items-center"><span className="font-display text-xl text-ink">{e.name}</span><span className="text-ink-mute text-sm">{e.date}</span></li>)}
           </ul>
         </section>

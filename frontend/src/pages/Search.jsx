@@ -15,7 +15,7 @@ export default function SearchPage() {
     <section className="pt-24 pb-24 max-w-4xl mx-auto px-6 lg:px-8">
       <div className="overline">Search</div>
       <h1 className="font-display font-light text-5xl leading-[0.95] tracking-tighter text-ink mt-4">What are you looking for?</h1>
-      <form onSubmit={submit} className="mt-10 flex border-b border-cream-200 focus-within:border-terracotta-500">
+      <form onSubmit={submit} className="mt-10 flex border-b border-silver-200 focus-within:border-terracotta-500">
         <Search size={18} className="text-ink-mute mr-3 self-center" />
         <input autoFocus value={q} onChange={e => setQ(e.target.value)} placeholder="Search courses, events, journal, jobs, store…" data-testid="search-input" className="flex-1 bg-transparent outline-none py-4 text-lg text-ink" />
         <button data-testid="search-submit" className="text-xs uppercase tracking-[0.2em] text-terracotta-400 px-4">Go</button>
@@ -26,7 +26,7 @@ export default function SearchPage() {
           {Object.entries(results).map(([coll, items]) => (
             <div key={coll}>
               <div className="overline mb-3">{coll.replace(/_/g, " ")}</div>
-              <ul className="divide-y divide-cream-200">
+              <ul className="divide-y divide-silver-200">
                 {items.map(i => <li key={i.id} className="py-4 text-ink font-display text-lg">{i.title || i.name}</li>)}
               </ul>
             </div>

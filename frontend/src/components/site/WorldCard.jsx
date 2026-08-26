@@ -5,7 +5,7 @@ export default function WorldCard({ world, size = "md" }) {
   const heights = { sm: "aspect-[4/5]", md: "aspect-[3/4]", lg: "aspect-[4/6]" };
   return (
     <Link to={world.href} data-testid={`world-card-${world.key}`}
-      className={`group relative block overflow-hidden bg-cream-100 border border-cream-200 ${heights[size]}`}>
+      className={`group relative block overflow-hidden bg-cream-100 border border-silver-200 ${heights[size]}`}>
       <img src={world.img} alt={world.name} loading="lazy"
         className="card-media absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-700" />
       <div className="absolute inset-0 bg-gradient-to-t from-cream-50 via-cream-50/30 to-transparent" />
