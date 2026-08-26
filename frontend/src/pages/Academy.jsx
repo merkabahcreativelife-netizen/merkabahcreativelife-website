@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { INSTRUMENTS } from "@/data/worlds";
+import AdmissionPopup from "@/components/site/AdmissionPopup";
 
 const GRADES = ["Debut","Grade 1","Grade 2","Grade 3","Grade 4","Grade 5","Grade 6","Grade 7","Grade 8"];
 const BOARDS = [
@@ -43,8 +45,18 @@ const FAQS = [
 ];
 
 export default function Academy() {
+  const [showAdmit, setShowAdmit] = useState(false);
+  useEffect(() => {
+    const t = setTimeout(() => setShowAdmit(true), 900);
+    return () => clearTimeout(t);
+  }, []);
+  const explore = () => {
+    setShowAdmit(false);
+    document.querySelector("#programs")?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
+      {showAdmit && <AdmissionPopup onClose={() => setShowAdmit(false)} onExplore={explore} />}
       <section className="relative min-h-[70vh] flex items-end pb-20 overflow-hidden">
         <img src="https://images.unsplash.com/photo-1692592313062-4015cd36c04b?crop=entropy&cs=srgb&fm=jpg&q=85" alt="" className="absolute inset-0 w-full h-full object-cover opacity-70" />
         <div className="absolute inset-0 bg-gradient-to-b from-cream-50/30 to-cream-50" />
@@ -59,7 +71,7 @@ export default function Academy() {
         </div>
       </section>
 
-      <section className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
+      <section id="programs" className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="overline mb-4">Find Your Perfect Music Class</div>
         <h2 className="font-display text-4xl lg:text-6xl text-ink font-light tracking-tight leading-[1.05] mb-14 max-w-3xl">Our music programs.</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">

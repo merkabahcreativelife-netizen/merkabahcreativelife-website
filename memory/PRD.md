@@ -83,6 +83,9 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 ## Implemented (v14, Aug 2026 — legal pages fix)
 - Legal pages (/privacy, /terms, /refund, /shipping) now render via explicit routes (React Router v6+ doesn't support regex path params); boxed professional content per page
 
+## Implemented (v15, Aug 2026 — admissions popup)
+- Poster-style "Admissions Open" popup on Academy page (shows once per session, 900ms delay): 3-image instrument strip with violet overlay, ADMISSIONS OPEN / Join Now! headline, RSL·Trinity·ABRSM highlights, level chips, "Book Your Free Trial Class" CTA → closes + smooth-scrolls to programs grid
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players
