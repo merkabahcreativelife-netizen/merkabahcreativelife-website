@@ -36,25 +36,25 @@ export default function Navbar() {
     <>
       <header
         data-testid="site-navbar"
-        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ${scrolled ? "bg-stone-950/85 backdrop-blur-xl border-b border-stone-800" : "bg-stone-950/40 backdrop-blur-md"}`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ${scrolled ? "bg-cream-50/85 backdrop-blur-xl border-b border-cream-200" : "bg-cream-50/40 backdrop-blur-md"}`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-20">
           <Link to="/" data-testid="nav-logo" className="flex flex-col leading-none">
-            <span className="font-display text-lg tracking-tight text-cream-50">Merkabah</span>
+            <span className="font-display text-lg tracking-tight text-ink">Merkabah</span>
             <span className="overline mt-0.5">Creative Life</span>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-7">
             <div className="relative" onMouseEnter={() => setWorlds(true)} onMouseLeave={() => setWorlds(false)}>
-              <button data-testid="nav-worlds-toggle" className="nav-link text-sm text-stone-200 tracking-wide font-body">Our Worlds</button>
+              <button data-testid="nav-worlds-toggle" className="nav-link text-sm text-ink-soft tracking-wide font-body">Our Worlds</button>
               {worlds && (
                 <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 w-[880px]">
-                  <div className="bg-stone-950 border border-stone-800 p-8 grid grid-cols-3 gap-6">
+                  <div className="bg-cream-50 border border-cream-200 p-8 grid grid-cols-3 gap-6">
                     {WORLDS.map((w) => (
                       <Link key={w.key} to={w.href} data-testid={`mega-${w.key}`}
                         className="group block">
                         <div className="overline mb-1 group-hover:text-terracotta-400 transition-colors">{w.tagline}</div>
-                        <div className="font-display text-lg text-cream-50 group-hover:text-terracotta-400 transition-colors">{w.name}</div>
+                        <div className="font-display text-lg text-ink group-hover:text-terracotta-400 transition-colors">{w.name}</div>
                       </Link>
                     ))}
                   </div>
@@ -65,7 +65,7 @@ export default function Navbar() {
               const item = NAV.find(n => n.to === to);
               return (
                 <NavLink key={to} to={to} data-testid={`nav-${to.replace("/","")||"home"}`}
-                  className={({isActive}) => `nav-link text-sm tracking-wide font-body ${isActive ? "active text-terracotta-400" : "text-stone-200"}`}>
+                  className={({isActive}) => `nav-link text-sm tracking-wide font-body ${isActive ? "active text-terracotta-400" : "text-ink-soft"}`}>
                   {item.label}
                 </NavLink>
               );
@@ -73,14 +73,14 @@ export default function Navbar() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <Link to="/search" data-testid="nav-search" className="hidden sm:flex text-stone-300 hover:text-terracotta-400 transition-colors">
+            <Link to="/search" data-testid="nav-search" className="hidden sm:flex text-ink-soft hover:text-terracotta-400 transition-colors">
               <Search size={18} />
             </Link>
             <Link to="/creative-agency#enquiry" data-testid="nav-cta"
-              className="hidden md:inline-block bg-terracotta-500 hover:bg-terracotta-600 text-cream-50 px-6 py-3 text-xs uppercase tracking-[0.2em] font-body transition-colors">
+              className="hidden md:inline-block bg-terracotta-500 hover:bg-terracotta-600 text-white px-6 py-3 text-xs uppercase tracking-[0.2em] font-body transition-colors">
               Start a Project
             </Link>
-            <button data-testid="nav-mobile-open" onClick={() => setOpen(true)} className="lg:hidden text-stone-100 p-2">
+            <button data-testid="nav-mobile-open" onClick={() => setOpen(true)} className="lg:hidden text-ink p-2">
               <Menu size={22} />
             </button>
           </div>
@@ -88,21 +88,21 @@ export default function Navbar() {
       </header>
 
       {open && (
-        <div data-testid="mobile-menu" className="fixed inset-0 z-[60] bg-stone-950 overflow-y-auto">
-          <div className="flex items-center justify-between px-6 h-20 border-b border-stone-900">
-            <span className="font-display text-lg text-cream-50">Merkabah</span>
-            <button data-testid="nav-mobile-close" onClick={() => setOpen(false)} className="text-cream-50 p-2"><X size={24}/></button>
+        <div data-testid="mobile-menu" className="fixed inset-0 z-[60] bg-cream-50 overflow-y-auto">
+          <div className="flex items-center justify-between px-6 h-20 border-b border-cream-200">
+            <span className="font-display text-lg text-ink">Merkabah</span>
+            <button data-testid="nav-mobile-close" onClick={() => setOpen(false)} className="text-ink p-2"><X size={24}/></button>
           </div>
           <div className="px-6 py-10 flex flex-col gap-4">
             {NAV.map((n, i) => (
               <NavLink key={n.to} to={n.to} data-testid={`m-nav-${n.to.replace("/","")||"home"}`}
-                className="font-display text-4xl text-cream-50 hover:text-terracotta-400 reveal"
+                className="font-display text-4xl text-ink hover:text-terracotta-400 reveal"
                 style={{ animationDelay: `${i * 40}ms` }}>
                 {n.label}
               </NavLink>
             ))}
             <Link to="/creative-agency#enquiry" data-testid="m-nav-cta"
-              className="mt-8 bg-terracotta-500 text-cream-50 py-4 text-center text-xs uppercase tracking-[0.25em]">Start a Project</Link>
+              className="mt-8 bg-terracotta-500 text-white py-4 text-center text-xs uppercase tracking-[0.25em]">Start a Project</Link>
           </div>
         </div>
       )}

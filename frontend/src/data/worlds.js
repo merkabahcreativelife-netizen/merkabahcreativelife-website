@@ -111,6 +111,5 @@ export const INSTRUMENTS = {
 };
 
 export const HERO_IMG = "https://images.unsplash.com/photo-1581733095033-958d7422b5ce?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMHdhcm0lMjBsaWdodCUyMGNpbmVtYXRpY3xlbnwwfHx8fDE3ODc3NTg5NDB8MA&ixlib=rb-4.1.0&q=85";
-export const FOUNDER_IMG = "https://customer-assets-rejwkqb3.emergentagent.net/job_merkabah-ecosystem/artifacts/rogtj5td_f6579576-d3df-4336-b72e-00293c8d9cc7.png";
-export const HEALER_CARD_IMG = "https://customer-assets-rejwkqb3.emergentagent.net/job_merkabah-ecosystem/artifacts/8aa7mtoe_WhatsApp%20Image%202026-08-26%20at%209.56.16%20PM.jpeg";
+
 export const JOURNAL_IMG = "https://images.unsplash.com/photo-1568756600820-ab7372450cd6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwzfHxlZGl0b3JpYWwlMjBtYWdhemluZSUyMHNwcmVhZCUyMGRhcmt8ZW58MHx8fHwxNzg3NzU4OTQwfDA&ixlib=rb-4.1.0&q=85";

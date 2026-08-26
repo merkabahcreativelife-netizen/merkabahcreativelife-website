@@ -27,6 +27,11 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 - Seeded publish-ready content: 3 journal articles, 2 jobs, 2 podcast episodes, 3 products (tee, theory workbook, live event ticket), 2 portfolio case studies
 - CORS fixed to explicit FRONTEND_URL; admin write endpoints restricted to content collections
 
+## Implemented (v3, Aug 2026 — bright retheme)
+- Removed founder portrait + healer card images per user request; replaced with typographic quote cards
+- Full theme shift to bright/vibrant creative palette: warm cream base (#faf5ec), ink text (#201812), vibrant coral terracotta (#ef4e1f) + marigold + leaf accent tokens; lighter hero image treatments, multiply grain overlay
+- HTML title + meta description set for launch
+
 ## Backlog
 - P0: Stripe checkout for store; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend email notifications; event ticketing; podcast audio/video players

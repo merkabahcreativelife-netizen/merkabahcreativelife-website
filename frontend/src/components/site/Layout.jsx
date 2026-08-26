@@ -8,7 +8,7 @@ export default function Layout({ children }) {
   const loc = useLocation();
   useEffect(() => { window.scrollTo(0, 0); }, [loc.pathname]);
   return (
-    <div className="min-h-screen bg-stone-950 text-cream-50 relative">
+    <div className="min-h-screen bg-cream-50 text-ink relative">
       <div className="grain-overlay" />
       <Navbar />
       <main className="pt-20">{children}</main>

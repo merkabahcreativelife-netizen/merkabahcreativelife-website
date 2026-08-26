@@ -20,19 +20,19 @@ export default function Footer() {
   };
 
   return (
-    <footer data-testid="site-footer" className="bg-stone-950 border-t border-stone-900 pt-24 pb-10">
+    <footer data-testid="site-footer" className="bg-cream-50 border-t border-cream-200 pt-24 pb-10">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="mb-16">
           <div className="overline mb-4">Beyond Imagination</div>
-          <h2 className="font-display text-5xl sm:text-7xl lg:text-8xl tracking-tighter leading-none text-cream-50 font-light">
+          <h2 className="font-display text-5xl sm:text-7xl lg:text-8xl tracking-tighter leading-none text-ink font-light">
             Create. Learn.<br/>Experience. Grow.
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 border-t border-stone-900 pt-14">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 border-t border-cream-200 pt-14">
           <div>
             <div className="overline mb-4">Explore</div>
-            <ul className="space-y-3 text-sm text-stone-300">
+            <ul className="space-y-3 text-sm text-ink-soft">
               <li><Link to="/creative-agency" className="hover:text-terracotta-400">Creative Agency</Link></li>
               <li><Link to="/studios" className="hover:text-terracotta-400">Studios</Link></li>
               <li><Link to="/academy" className="hover:text-terracotta-400">Academy</Link></li>
@@ -46,7 +46,7 @@ export default function Footer() {
           </div>
           <div>
             <div className="overline mb-4">Company</div>
-            <ul className="space-y-3 text-sm text-stone-300">
+            <ul className="space-y-3 text-sm text-ink-soft">
               <li><Link to="/about" className="hover:text-terracotta-400">About</Link></li>
               <li><Link to="/journal" className="hover:text-terracotta-400">Journal</Link></li>
               <li><Link to="/community" className="hover:text-terracotta-400">Community</Link></li>
@@ -56,7 +56,7 @@ export default function Footer() {
           </div>
           <div>
             <div className="overline mb-4">Legal</div>
-            <ul className="space-y-3 text-sm text-stone-300">
+            <ul className="space-y-3 text-sm text-ink-soft">
               <li><Link to="/privacy" className="hover:text-terracotta-400">Privacy Policy</Link></li>
               <li><Link to="/terms" className="hover:text-terracotta-400">Terms</Link></li>
               <li><Link to="/refund" className="hover:text-terracotta-400">Refund Policy</Link></li>
@@ -68,16 +68,16 @@ export default function Footer() {
             <form onSubmit={subscribe} className="flex flex-col gap-3">
               <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your email" data-testid="footer-newsletter-email"
-                className="bg-transparent border border-stone-800 focus:border-terracotta-500 outline-none px-4 py-3 text-sm text-cream-50" />
+                className="bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3 text-sm text-ink" />
               <button disabled={loading} data-testid="footer-newsletter-submit"
-                className="bg-terracotta-500 hover:bg-terracotta-600 text-cream-50 py-3 text-xs uppercase tracking-[0.2em] transition-colors disabled:opacity-60">
+                className="bg-terracotta-500 hover:bg-terracotta-600 text-white py-3 text-xs uppercase tracking-[0.2em] transition-colors disabled:opacity-60">
                 {loading ? "Subscribing…" : "Subscribe"}
               </button>
             </form>
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-stone-900 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-stone-500">
+        <div className="mt-16 pt-8 border-t border-cream-200 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-ink-mute">
           <div>© 2026 Merkabah Creative Life. All rights reserved.</div>
           <div className="overline">Beyond Imagination</div>
         </div>

@@ -42,49 +42,49 @@ export default function CreativeAgency() {
   return (
     <>
       <section className="relative min-h-[70vh] flex items-end pb-20 overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1693159682618-074078ed271e?crop=entropy&cs=srgb&fm=jpg&q=85" alt="" className="absolute inset-0 w-full h-full object-cover opacity-40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-stone-950/30 to-stone-950" />
+        <img src="https://images.unsplash.com/photo-1693159682618-074078ed271e?crop=entropy&cs=srgb&fm=jpg&q=85" alt="" className="absolute inset-0 w-full h-full object-cover opacity-70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-cream-50/30 to-cream-50" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="overline">Merkabah Creative Agency</div>
-          <h1 className="font-display font-light text-5xl sm:text-7xl lg:text-8xl leading-[0.95] tracking-tighter text-cream-50 mt-6 max-w-5xl">
+          <h1 className="font-display font-light text-5xl sm:text-7xl lg:text-8xl leading-[0.95] tracking-tighter text-ink mt-6 max-w-5xl">
             Transform your ideas into brand growth.
           </h1>
-          <p className="mt-8 max-w-2xl text-lg text-stone-300 leading-relaxed">
+          <p className="mt-8 max-w-2xl text-lg text-ink-soft leading-relaxed">
             We combine strategy, creativity, media and technology to help brands stand out, connect with their audiences and grow.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <a href="#enquiry" data-testid="agency-cta-start" className="bg-terracotta-500 hover:bg-terracotta-600 text-cream-50 px-8 py-4 text-xs uppercase tracking-[0.25em] transition-colors">Start a Project</a>
-            <a href="#services" data-testid="agency-cta-services" className="border border-stone-600 hover:border-terracotta-500 hover:text-terracotta-400 text-cream-50 px-8 py-4 text-xs uppercase tracking-[0.25em] transition-colors">Explore Services</a>
+            <a href="#enquiry" data-testid="agency-cta-start" className="bg-terracotta-500 hover:bg-terracotta-600 text-white px-8 py-4 text-xs uppercase tracking-[0.25em] transition-colors">Start a Project</a>
+            <a href="#services" data-testid="agency-cta-services" className="border border-cream-300 hover:border-terracotta-500 hover:text-terracotta-400 text-ink px-8 py-4 text-xs uppercase tracking-[0.25em] transition-colors">Explore Services</a>
           </div>
         </div>
       </section>
 
       <section id="services" className="py-24 lg:py-32 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="overline mb-4">Our Services</div>
-        <h2 className="font-display text-4xl lg:text-6xl text-cream-50 font-light tracking-tight leading-[1.05] mb-16 max-w-3xl">Everything a modern brand needs — under one roof.</h2>
+        <h2 className="font-display text-4xl lg:text-6xl text-ink font-light tracking-tight leading-[1.05] mb-16 max-w-3xl">Everything a modern brand needs — under one roof.</h2>
         <div className="grid md:grid-cols-2 gap-x-16 gap-y-14">
           {Object.entries(CATS).map(([cat, items]) => (
             <div key={cat}>
               <Link to={`/creative-agency/services/${slugify(cat)}`} data-testid={`svc-${slugify(cat)}`}
-                className="block font-display text-2xl text-cream-50 mb-4 pb-3 border-b border-stone-800 hover:text-terracotta-400 hover:border-terracotta-500 transition-colors">
+                className="block font-display text-2xl text-ink mb-4 pb-3 border-b border-cream-200 hover:text-terracotta-400 hover:border-terracotta-500 transition-colors">
                 {cat} <span className="text-terracotta-500 text-base">→</span>
               </Link>
               <ul className="space-y-2">
-                {items.map(i => <li key={i} className="text-stone-400 text-sm hover:text-terracotta-400 transition-colors">{i}</li>)}
+                {items.map(i => <li key={i} className="text-ink-mute text-sm hover:text-terracotta-400 transition-colors">{i}</li>)}
               </ul>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="py-24 border-y border-stone-900 bg-stone-900/30">
+      <section className="py-24 border-y border-cream-200 bg-cream-100/30">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="overline mb-4">Why Merkabah</div>
           <div className="grid md:grid-cols-3 gap-6 mt-12">
             {WHY.map(([t, d]) => (
-              <div key={t} className="border border-stone-800 p-10 hover:border-terracotta-500 transition-colors">
-                <div className="font-display text-3xl text-cream-50 mb-4">{t}</div>
-                <p className="text-stone-400 leading-relaxed">{d}</p>
+              <div key={t} className="border border-cream-200 p-10 hover:border-terracotta-500 transition-colors">
+                <div className="font-display text-3xl text-ink mb-4">{t}</div>
+                <p className="text-ink-mute leading-relaxed">{d}</p>
               </div>
             ))}
           </div>
@@ -93,58 +93,58 @@ export default function CreativeAgency() {
 
       <section className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="overline mb-4">Our Creative Process</div>
-        <h2 className="font-display text-4xl lg:text-6xl text-cream-50 font-light tracking-tight leading-[1.05] mb-14">Discover → Strategize → Create → Grow</h2>
+        <h2 className="font-display text-4xl lg:text-6xl text-ink font-light tracking-tight leading-[1.05] mb-14">Discover → Strategize → Create → Grow</h2>
         <div className="grid md:grid-cols-4 gap-6">
           {PROCESS.map(([t, d], i) => (
-            <div key={t} className="border border-stone-800 p-8">
+            <div key={t} className="border border-cream-200 p-8">
               <div className="overline mb-3 text-terracotta-500">Step {i + 1}</div>
-              <div className="font-display text-2xl text-cream-50 mb-3">{t}</div>
-              <p className="text-stone-400 text-sm">{d}</p>
+              <div className="font-display text-2xl text-ink mb-3">{t}</div>
+              <p className="text-ink-mute text-sm">{d}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="py-24 border-t border-stone-900">
+      <section className="py-24 border-t border-cream-200">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="overline mb-4">Who We Work With</div>
           <div className="mt-8 flex flex-wrap gap-3">
-            {CLIENTS.map(c => <span key={c} className="border border-stone-800 px-5 py-3 text-sm text-stone-300">{c}</span>)}
+            {CLIENTS.map(c => <span key={c} className="border border-cream-200 px-5 py-3 text-sm text-ink-soft">{c}</span>)}
           </div>
         </div>
       </section>
 
-      <section id="enquiry" className="py-24 lg:py-32 border-t border-stone-900 bg-stone-900/30">
+      <section id="enquiry" className="py-24 lg:py-32 border-t border-cream-200 bg-cream-100/30">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="overline mb-4">Start a Project</div>
-          <h2 className="font-display text-4xl lg:text-6xl text-cream-50 font-light tracking-tight leading-[1.05] mb-10">Let's build something meaningful.</h2>
+          <h2 className="font-display text-4xl lg:text-6xl text-ink font-light tracking-tight leading-[1.05] mb-10">Let's build something meaningful.</h2>
           {submitted ? (
             <div data-testid="agency-enquiry-success" className="border border-terracotta-500/40 p-10">
-              <div className="font-display text-3xl text-cream-50 mb-3">Thank you.</div>
-              <p className="text-stone-300">Your project enquiry has been received. Our team will review it and get back to you.</p>
+              <div className="font-display text-3xl text-ink mb-3">Thank you.</div>
+              <p className="text-ink-soft">Your project enquiry has been received. Our team will review it and get back to you.</p>
             </div>
           ) : (
             <form onSubmit={submit} className="grid md:grid-cols-2 gap-5">
               {[["name","Name*"],["company","Company / Brand"],["email","Email*","email"],["phone","Phone"],["website","Website"],["industry","Industry"]].map(([k, l, type]) => (
                 <input key={k} required={l.endsWith("*")} type={type || "text"} placeholder={l} value={form[k]} onChange={(e) => setForm(f => ({ ...f, [k]: e.target.value }))}
                   data-testid={`agency-field-${k}`}
-                  className="bg-transparent border border-stone-800 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm text-cream-50" />
+                  className="bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm text-ink" />
               ))}
               <div className="md:col-span-2">
                 <div className="overline mb-3">Services Required (multi-select)</div>
                 <div className="flex flex-wrap gap-2">
                   {Object.values(CATS).flat().slice(0, 30).map(s => (
                     <button type="button" key={s} onClick={() => toggle(s)} data-testid={`agency-svc-${s}`}
-                      className={`text-xs px-3 py-2 border transition-colors ${form.services.includes(s) ? "bg-terracotta-500 border-terracotta-500 text-cream-50" : "border-stone-800 text-stone-400 hover:border-terracotta-500"}`}>{s}</button>
+                      className={`text-xs px-3 py-2 border transition-colors ${form.services.includes(s) ? "bg-terracotta-500 border-terracotta-500 text-white" : "border-cream-200 text-ink-mute hover:border-terracotta-500"}`}>{s}</button>
                   ))}
                 </div>
               </div>
               <textarea required placeholder="Project description*" value={form.description} onChange={(e) => setForm(f => ({ ...f, description: e.target.value }))}
-                data-testid="agency-field-description" rows={4} className="md:col-span-2 bg-transparent border border-stone-800 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm text-cream-50" />
-              <input placeholder="Budget range" value={form.budget} onChange={(e) => setForm(f => ({ ...f, budget: e.target.value }))} data-testid="agency-field-budget" className="bg-transparent border border-stone-800 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
-              <input placeholder="Timeline" value={form.timeline} onChange={(e) => setForm(f => ({ ...f, timeline: e.target.value }))} data-testid="agency-field-timeline" className="bg-transparent border border-stone-800 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
-              <input placeholder="How did you hear about us?" value={form.heard_from} onChange={(e) => setForm(f => ({ ...f, heard_from: e.target.value }))} data-testid="agency-field-heard" className="md:col-span-2 bg-transparent border border-stone-800 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
-              <button disabled={loading} data-testid="agency-submit" className="md:col-span-2 mt-4 bg-terracotta-500 hover:bg-terracotta-600 text-cream-50 py-4 text-xs uppercase tracking-[0.25em] transition-colors disabled:opacity-60">
+                data-testid="agency-field-description" rows={4} className="md:col-span-2 bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm text-ink" />
+              <input placeholder="Budget range" value={form.budget} onChange={(e) => setForm(f => ({ ...f, budget: e.target.value }))} data-testid="agency-field-budget" className="bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
+              <input placeholder="Timeline" value={form.timeline} onChange={(e) => setForm(f => ({ ...f, timeline: e.target.value }))} data-testid="agency-field-timeline" className="bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
+              <input placeholder="How did you hear about us?" value={form.heard_from} onChange={(e) => setForm(f => ({ ...f, heard_from: e.target.value }))} data-testid="agency-field-heard" className="md:col-span-2 bg-transparent border border-cream-200 focus:border-terracotta-500 outline-none px-4 py-3.5 text-sm" />
+              <button disabled={loading} data-testid="agency-submit" className="md:col-span-2 mt-4 bg-terracotta-500 hover:bg-terracotta-600 text-white py-4 text-xs uppercase tracking-[0.25em] transition-colors disabled:opacity-60">
                 {loading ? "Sending…" : "Send Enquiry"}
               </button>
             </form>

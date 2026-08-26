@@ -21,12 +21,15 @@ module.exports = {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
+        ink: { DEFAULT: "#201812", soft: "#4d4238", mute: "#877966" },
         terracotta: {
-          50: "#faf1ec", 100: "#f0dccf", 200: "#e0b89f", 300: "#d09570",
-          400: "#c48156", 500: "#b76e4b", 600: "#9c5a3b", 700: "#7c4830",
-          800: "#5c3623", 900: "#3c2417",
+          50: "#fdf1ea", 100: "#fbdfcc", 200: "#f6b795", 300: "#f08a5c",
+          400: "#f26230", 500: "#ef4e1f", 600: "#d63f12", 700: "#b03410",
+          800: "#8c2a0f", 900: "#6e220d",
         },
-        cream: { 50: "#faf7f2", 100: "#f2ece1", 200: "#e6d9c3" },
+        marigold: { 300: "#f9cd6a", 400: "#f5b83d", 500: "#f0a520", 600: "#d18c0d" },
+        leaf: { 400: "#5fb97a", 500: "#3da05f", 600: "#2f8050" },
+        cream: { 50: "#faf5ec", 100: "#f3ead9", 200: "#e7d8bd", 300: "#d9c5a0" },
       },
       borderRadius: {
         lg: 'var(--radius)', md: 'calc(var(--radius))', sm: 'calc(var(--radius))'
