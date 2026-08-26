@@ -65,7 +65,52 @@ export default function AcademyProgram() {
         </div>
       </section>
 
-      <section id="trial" className="py-24 border-t border-cream-200 bg-cream-100/30">
+      {ins.whoFor && (
+        <section className="py-16 max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="overline mb-4">Who It's For</div>
+          <p className="text-ink-soft text-lg leading-relaxed">{ins.whoFor}</p>
+        </section>
+      )}
+
+      {ins.modules && (
+        <section className="py-24 border-y border-silver-200 bg-cream-100/30">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="overline mb-4">Curriculum</div>
+            <h2 className="font-display text-4xl lg:text-5xl text-ink font-light tracking-tight mb-12">The journey, mapped.</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {ins.modules.map(([m, t, d]) => (
+                <div key={t} className="border border-silver-200 bg-white p-7 hover:shadow-lg hover:-translate-y-1 transition-all duration-300" style={{ borderTop: "3px solid #7c3aed" }}>
+                  <div className="font-body text-[10px] tracking-[0.25em] uppercase font-bold text-violet-700 mb-3">{m}</div>
+                  <div className="font-display text-xl text-ink mb-2">{t}</div>
+                  <p className="text-sm text-ink-mute leading-relaxed">{d}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {ins.tools && (
+        <section className="py-16 max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="overline mb-6">Tools & Gear You'll Train On</div>
+          <div className="flex flex-wrap gap-3">
+            {ins.tools.map(t => <span key={t} className="border border-silver-200 bg-white px-5 py-3 text-sm text-ink-soft hover:border-terracotta-500 transition-colors">{t}</span>)}
+          </div>
+        </section>
+      )}
+
+      {ins.outcomes && (
+        <section className="pb-24 max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="border border-silver-200 bg-white p-8 lg:p-12" style={{ borderTop: "4px solid #c9a227" }}>
+            <div className="overline mb-6">What You'll Walk Away With</div>
+            <div className="grid md:grid-cols-2 gap-4">
+              {ins.outcomes.map(o => <div key={o} className="flex items-start gap-3 text-ink-soft"><span className="font-bold" style={{ color: "#c9a227" }}>✓</span>{o}</div>)}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section id="trial" className="py-24 border-t border-silver-200 bg-cream-100/30">
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <div className="overline mb-4">Book Your Free Trial Class</div>
           <h2 className="font-display text-4xl lg:text-5xl text-ink font-light tracking-tight mb-10">Come experience {ins.name} with us.</h2>

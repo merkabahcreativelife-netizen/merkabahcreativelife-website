@@ -98,6 +98,9 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 ## Implemented (v19, Aug 2026 — program durations)
 - Electronic Music Production = 6 Months, Diploma in Sound Engineering & Recording Arts = 12 Months — shown as duration badge on detail pages and violet chip on program cards
 
+## Implemented (v20, Aug 2026 — detailed program pages)
+- EMP + Sound Engineering pages now fully detailed: who-it's-for, month-by-month curriculum (6 modules each), tools & gear chips, outcomes checklist — rendered via new optional data fields in AcademyProgram
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players
