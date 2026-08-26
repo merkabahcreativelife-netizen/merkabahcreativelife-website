@@ -1,3 +1,5 @@
+import { FOUNDER_IMG } from "@/data/worlds";
+
 const EXPERTISE = ["Audio Production","Sound Engineering","Music Programming","Music Composition","Music Arrangement","Jingle Production","Voice-over Production","Radio Production","Mixing & Mastering","Creative Content","Brand Storytelling","Creative Direction"];
 const APPROACH = ["Adaptability","Creativity","Interdisciplinary Expertise","Innovation","Professionalism"];
 
@@ -7,10 +9,14 @@ export default function Founder() {
       <section className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32 grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
-            <div className="relative border border-cream-200 bg-cream-100/50 p-12 lg:p-16">
-              <div className="font-display text-8xl text-terracotta-500 leading-none">&ldquo;</div>
-              <p className="font-display text-2xl lg:text-3xl italic font-light text-ink leading-snug mt-2">Every brand has a sound. Every story has a stage. Merkabah is where they meet.</p>
-              <div className="overline mt-8">Kingsley Victor · Founder & Creative Visionary</div>
+            <div className="relative">
+              <div className="aspect-[3/4] overflow-hidden border border-silver-200 bg-silver-100">
+                <img src={FOUNDER_IMG} alt="Kingsley Victor — Founder & Creative Visionary" className="w-full h-full object-cover" />
+              </div>
+              <div className="absolute -bottom-6 -right-6 bg-neutral-950 text-white px-7 py-5 shadow-xl">
+                <div className="font-display text-xl leading-tight">Kingsley Victor</div>
+                <div className="font-body text-[10px] tracking-[0.25em] uppercase text-violet-300 mt-1">Founder & Creative Visionary</div>
+              </div>
             </div>
           </div>
           <div className="lg:col-span-7 flex flex-col justify-center">

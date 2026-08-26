@@ -64,6 +64,10 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 - Homepage backgrounds synchronized: hero fades into pure white body, section separators unified to silver-200, journey panel on cream-to-white gradient band
 - Academy page boxed redesign (v8b): color-coded program cards with photos, boxed certification boards, vibrant grade ladder chips, boxed FAQs, brighter hero/instrument photos
 
+## Implemented (v10, Aug 2026 — founder portrait + worlds grid)
+- Real Kingsley Victor B&W portrait added to Founder (framed card with black nameplate), Home preview (violet nameplate, grayscale→color hover), About, and Wellness healer section
+- Our Worlds rebuilt as professional 3-col boxed grid: white cards, per-division color top border + number, tagline, name, description, CTA footer, hover lift/shadow
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players

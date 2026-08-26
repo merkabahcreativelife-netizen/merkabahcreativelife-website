@@ -113,3 +113,4 @@ export const INSTRUMENTS = {
 export const HERO_IMG = "https://images.unsplash.com/photo-1581733095033-958d7422b5ce?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMHdhcm0lMjBsaWdodCUyMGNpbmVtYXRpY3xlbnwwfHx8fDE3ODc3NTg5NDB8MA&ixlib=rb-4.1.0&q=85";
 
 export const JOURNAL_IMG = "https://images.unsplash.com/photo-1568756600820-ab7372450cd6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwzfHxlZGl0b3JpYWwlMjBtYWdhemluZSUyMHNwcmVhZCUyMGRhcmt8ZW58MHx8fHwxNzg3NzU4OTQwfDA&ixlib=rb-4.1.0&q=85";
+export const FOUNDER_IMG = "https://customer-assets-rejwkqb3.emergentagent.net/job_merkabah-ecosystem/artifacts/t5it9bvq_black-and-white.webp";

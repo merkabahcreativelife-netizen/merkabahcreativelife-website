@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
-import { WORLDS, HERO_IMG } from "@/data/worlds";
+import { WORLDS, HERO_IMG, FOUNDER_IMG } from "@/data/worlds";
 
 export default function Home() {
   return (
@@ -65,17 +65,18 @@ export default function Home() {
               Merkabah is a connected ecosystem. Enter through the door that speaks to you — every path connects back to a shared creative vision.
             </p>
           </div>
-          <div className="border-t border-silver-200">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {WORLDS.map((w, i) => (
               <Link key={w.key} to={w.href} data-testid={`world-row-${w.key}`}
-                className="group grid grid-cols-[auto_1fr_auto] items-center gap-6 lg:gap-12 py-8 lg:py-10 px-2 lg:px-6 border-b border-silver-200 hover:bg-cream-100/60 transition-colors duration-300">
-                <span className="font-body text-xs lg:text-sm tracking-widest w-9 h-9 lg:w-11 lg:h-11 flex items-center justify-center text-white shrink-0" style={{ background: w.accent }}>{String(i + 1).padStart(2, "0")}</span>
-                <div>
-                  <div className="overline mb-1">{w.tagline}</div>
-                  <h3 className="font-display text-2xl sm:text-4xl lg:text-5xl text-ink group-hover:text-terracotta-600 transition-colors font-light tracking-tight">{w.name}</h3>
-                  <p className="mt-2 text-sm lg:text-base text-ink-mute max-w-2xl">{w.desc}</p>
+                className="group border border-silver-200 bg-white p-7 lg:p-8 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style={{ borderTop: `4px solid ${w.accent}` }}>
+                <div className="flex items-center justify-between mb-6">
+                  <span className="font-body text-[10px] tracking-[0.25em] uppercase font-bold" style={{ color: w.accent }}>{String(i + 1).padStart(2, "0")}</span>
+                  <ArrowUpRight size={18} className="text-ink-mute group-hover:text-ink group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
                 </div>
-                <ArrowUpRight className="text-ink-mute group-hover:text-terracotta-600 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" size={28} />
+                <div className="font-body text-[10px] tracking-[0.25em] uppercase text-ink-mute mb-2">{w.tagline}</div>
+                <h3 className="font-display text-2xl lg:text-3xl text-ink group-hover:text-terracotta-600 transition-colors font-light tracking-tight leading-tight">{w.name}</h3>
+                <p className="mt-3 text-sm text-ink-mute leading-relaxed flex-1">{w.desc}</p>
+                <div className="mt-6 pt-4 border-t border-silver-200 text-xs uppercase tracking-[0.2em] font-semibold" style={{ color: w.accent }}>{w.cta} →</div>
               </Link>
             ))}
           </div>
@@ -114,10 +115,14 @@ export default function Home() {
       {/* FOUNDER PREVIEW */}
       <section className="bg-cream-100/50 border-y border-silver-200">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-20 py-24 lg:py-32">
-          <div className="border border-silver-200 bg-cream-100/50 p-10 lg:p-14 flex flex-col justify-center">
-            <div className="font-display text-7xl text-terracotta-500 leading-none">&ldquo;</div>
-            <p className="font-display text-2xl italic font-light text-ink leading-snug mt-2">Beyond imagination is not a slogan. It is an invitation to create, learn, experience and grow.</p>
-            <div className="overline mt-6">Kingsley Victor · Founder</div>
+          <div className="relative">
+            <div className="aspect-[4/5] overflow-hidden border border-silver-200 bg-silver-100">
+              <img src={FOUNDER_IMG} alt="Kingsley Victor — Founder, Merkabah Creative Life" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+            </div>
+            <div className="absolute -bottom-5 -right-5 bg-violet-600 text-white px-6 py-4 shadow-xl">
+              <div className="font-display text-lg leading-tight">Kingsley Victor</div>
+              <div className="font-body text-[10px] tracking-[0.25em] uppercase opacity-80 mt-1">Founder & Creative Visionary</div>
+            </div>
           </div>
           <div className="flex flex-col justify-center">
             <div className="overline mb-4">The Vision Behind Merkabah</div>

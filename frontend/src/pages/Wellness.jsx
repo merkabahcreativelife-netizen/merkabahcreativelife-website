@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FOUNDER_IMG } from "@/data/worlds";
 
 const MODALITIES = [
   ["Reiki Healing", "Gentle, hands-on energy healing that calms the nervous system, releases stored tension and restores your natural sense of balance."],
@@ -46,10 +47,11 @@ export default function Wellness() {
 
       <section className="py-24 border-y border-cream-200 bg-cream-100/30">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <div className="border border-cream-200 bg-cream-50 p-10 lg:p-14">
-            <div className="font-display text-7xl text-terracotta-500 leading-none">&ldquo;</div>
-            <p className="font-display text-2xl italic font-light text-ink leading-snug mt-2">He always nurtured a natural wish to uplift others through his spiritual development.</p>
-            <div className="overline mt-6">Merkabah Magic & Miracles</div>
+          <div className="relative max-w-md mx-auto lg:mx-0 w-full">
+            <div className="aspect-[4/5] overflow-hidden border border-silver-200 bg-silver-100">
+              <img src={FOUNDER_IMG} alt="Kingsley Victor — Certified Reiki, Angelic Zibu & Candle Healer" className="w-full h-full object-cover" />
+            </div>
+            <div className="mt-4 font-body text-[10px] tracking-[0.25em] uppercase text-ink-mute">Kingsley Victor · Merkabah Magic & Miracles</div>
           </div>
           <div>
             <div className="overline mb-4">Your Guide</div>

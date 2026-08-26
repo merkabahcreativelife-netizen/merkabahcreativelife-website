@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FOUNDER_IMG } from "@/data/worlds";
 
 const PILLARS = [
   ["Create", "Express ideas, emotions and imagination."],
@@ -71,10 +72,11 @@ export default function About() {
 
       <section className="bg-cream-100/50 border-t border-cream-200">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 py-24">
-          <div className="border border-cream-200 bg-cream-100/50 p-10 lg:p-14 max-w-sm">
-            <div className="font-display text-7xl text-terracotta-500 leading-none">&ldquo;</div>
-            <p className="font-display text-xl italic font-light text-ink leading-snug mt-2">Creativity is not what we do. It is how we live.</p>
-            <div className="overline mt-6">Kingsley Victor</div>
+          <div className="relative max-w-sm">
+            <div className="aspect-[4/5] overflow-hidden border border-silver-200 bg-silver-100">
+              <img src={FOUNDER_IMG} alt="Kingsley Victor" className="w-full h-full object-cover" />
+            </div>
+            <div className="mt-4 font-body text-[10px] tracking-[0.25em] uppercase text-ink-mute">Kingsley Victor · Founder</div>
           </div>
           <div className="flex flex-col justify-center">
             <div className="overline mb-4">Meet Our Visionary Founder</div>
