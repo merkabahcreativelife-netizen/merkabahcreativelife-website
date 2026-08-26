@@ -107,6 +107,10 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 ## Implemented (v22, Aug 2026 — instructor openings)
 - 5 Academy instructor job openings in Careers: Piano & Keyboard, Guitar, Violin, Drums & Percussion, Vocals — Part-Time, On-site, Electronic City; each with description, responsibilities, requirements, offer
 
+## Implemented (v23, Aug 2026 — agency hiring)
+- 6 agency openings added to Careers: Digital Marketing Manager, Performance Marketing Specialist, Content Marketing Specialist, Web Designer (UI/UX), WordPress Developer, Full-Stack Web Developer — covering Digital Marketing + Website Design & Development services
+- Careers now lists 12 open positions (6 agency + 5 academy instructors + social media)
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players
