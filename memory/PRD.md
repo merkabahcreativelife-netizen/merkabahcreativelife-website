@@ -131,6 +131,9 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 - Hero: italic violet "Grow." accent, bottom quick-nav strip with per-division color dots + scroll cue
 - Numbered section eyebrows (01–05), violet glow hover on world cards, new "From the Journal + Next Live Event" preview section with real API data between founder and closing CTA
 
+## Implemented (v30, Aug 2026 — story section rewrite)
+- Homepage "01 — More Than a Creative Brand" rewritten: "One ecosystem for everything you imagine." with connected-creativity narrative (brand → anthem → stage → courses; student → class → stage) and founder line
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players

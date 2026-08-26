@@ -69,13 +69,13 @@ export default function Home() {
           <div className="lg:col-span-5">
             <div className="overline mb-6">01 — More Than a Creative Brand</div>
             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-ink font-light tracking-tight">
-              A journey through art, music and meaningful experience.
+              One ecosystem for everything you imagine.
             </h2>
           </div>
           <div className="lg:col-span-6 lg:col-start-7 space-y-6 text-ink-soft leading-relaxed text-lg">
-            <p>Merkabah is a gateway to inspiration and transformation through the profound power of art, music, creativity and meaningful experiences.</p>
-            <p>We bring together creative services, music education, live events, podcasts, courses, wellness experiences, merchandise and community under one ecosystem.</p>
-            <p>Founded by <span className="text-ink">Kingsley Victor</span>, Merkabah has grown from a passion for music, media and creative expression into a broader vision for a connected creative life.</p>
+            <p>Merkabah Creative Life is a creative ecosystem built for people and brands who refuse to think in silos. Strategy, sound, story and stage — every discipline lives under one roof, and every discipline strengthens the others.</p>
+            <p>A business finds its brand voice with our agency, records its anthem in our studios, launches it on our stage and teaches its team through our courses. A student walks in for a piano class and walks out onto a stage. That is what connected creativity means.</p>
+            <p>Founded by <span className="text-ink font-semibold">Kingsley Victor</span>, Merkabah brings twelve years of radio, music production and media craft into one vision: a creative life that anyone can enter — and nobody outgrows.</p>
             <Link to="/about" data-testid="home-discover-story"
               className="inline-flex items-center gap-2 mt-4 text-terracotta-400 hover:text-terracotta-300 text-sm uppercase tracking-[0.2em]">
               Discover Our Story <ArrowRight size={16}/>
