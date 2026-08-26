@@ -98,6 +98,31 @@ export default function Academy() {
         </div>
       </section>
 
+      <section id="students" className="py-24 border-t border-silver-200 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="overline mb-4">Our Students</div>
+          <h2 className="font-display text-4xl lg:text-6xl text-ink font-light tracking-tight leading-[1.05] mb-6 max-w-3xl">Real students. Real progress.</h2>
+          <p className="text-ink-mute max-w-2xl text-lg mb-14">From first notes to first performances — moments from our classrooms in Electronic City.</p>
+          <div className="grid md:grid-cols-3 gap-5">
+            {[
+              ["https://customer-assets-rejwkqb3.emergentagent.net/job_merkabah-ecosystem/artifacts/zb73of8j_whatsapp-image-2025-02-23-at-00.40.17_9d085a50.webp", "Learning together", "Group energy at the academy — growing together", "#7c3aed"],
+              ["https://customer-assets-rejwkqb3.emergentagent.net/job_merkabah-ecosystem/artifacts/rf74jvw5_whatsapp-image-2025-02-23-at-00.40.14_a1cd70cf.webp", "Our young performers", "Smiles after a class well played", "#0d9488"],
+              ["https://customer-assets-rejwkqb3.emergentagent.net/job_merkabah-ecosystem/artifacts/i2n8t6d9_whatsapp-image-2025-02-23-at-00.40.23_6d92d6b2.webp", "Deep focus", "Sight-reading practice during a keyboard session", "#c9a227"],
+            ].map(([src, cap, sub, c], i) => (
+              <figure key={i} data-testid={`student-photo-${i}`} className="group border border-silver-200 bg-white overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style={{ borderTop: `4px solid ${c}` }}>
+                <div className="overflow-hidden aspect-[4/3]">
+                  <img src={src} alt={cap} loading="lazy" className="card-media w-full h-full object-cover" />
+                </div>
+                <figcaption className="p-6">
+                  <div className="font-display text-xl text-ink">{cap}</div>
+                  <p className="text-sm text-ink-mute mt-1">{sub}</p>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-24 border-y border-silver-200 bg-cream-100/30" id="certifications">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="overline mb-4">Certifications</div>
