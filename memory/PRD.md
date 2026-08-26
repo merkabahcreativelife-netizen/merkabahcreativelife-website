@@ -68,6 +68,10 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 - Real Kingsley Victor B&W portrait added to Founder (framed card with black nameplate), Home preview (violet nameplate, grayscale→color hover), About, and Wellness healer section
 - Our Worlds rebuilt as professional 3-col boxed grid: white cards, per-division color top border + number, tagline, name, description, CTA footer, hover lift/shadow
 
+## Implemented (v11, Aug 2026 — full certification content)
+- Academy certifications rebuilt with complete exam-board detail: RSL (Rockschool), Trinity College London, ABRSM — each a large boxed panel with intro, subjects, grade ladder chips (Debut/Initial → Grade 8), level notes (incl. ABRSM Grade 5 Theory mandatory warning), "Why choose" bullets, "At Merkabah" support checklists, eligibility, Grade Exam vs Performance Certificate syllabus boxes
+- Passport-journey intro with 3 benefit boxes (love performing / learn responsibility / future starts here), Merkabah branding throughout (no third-party academy names)
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players
