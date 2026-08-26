@@ -42,7 +42,7 @@ export default function CreativeAgency() {
   return (
     <>
       <section className="relative min-h-[70vh] flex items-end pb-20 overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1693159682618-074078ed271e?crop=entropy&cs=srgb&fm=jpg&q=85" alt="" className="absolute inset-0 w-full h-full object-cover opacity-70" />
+        <img src="https://images.unsplash.com/photo-1787647561794-3835bee16a09?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwzfHxjcmVhdGl2ZSUyMHByb2Zlc3Npb25hbCUyMHRlYW0lMjBvZmZpY2UlMjBtZWV0aW5nfGVufDB8fHx8MTc4Nzc2NDkyNnww&ixlib=rb-4.1.0&q=85" alt="" className="absolute inset-0 w-full h-full object-cover opacity-70" />
         <div className="absolute inset-0 bg-gradient-to-b from-cream-50/30 to-cream-50" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="overline">Merkabah Creative Agency</div>
@@ -62,18 +62,26 @@ export default function CreativeAgency() {
       <section id="services" className="py-24 lg:py-32 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="overline mb-4">Our Services</div>
         <h2 className="font-display text-4xl lg:text-6xl text-ink font-light tracking-tight leading-[1.05] mb-16 max-w-3xl">Everything a modern brand needs — under one roof.</h2>
-        <div className="grid md:grid-cols-2 gap-x-16 gap-y-14">
-          {Object.entries(CATS).map(([cat, items]) => (
-            <div key={cat}>
-              <Link to={`/creative-agency/services/${slugify(cat)}`} data-testid={`svc-${slugify(cat)}`}
-                className="block font-display text-2xl text-ink mb-4 pb-3 border-b border-cream-200 hover:text-terracotta-400 hover:border-terracotta-500 transition-colors">
-                {cat} <span className="text-terracotta-500 text-base">→</span>
-              </Link>
-              <ul className="space-y-2">
-                {items.map(i => <li key={i} className="text-ink-mute text-sm hover:text-terracotta-400 transition-colors">{i}</li>)}
-              </ul>
-            </div>
-          ))}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {Object.entries(CATS).map(([cat, items], idx) => {
+            const accents = ["#7c3aed","#0d9488","#c9a227","#ec4899","#64748b"];
+            const c = accents[idx % 5];
+            return (
+              <div key={cat} className="group border border-silver-200 bg-white p-7 flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style={{ borderTop: `3px solid ${c}` }}>
+                <div className="font-body text-[10px] tracking-[0.25em] uppercase mb-4" style={{ color: c }}>{String(idx + 1).padStart(2, "0")}</div>
+                <Link to={`/creative-agency/services/${slugify(cat)}`} data-testid={`svc-${slugify(cat)}`}
+                  className="font-display text-2xl text-ink group-hover:text-terracotta-600 transition-colors leading-snug">{cat}</Link>
+                <ul className="mt-5 space-y-1.5 flex-1">
+                  {items.map(i => (
+                    <li key={i} className="text-ink-mute text-sm flex items-start gap-2">
+                      <span className="mt-1.5 w-1.5 h-1.5 shrink-0" style={{ background: c }} />{i}
+                    </li>
+                  ))}
+                </ul>
+                <Link to={`/creative-agency/services/${slugify(cat)}`} className="mt-6 text-xs uppercase tracking-[0.2em] font-semibold" style={{ color: c }}>Explore Service →</Link>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -82,7 +90,7 @@ export default function CreativeAgency() {
           <div className="overline mb-4">Why Merkabah</div>
           <div className="grid md:grid-cols-3 gap-6 mt-12">
             {WHY.map(([t, d]) => (
-              <div key={t} className="border border-cream-200 p-10 hover:border-terracotta-500 transition-colors">
+              <div key={t} className="border border-silver-200 bg-white p-10 hover:border-terracotta-500 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                 <div className="font-display text-3xl text-ink mb-4">{t}</div>
                 <p className="text-ink-mute leading-relaxed">{d}</p>
               </div>
@@ -95,13 +103,16 @@ export default function CreativeAgency() {
         <div className="overline mb-4">Our Creative Process</div>
         <h2 className="font-display text-4xl lg:text-6xl text-ink font-light tracking-tight leading-[1.05] mb-14">Discover → Strategize → Create → Grow</h2>
         <div className="grid md:grid-cols-4 gap-6">
-          {PROCESS.map(([t, d], i) => (
-            <div key={t} className="border border-cream-200 p-8">
-              <div className="overline mb-3 text-terracotta-500">Step {i + 1}</div>
-              <div className="font-display text-2xl text-ink mb-3">{t}</div>
-              <p className="text-ink-mute text-sm">{d}</p>
-            </div>
-          ))}
+          {PROCESS.map(([t, d], i) => {
+            const accents = ["#7c3aed","#0d9488","#c9a227","#ec4899"];
+            return (
+              <div key={t} className="border border-silver-200 bg-white p-8 hover:-translate-y-1 hover:shadow-lg transition-all duration-300" style={{ borderTop: `3px solid ${accents[i]}` }}>
+                <div className="font-body text-[10px] tracking-[0.25em] uppercase mb-3" style={{ color: accents[i] }}>Step {i + 1}</div>
+                <div className="font-display text-2xl text-ink mb-3">{t}</div>
+                <p className="text-ink-mute text-sm">{d}</p>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -109,7 +120,7 @@ export default function CreativeAgency() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="overline mb-4">Who We Work With</div>
           <div className="mt-8 flex flex-wrap gap-3">
-            {CLIENTS.map(c => <span key={c} className="border border-cream-200 px-5 py-3 text-sm text-ink-soft">{c}</span>)}
+            {CLIENTS.map(c => <span key={c} className="border border-silver-200 bg-white px-5 py-3 text-sm text-ink-soft hover:border-terracotta-500 hover:text-ink transition-colors">{c}</span>)}
           </div>
         </div>
       </section>

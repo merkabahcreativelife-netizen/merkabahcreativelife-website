@@ -51,6 +51,11 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 - Footer rebuilt in black with color-coded column labels (gold Explore, teal Company, pink Legal, silver Newsletter), violet subscribe CTA
 - White body canvas replacing cream for a cleaner read
 
+## Implemented (v7, Aug 2026 — Creative Agency boxed redesign)
+- Agency services rebuilt as 11 boxed, color-coded cards (numbered, accent top border, dotted service list, "Explore Service" links) replacing flat 2-column lists
+- Process steps (Discover→Strategize→Create→Grow) as color-coded lift-on-hover boxes; Why Merkabah and client chips boxed with white cards + shadow hover
+- Hero photo swapped to professional team-collaboration image
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players
