@@ -14,7 +14,7 @@ export default function Academy() {
   return (
     <>
       <section className="relative min-h-[70vh] flex items-end pb-20 overflow-hidden">
-        <img src={INSTRUMENTS.piano.img} alt="" className="absolute inset-0 w-full h-full object-cover opacity-70" />
+        <img src="https://images.unsplash.com/photo-1692592313062-4015cd36c04b?crop=entropy&cs=srgb&fm=jpg&q=85" alt="" className="absolute inset-0 w-full h-full object-cover opacity-70" />
         <div className="absolute inset-0 bg-gradient-to-b from-cream-50/30 to-cream-50" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="overline">Merkabah Academy of Music</div>
@@ -30,17 +30,27 @@ export default function Academy() {
       <section className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="overline mb-4">Find Your Perfect Music Class</div>
         <h2 className="font-display text-4xl lg:text-6xl text-ink font-light tracking-tight leading-[1.05] mb-14 max-w-3xl">Our music programs.</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {Object.entries(INSTRUMENTS).map(([slug, ins]) => (
-            <Link key={slug} to={`/academy/${slug}`} data-testid={`instrument-${slug}`} className="group relative overflow-hidden bg-cream-100 border border-cream-200 aspect-[3/4]">
-              <img src={ins.img} alt={ins.name} loading="lazy" className="card-media absolute inset-0 w-full h-full object-cover opacity-70" />
-              <div className="absolute inset-0 bg-gradient-to-t from-cream-50 via-cream-50/20 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-6">
-                <div className="overline mb-1">{ins.tagline}</div>
-                <div className="font-display text-3xl text-ink group-hover:text-terracotta-400 transition-colors">{ins.name}</div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {Object.entries(INSTRUMENTS).map(([slug, ins], idx) => {
+            const accents = ["#7c3aed","#0d9488","#c9a227","#ec4899","#64748b"];
+            const c = accents[idx % 5];
+            return (
+              <div key={slug} data-testid={`instrument-${slug}`} className="group border border-silver-200 bg-white overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style={{ borderTop: `4px solid ${c}` }}>
+                <Link to={`/academy/${slug}`} className="block overflow-hidden aspect-[16/10]">
+                  <img src={ins.img} alt={ins.name} loading="lazy" className="card-media w-full h-full object-cover" />
+                </Link>
+                <div className="p-7">
+                  <div className="font-body text-[10px] tracking-[0.25em] uppercase font-bold" style={{ color: c }}>{ins.tagline}</div>
+                  <Link to={`/academy/${slug}`} className="font-display text-3xl text-ink mt-2 block group-hover:text-terracotta-600 transition-colors">{ins.name}</Link>
+                  <p className="mt-3 text-sm text-ink-mute line-clamp-2">{ins.intro}</p>
+                  <div className="mt-6 flex items-center gap-5">
+                    <Link to={`/academy/${slug}`} className="text-xs uppercase tracking-[0.2em] font-semibold" style={{ color: c }}>Explore Program →</Link>
+                    <Link to={`/academy/${slug}#trial`} className="text-xs uppercase tracking-[0.2em] text-ink-mute hover:text-ink transition-colors">Free Trial</Link>
+                  </div>
+                </div>
               </div>
-            </Link>
-          ))}
+            );
+          })}
         </div>
       </section>
 
@@ -54,21 +64,22 @@ export default function Academy() {
           <div className="grid md:grid-cols-3 gap-6 mb-16">
             {[["Rockschool London","Contemporary repertoire (rock, pop, jazz, metal). Performance-focused exams (70% performance weight). UCAS points for UK universities (Grades 6-8). Globally recognized in 40+ countries."],
               ["Trinity College London","World-renowned examinations with a strong classical and contemporary reputation. Performance and diploma pathways."],
-              ["ABRSM","The Associated Board of the Royal Schools of Music — the world's gold standard for classical certification."]].map(([t, d]) => (
-              <div key={t} className="border border-cream-200 p-8 hover:border-terracotta-500 transition-colors">
+              ["ABRSM","The Associated Board of the Royal Schools of Music — the world's gold standard for classical certification."]].map(([t, d], idx) => { const boardAccents = ["#7c3aed","#0d9488","#c9a227"]; return (
+              <div key={t} className="border border-silver-200 bg-white p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300" style={{ borderTop: `3px solid ${boardAccents[idx]}` }}>
                 <div className="font-display text-2xl text-ink mb-4">{t}</div>
                 <p className="text-ink-mute text-sm leading-relaxed">{d}</p>
               </div>
-            ))}
+            );})}
           </div>
           <div className="overline mb-4">RSL Grade Ladder</div>
           <div className="flex flex-wrap gap-2 mb-12">
-            {GRADES.map((g, i) => (
-              <span key={g} className={`px-4 py-2 text-sm border ${i === 0 || i === GRADES.length - 1 ? "bg-terracotta-500 border-terracotta-500 text-white" : "border-cream-300 text-ink-soft"}`}>{g}</span>
-            ))}
+            {GRADES.map((g, i) => {
+              const gradeColors = ["#ec4899","#7c3aed","#0d9488","#c9a227","#64748b","#ec4899","#7c3aed","#0d9488","#c9a227"];
+              return <span key={g} data-testid={`grade-${i}`} className="px-4 py-2 text-sm font-semibold text-white shadow-sm" style={{ background: gradeColors[i] }}>{g}</span>;
+            })}
           </div>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="border border-cream-200 p-8">
+            <div className="border border-silver-200 bg-white p-8" style={{ borderTop: "3px solid #0d9488" }}>
               <div className="font-display text-2xl text-ink mb-3">Grade Exam</div>
               <ul className="text-ink-mute text-sm space-y-2 list-disc pl-5">
                 <li>3 Performance Pieces (two may be Free Choice)</li>
@@ -76,7 +87,7 @@ export default function Academy() {
                 <li>Recorded submission</li>
               </ul>
             </div>
-            <div className="border border-cream-200 p-8">
+            <div className="border border-silver-200 bg-white p-8" style={{ borderTop: "3px solid #0d9488" }}>
               <div className="font-display text-2xl text-ink mb-3">Performance Certificate</div>
               <ul className="text-ink-mute text-sm space-y-2 list-disc pl-5">
                 <li>5 Performance Pieces (three may be Free Choice)</li>
@@ -91,9 +102,9 @@ export default function Academy() {
       <section className="py-24 max-w-4xl mx-auto px-6 lg:px-8">
         <div className="overline mb-4">Frequently Asked</div>
         <h2 className="font-display text-4xl lg:text-5xl text-ink font-light tracking-tight mb-12">Questions parents ask us.</h2>
-        <div className="divide-y divide-cream-200">
+        <div className="space-y-4">
           {FAQS.map(([q, a], i) => (
-            <details key={i} className="group py-6" data-testid={`academy-faq-${i}`}>
+            <details key={i} className="group border border-silver-200 bg-white p-6 hover:shadow-md transition-shadow" data-testid={`academy-faq-${i}`}>
               <summary className="cursor-pointer flex items-center justify-between font-display text-xl text-ink group-open:text-terracotta-400 transition-colors list-none">
                 <span>{q}</span>
                 <span className="text-terracotta-500 text-2xl group-open:rotate-45 transition-transform">+</span>

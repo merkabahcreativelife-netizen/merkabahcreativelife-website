@@ -53,7 +53,7 @@ export const INSTRUMENTS = {
       ["Advanced", "Complex pieces, improvisation, and performance mastery"],
     ]},
   guitar: { name: "Guitar", tagline: "Strum Your Story, Solo Your Sound",
-    img: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDZ8MHwxfHNlYXJjaHwxfHxndWl0YXIlMjBwbGF5ZXIlMjBoYW5kcyUyMGRhcmslMjBtb29keXxlbnwwfHx8fDE3ODc3NTg5NDB8MA&ixlib=rb-4.1.0&q=85",
+    img: "https://images.unsplash.com/photo-1614355013870-f3916bc15ced?crop=entropy&cs=srgb&fm=jpg&q=85",
     intro: "From quiet chords in your room to roaring solos on stage—our Guitar program turns beginners into confident players and players into true musicians.",
     highlights: [
       ["Foundational Fretwork", "Master tuning, basic chords, and strumming patterns from your very first session."],
@@ -81,7 +81,7 @@ export const INSTRUMENTS = {
       ["Advanced", "Complex pieces/improvisation, performance preparation, and cross-genre projects"],
     ]},
   drums: { name: "Drums & Percussion", tagline: "Find Your Pulse, Own Your Groove",
-    img: "https://images.pexels.com/photos/18319250/pexels-photo-18319250.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    img: "https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?crop=entropy&cs=srgb&fm=jpg&q=85",
     intro: "From the primal heartbeat of a simple backbeat to the intricate conversations of jazz fusion, our Drums & Percussion program transforms rhythm lovers into confident, creative musicians.",
     highlights: [
       ["Foundational Power", "Master grip, posture, and pedal technique on a full acoustic kit from day one."],

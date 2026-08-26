@@ -8,7 +8,7 @@ export default function Home() {
       {/* HERO */}
       <section className="relative min-h-[92vh] flex items-end overflow-hidden">
         <img src={HERO_IMG} alt="" className="absolute inset-0 w-full h-full object-cover opacity-70" />
-        <div className="absolute inset-0 bg-gradient-to-b from-cream-50/40 via-cream-50/20 to-cream-50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-white/20 to-white" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pb-20 w-full">
           <div className="overline reveal">Beyond Imagination</div>
           <h1 className="font-display font-light text-5xl sm:text-7xl lg:text-[9rem] leading-[0.9] tracking-tighter text-ink mt-6 reveal reveal-delay-1">
@@ -52,7 +52,7 @@ export default function Home() {
       </section>
 
       {/* OUR WORLDS */}
-      <section id="our-worlds" className="py-24 lg:py-32 bg-cream-50 border-t border-cream-200">
+      <section id="our-worlds" className="py-24 lg:py-32 bg-cream-50 border-t border-silver-200">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div>
@@ -65,10 +65,10 @@ export default function Home() {
               Merkabah is a connected ecosystem. Enter through the door that speaks to you — every path connects back to a shared creative vision.
             </p>
           </div>
-          <div className="border-t border-cream-200">
+          <div className="border-t border-silver-200">
             {WORLDS.map((w, i) => (
               <Link key={w.key} to={w.href} data-testid={`world-row-${w.key}`}
-                className="group grid grid-cols-[auto_1fr_auto] items-center gap-6 lg:gap-12 py-8 lg:py-10 px-2 lg:px-6 border-b border-cream-200 hover:bg-cream-100/60 transition-colors duration-300">
+                className="group grid grid-cols-[auto_1fr_auto] items-center gap-6 lg:gap-12 py-8 lg:py-10 px-2 lg:px-6 border-b border-silver-200 hover:bg-cream-100/60 transition-colors duration-300">
                 <span className="font-body text-xs lg:text-sm tracking-widest w-9 h-9 lg:w-11 lg:h-11 flex items-center justify-center text-white shrink-0" style={{ background: w.accent }}>{String(i + 1).padStart(2, "0")}</span>
                 <div>
                   <div className="overline mb-1">{w.tagline}</div>
@@ -83,29 +83,38 @@ export default function Home() {
       </section>
 
       {/* CONNECTED ECOSYSTEM DIFFERENTIATOR */}
-      <section className="py-24 lg:py-40 max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="overline mb-6">The Merkabah Difference</div>
-        <h2 className="font-display text-4xl lg:text-6xl text-ink font-light tracking-tight max-w-4xl leading-[1.05]">
-          Most agencies offer services. We offer an entire creative journey.
-        </h2>
-        <div className="mt-16 grid grid-cols-2 sm:grid-cols-5 gap-3">
-          {["Idea","Strategy","Branding","Content","Website","Advertising","Audio","Video","Event","Growth"].map((s, i) => {
-            const accents = ["#7c3aed","#0d9488","#c9a227","#ec4899","#64748b"];
-            const c = accents[i % 5];
-            return (
-              <div key={s} data-testid={`journey-step-${i}`} className="border border-silver-200 bg-white p-5 text-center hover:-translate-y-1 hover:shadow-lg transition-all duration-300" style={{ borderTop: `3px solid ${c}` }}>
-                <div className="font-body text-[10px] tracking-[0.25em] uppercase" style={{ color: c }}>{String(i + 1).padStart(2, "0")}</div>
-                <div className="font-display text-xl text-ink mt-2">{s}</div>
-              </div>
-            );
-          })}
+      <section className="py-24 lg:py-36 border-y border-silver-200 bg-gradient-to-b from-cream-50 to-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="overline mb-6">The Merkabah Difference</div>
+          <h2 className="font-display text-4xl lg:text-6xl text-ink font-light tracking-tight max-w-4xl leading-[1.05]">
+            Most agencies offer services. We offer an entire creative journey.
+          </h2>
+          <div className="relative mt-20 lg:mt-24">
+            <div className="absolute top-6 left-8 right-8 h-[2px] hidden lg:block opacity-60" style={{ background: "linear-gradient(to right, #7c3aed, #0d9488, #c9a227, #ec4899, #64748b)" }} />
+            <div className="grid grid-cols-2 sm:grid-cols-5 gap-y-12 gap-x-4">
+              {["Idea","Strategy","Branding","Content","Website","Advertising","Audio","Video","Event","Growth"].map((s, i) => {
+                const accents = ["#7c3aed","#0d9488","#c9a227","#ec4899","#64748b"];
+                const c = accents[i % 5];
+                return (
+                  <div key={s} data-testid={`journey-step-${i}`} className="group relative text-center">
+                    <div className="relative z-10 mx-auto w-12 h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center font-display text-base lg:text-lg text-white group-hover:scale-110 transition-transform duration-300" style={{ background: c, boxShadow: `0 0 0 6px #ffffff, 0 12px 28px -8px ${c}80` }}>{String(i + 1).padStart(2, "0")}</div>
+                    <div className="mt-4 font-display text-xl lg:text-2xl text-ink group-hover:-translate-y-0.5 transition-transform duration-300">{s}</div>
+                    <div className="mt-2 h-[2px] w-8 mx-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: c }} />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          <p className="mt-20 lg:mt-24 text-center font-display text-2xl lg:text-4xl italic font-light text-ink max-w-3xl mx-auto leading-snug">
+            One idea in. <span style={{ color: "#7c3aed" }}>A whole brand out.</span>
+          </p>
         </div>
       </section>
 
       {/* FOUNDER PREVIEW */}
-      <section className="bg-cream-100/50 border-y border-cream-200">
+      <section className="bg-cream-100/50 border-y border-silver-200">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-20 py-24 lg:py-32">
-          <div className="border border-cream-200 bg-cream-100/50 p-10 lg:p-14 flex flex-col justify-center">
+          <div className="border border-silver-200 bg-cream-100/50 p-10 lg:p-14 flex flex-col justify-center">
             <div className="font-display text-7xl text-terracotta-500 leading-none">&ldquo;</div>
             <p className="font-display text-2xl italic font-light text-ink leading-snug mt-2">Beyond imagination is not a slogan. It is an invitation to create, learn, experience and grow.</p>
             <div className="overline mt-6">Kingsley Victor · Founder</div>

@@ -59,6 +59,11 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 ## Implemented (v8, Aug 2026 — copy dedup)
 - Removed repetitive "Merkabah" prefix from all 9 division names in Our Worlds index + mega menu (Creative Agency, Studios, Academy of Music, Live, Courses & Workshops, Podcast, Holistic Wellness, Careers, Store)
 
+## Implemented (v9, Aug 2026 — iconic journey + bg sync)
+- "Merkabah Difference" rebuilt as iconic connected path: gradient line (violet→teal→gold→pink→silver) linking 10 numbered circular nodes with glow shadows, hover scale, closing statement "One idea in. A whole brand out."
+- Homepage backgrounds synchronized: hero fades into pure white body, section separators unified to silver-200, journey panel on cream-to-white gradient band
+- Academy page boxed redesign (v8b): color-coded program cards with photos, boxed certification boards, vibrant grade ladder chips, boxed FAQs, brighter hero/instrument photos
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players
