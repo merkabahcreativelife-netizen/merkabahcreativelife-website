@@ -1,0 +1,166 @@
+{
+  "brand": {
+    "name": "MERKABAH CREATIVE LIFE",
+    "tagline": "BEYOND IMAGINATION",
+    "philosophy": "CREATE. LEARN. EXPERIENCE. GROW.",
+    "founder": "Kingsley Victor",
+    "aesthetic": "Premium, creative, intelligent, human, inspirational, modern, artistic. Editorial, cinematic, warm dark + cream palette. Aesop / A24 / Kinfolk tier."
+  },
+  "typography": {
+    "display": {
+      "family": "Fraunces, serif",
+      "import_url": "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap",
+      "usage": "Headings, massive editorial typography, division titles. Use variable weights (e.g., font-light or font-medium) to keep it elegant.",
+      "forbidden": ["Playfair Display", "Cormorant", "Inter", "Roboto"]
+    },
+    "body": {
+      "family": "Manrope, sans-serif",
+      "import_url": "https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap",
+      "usage": "Body text, metadata, navigation, buttons, overlines. High legibility, modern geometric feel.",
+      "forbidden": ["Inter", "Roboto", "Open Sans"]
+    },
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tighter leading-none font-light",
+      "h2": "text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-tight",
+      "h3": "text-2xl sm:text-3xl lg:text-4xl tracking-tight",
+      "body": "text-base lg:text-lg leading-relaxed text-stone-300",
+      "overline": "text-xs tracking-[0.2em] uppercase font-semibold text-terracotta-500"
+    }
+  },
+  "colors": {
+    "theme": "dark",
+    "palette": {
+      "background": {
+        "primary": "#0c0a09",
+        "secondary": "#1c1917",
+        "glass": "rgba(28, 25, 23, 0.7)"
+      },
+      "text": {
+        "primary": "#f5f5f4",
+        "secondary": "#a8a29e",
+        "muted": "#78716c"
+      },
+      "accent": {
+        "terracotta": "#b76e4b",
+        "terracotta_hover": "#9c5a3b",
+        "ochre": "#c2854b"
+      },
+      "border": {
+        "subtle": "#292524",
+        "strong": "#44403c"
+      }
+    },
+    "forbidden": ["Purple gradients", "Violet gradients", "Pure black (#000000)", "Generic SaaS Blue"]
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous Spacing Philosophy. Use 2-3x more spacing than typical designs. Let the typography and imagery breathe.",
+    "grid": "Bento 'Tetris' Grid for Marketing. Asymmetrical, visual tension. Grid cols 1 md:grid-cols-8 lg:grid-cols-12 with gap-8 to gap-12.",
+    "section_padding": "py-24 sm:py-32 lg:py-48",
+    "container": "max-w-7xl mx-auto px-6 lg:px-8"
+  },
+  "components": {
+    "navigation": {
+      "desktop": "Sticky header with backdrop-blur-xl and bg-stone-950/70. 1px bottom border-stone-800. Mega menu for 'Our Worlds' triggered on hover. DO NOT use complete transparent backgrounds.",
+      "mobile": "Premium full-screen overlay (100vh). Massive Fraunces typography for links. Staggered fade-up animation for links. Solid bg-stone-950."
+    },
+    "buttons": {
+      "primary": "bg-terracotta-500 text-stone-100 px-8 py-4 rounded-none hover:bg-terracotta-600 transition-colors duration-300 font-body uppercase tracking-wider text-sm",
+      "secondary": "border border-stone-700 bg-transparent text-stone-200 px-8 py-4 rounded-none hover:border-terracotta-500 hover:text-terracotta-500 transition-colors duration-300 font-body uppercase tracking-wider text-sm",
+      "ghost": "text-stone-300 hover:text-terracotta-500 transition-colors duration-300 flex items-center gap-2"
+    },
+    "cards_our_worlds": {
+      "style": "Tall, elegant, cinematic ratio (e.g. aspect-[3/4]). No border-radius (rounded-none).",
+      "surface": "bg-stone-900 border border-stone-800 relative overflow-hidden group",
+      "interaction": "Image background scales slowly on hover. Dark gradient overlay at bottom ensures text contrast. Title translates slightly up on hover.",
+      "typography": "Absolute bottom-left positioning. Fraunces h3 title. Manrope overline."
+    },
+    "footer": {
+      "style": "Massive py-32 bg-stone-950 border-t border-stone-900.",
+      "layout": "Top section: Massive typography 'BEYOND IMAGINATION' across the width. Middle: Grid of links (9 divisions, social, legal). Bottom: Copyright and simple back-to-top."
+    }
+  },
+  "visual_enhancers": {
+    "textures": "Subtle SVG noise/grain overlay fixed across the entire site (pointer-events-none, opacity-20) to give a cinematic, tactile feel.",
+    "motion": "Framer Motion. Use slow, eased transitions (duration 0.8s, ease [0.16, 1, 0.3, 1]). Scroll-triggered reveals for typography and images.",
+    "hover_states": "Images should have a slow, subtle scale effect (1.05x). Links should have an underline reveal or color shift to terracotta."
+  },
+  "image_urls": {
+    "hero_cinematic": {
+      "url": "https://images.unsplash.com/photo-1581733095033-958d7422b5ce?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMHdhcm0lMjBsaWdodCUyMGNpbmVtYXRpY3xlbnwwfHx8fDE3ODc3NTg5NDB8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract warm cinematic light reflection, perfect for an ethereal hero background."
+    },
+    "divisions": {
+      "agency": {
+        "url": "https://images.unsplash.com/photo-1693159682618-074078ed271e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjd8MHwxfHNlYXJjaHw0fHxjcmVhdGl2ZSUyMGFnZW5jeSUyMHdvcmtzcGFjZSUyMG1vb2R5fGVufDB8fHx8MTc4Nzc1ODkyOXww&ixlib=rb-4.1.0&q=85",
+        "description": "Creative agency workspace, moody and premium."
+      },
+      "studios": {
+        "url": "https://images.unsplash.com/photo-1615228426590-fd01651aff47?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTV8MHwxfHNlYXJjaHwxfHxmaWxtJTIwcHJvZHVjdGlvbiUyMHNldCUyMGNpbmVtYXRpY3xlbnwwfHx8fDE3ODMxMzA1MTR8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Film production camera silhouette."
+      },
+      "academy_music": {
+        "url": "https://images.unsplash.com/photo-1447876576829-25dd6c4b3d21",
+        "description": "Pianist hands in dark moody lighting."
+      },
+      "live": {
+        "url": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwxfHxsaXZlJTIwY29uY2VydCUyMHNpbGhvdWV0dGUlMjB3YXJtfGVufDB8fHx8MTc4Nzc1ODkyOXww&ixlib=rb-4.1.0&q=85",
+        "description": "Live concert stage light."
+      },
+      "courses": {
+        "url": "https://images.unsplash.com/photo-1681404141874-633aa2de7c76?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwxfHxlZGl0b3JpYWwlMjBtYWxlJTIwcG9ydHJhaXQlMjB3YXJtJTIwZGFya3xlbnwwfHx8fDE3ODc3NTg5Mjl8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Editorial portrait for courses/workshops."
+      },
+      "podcast": {
+        "url": "https://images.unsplash.com/photo-1552174588-6733961c358e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwzfHxwb2RjYXN0JTIwbWljcm9waG9uZSUyMGRhcmslMjBzdHVkaW98ZW58MHx8fHwxNzg3NzU4OTI5fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Dark podcast microphone."
+      },
+      "wellness": {
+        "url": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwxfHxob2xpc3RpYyUyMHdlbGxuZXNzJTIwbWVkaXRhdGlvbiUyMHdhcm18ZW58MHx8fHwxNzg3NzU4OTI5fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Holistic wellness meditation warm silhouette."
+      },
+      "careers": {
+        "url": "https://images.pexels.com/photos/5428669/pexels-photo-5428669.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Creative team collaboration."
+      },
+      "store": {
+        "url": "https://images.unsplash.com/photo-1772191399367-91ed8d95664b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzV8MHwxfHNlYXJjaHwyfHxtaW5pbWFsaXN0JTIwcHJvZHVjdCUyMHBhY2thZ2luZyUyMGRhcmt8ZW58MHx8fHwxNzg3NzU4OTI5fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Minimalist premium product packaging."
+      }
+    },
+    "founder": {
+      "url": "https://images.unsplash.com/photo-1570216601541-fa11cfaf03e5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHw0fHxlZGl0b3JpYWwlMjBtYWxlJTIwcG9ydHJhaXQlMjB3YXJtJTIwZGFya3xlbnwwfHx8fDE3ODc3NTg5Mjl8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Silhouette editorial male portrait for Kingsley Victor."
+    },
+    "academy_instruments": {
+      "piano": "https://images.unsplash.com/photo-1447876576829-25dd6c4b3d21",
+      "guitar": "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDZ8MHwxfHNlYXJjaHwxfHxndWl0YXIlMjBwbGF5ZXIlMjBoYW5kcyUyMGRhcmslMjBtb29keXxlbnwwfHx8fDE3ODc3NTg5NDB8MA&ixlib=rb-4.1.0&q=85",
+      "violin": "https://images.unsplash.com/photo-1566913485242-694e995731b4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwyfHx2aW9saW5pc3QlMjBkYXJrJTIwbW9vZHklMjB3YXJtfGVufDB8fHx8MTc4Nzc1ODk0MHww&ixlib=rb-4.1.0&q=85",
+      "drums": "https://images.pexels.com/photos/18319250/pexels-photo-18319250.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "vocals": "https://images.unsplash.com/photo-1576967402682-19976eb930f2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHw0fHxsaXZlJTIwY29uY2VydCUyMHNpbGhvdWV0dGUlMjB3YXJtfGVufDB8fHx8MTc4Nzc1ODkyOXww&ixlib=rb-4.1.0&q=85"
+    },
+    "journal": {
+      "url": "https://images.unsplash.com/photo-1568756600820-ab7372450cd6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwzfHxlZGl0b3JpYWwlMjBtYWdhemluZSUyMHNwcmVhZCUyMGRhcmt8ZW58MHx8fHwxNzg3NzU4OTQwfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Editorial magazine spread."
+    }
+  },
+  "instructions_to_main_agent": [
+    "You are building a premium, cinematic brand ecosystem. This is NOT a SaaS dashboard. Prioritize whitespace, typography scale, and image impact.",
+    "Use standard semantic HTML tags (sections, headers, main) styled directly with Tailwind for the marketing layouts instead of rigid Shadcn layout components. Use Shadcn strictly for interactive pieces (modals, dropdowns, forms).",
+    "Add 'data-testid' to ALL interactive elements (buttons, links, form inputs) to support testing. Example: data-testid='hero-cta-button'.",
+    "Do NOT use 'Inter', 'Roboto' or generic UI fonts. Strictly implement 'Fraunces' for Headings and 'Manrope' for body copy. Include the provided Google Fonts URLs in index.css.",
+    "Implement the custom colors via Tailwind config extending colors. Base background MUST be stone-950 (#0c0a09).",
+    "Images MUST NOT be blocked by 100% solid overlays. If you need text legibility, use a linear gradient from bottom-to-top (black/80 to transparent) so the top of the image remains visible.",
+    "The 9 'Our Worlds' divisions should be presented in an asymmetrical Bento grid or a horizontal scrolling marquee to feel editorial and explorative.",
+    "For the Mobile Navigation, build a full-screen 100vh overlay modal. Use large Fraunces typography for the links. Do NOT just use a generic tiny dropdown.",
+    "Include a subtle grain/noise overlay div fixed to the screen pointer-events-none opacity-[0.03] to give the site a tactile, film-like texture."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters carefully. Text on glass MUST be high contrast.",
+    "Never apply universal transition like 'transition: all'. Target specific properties.",
+    "Do not center align the app container. Text aligns left for readability, center only for specific hero statements.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "NEVER use placeholder text for images. Use the provided image_urls strictly."
+  ]
+}

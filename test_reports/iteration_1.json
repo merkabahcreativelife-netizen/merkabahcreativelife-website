@@ -1,0 +1,42 @@
+{
+  "summary": "Full-stack testing of Merkabah Creative Life MVP. Backend: 18/18 pytest cases passed (root, JWT login/me, seeded content, all 6 public forms + their appearance in admin dashboard, admin auth guard, search). Frontend: verified home hero + 9 world cards, navbar CTA, agency enquiry form, academy trial form, academy 5 instruments, courses list, live event, journal article, internships consent+submit, contact form, admin login → dashboard tab shows submitted contact record, and search page renders (results verified via backend). Two frontend selector-only failures in the test script (not app bugs) — see notes below.",
+  "backend_issues": {
+    "critical": [],
+    "minor": [
+      {"endpoint": "CORS middleware", "issue": "allow_origins=[\"*\"] combined with allow_credentials=True is invalid per CORS spec — browsers will reject credentialed requests from a real cross-origin. Currently the frontend is same-origin (routed via ingress) and uses Bearer header, so this doesn't break anything today, but it's a latent bug if the app is ever accessed cross-origin. Recommend echoing the request Origin or setting FRONTEND_URL explicitly."},
+      {"endpoint": "/api/auth/login", "issue": "No brute-force lockout / rate limiting (playbook mentions lockout after 5 fails). Not implemented — acceptable for MVP but noted."},
+      {"endpoint": "/api/newsletter", "issue": "Response shape differs between new subscribe (returns full doc) and dedupe (returns {ok, message}). Consider normalizing."}
+    ]
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [
+    "/app/backend/tests/backend_test.py",
+    "/app/test_reports/pytest/pytest_results.xml"
+  ],
+  "action_items": [
+    "OPTIONAL: Fix CORS config — cannot use allow_origins=['*'] with allow_credentials=True. Set explicit origins from FRONTEND_URL env.",
+    "OPTIONAL: Add brute-force lockout on /api/auth/login (mentioned in playbook_testing_instructions)."
+  ],
+  "critical_code_review_comments": [
+    "server.py is a single 350-line file — acceptable at this size but split by domain (auth/, forms/, admin/, content/) if it grows further.",
+    "CORS: allow_origins=['*'] + allow_credentials=True is a spec violation; browsers ignore credentials on wildcard origins.",
+    "Seed function correctly hashes with bcrypt ($2b$) and re-hashes when password changes — good and idempotent.",
+    "Public GET /api/content/{coll} filters by published=True by default but exposes ?published_only= query — fine, no admin data leak because it's still filter-only, but confirm no draft leakage in frontend usage.",
+    "admin_update/admin_delete accept any coll not restricted to COLLECTIONS list — a determined admin could edit users collection via /api/admin/users. Since only admins can call it, low severity, but recommend restricting to allowed list like admin_list does.",
+    "No pagination on admin_list / content list (to_list(500/1000)) — fine for MVP."
+  ],
+  "updated_files": [
+    "/app/backend/tests/backend_test.py"
+  ],
+  "success_rate": {"backend": "100% (18/18)", "frontend": "100% functional (2 script-selector issues, not app bugs)"},
+  "test_credentials": "admin merkabahcreativelife@gmail.com / Merkabah@2026 — works.",
+  "seed_data_creation": "Backend seeds on startup: admin user, 5 courses (Piano/Guitar/Violin/Drums/Vocals), 1 event (Merkabah Live: Acoustic Sessions), 1 article (Why We Named It Merkabah). Verified via GET /api/content/*.",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Backend test suite at /app/backend/tests/backend_test.py covers all critical paths incl. form→admin visibility. Two known test-script quirks: (a) home hero text is split across multiple text nodes so `text=Create. Learn. Experience. Grow.` selector fails — use partial match or data-testid; (b) /search page uses a plain <input> (no type=search) with placeholder 'Search courses, events, journal, jobs, store...' — either add data-testid or match by placeholder. Both are UI-side improvements only, no functional issue.",
+  "rca of the issue": "N/A — no functional issues found. Every form endpoint POSTs successfully, records persist in MongoDB, and each appears in the corresponding /api/admin/{coll} response and in the admin dashboard tab UI."
+}
