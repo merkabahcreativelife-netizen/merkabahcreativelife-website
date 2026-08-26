@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { slugify } from "@/data/services";
 import { api, formatError } from "@/lib/api";
 import { toast } from "sonner";
 
@@ -63,7 +65,10 @@ export default function CreativeAgency() {
         <div className="grid md:grid-cols-2 gap-x-16 gap-y-14">
           {Object.entries(CATS).map(([cat, items]) => (
             <div key={cat}>
-              <div className="font-display text-2xl text-cream-50 mb-4 pb-3 border-b border-stone-800">{cat}</div>
+              <Link to={`/creative-agency/services/${slugify(cat)}`} data-testid={`svc-${slugify(cat)}`}
+                className="block font-display text-2xl text-cream-50 mb-4 pb-3 border-b border-stone-800 hover:text-terracotta-400 hover:border-terracotta-500 transition-colors">
+                {cat} <span className="text-terracotta-500 text-base">→</span>
+              </Link>
               <ul className="space-y-2">
                 {items.map(i => <li key={i} className="text-stone-400 text-sm hover:text-terracotta-400 transition-colors">{i}</li>)}
               </ul>

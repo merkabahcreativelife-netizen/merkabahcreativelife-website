@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { api } from "@/lib/api";
 
 export default function Podcast() {
@@ -19,10 +20,10 @@ export default function Podcast() {
         {eps.length === 0 ? <p className="text-stone-500">First episodes coming soon. Stay tuned.</p> : (
           <div className="space-y-4">
             {eps.map(e => (
-              <div key={e.id} className="border border-stone-800 p-8 hover:border-terracotta-500 transition-colors flex flex-col md:flex-row md:items-center gap-6">
+              <Link to={`/podcast/${e.id}`} key={e.id} data-testid={`episode-${e.id}`} className="block border border-stone-800 p-8 hover:border-terracotta-500 transition-colors md:flex md:items-center gap-6 group">
                 <div className="font-display text-4xl text-terracotta-500 md:w-20">#{e.episode_number}</div>
-                <div className="flex-1"><div className="font-display text-2xl text-cream-50 mb-1">{e.title}</div><p className="text-stone-400 text-sm">{e.description}</p></div>
-              </div>
+                <div className="flex-1"><div className="font-display text-2xl text-cream-50 mb-1 group-hover:text-terracotta-400 transition-colors">{e.title}</div><p className="text-stone-400 text-sm">{e.description}</p></div>
+              </Link>
             ))}
           </div>
         )}

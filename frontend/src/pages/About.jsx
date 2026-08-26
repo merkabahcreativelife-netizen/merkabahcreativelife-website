@@ -72,7 +72,9 @@ export default function About() {
 
       <section className="bg-stone-900/50 border-t border-stone-900">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 py-24">
-          <img src={FOUNDER_IMG} alt="Kingsley Victor" className="aspect-[4/5] w-full object-cover" />
+          <div className="rounded-full overflow-hidden border border-terracotta-500/30 p-3 bg-stone-900/50 max-w-sm">
+            <img src={FOUNDER_IMG} alt="Kingsley Victor" className="aspect-square w-full object-cover rounded-full" />
+          </div>
           <div className="flex flex-col justify-center">
             <div className="overline mb-4">Meet Our Visionary Founder</div>
             <h2 className="font-display text-4xl lg:text-6xl text-cream-50 font-light">Kingsley Victor</h2>

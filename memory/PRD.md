@@ -20,10 +20,17 @@ Premium full-stack website for Merkabah Creative Life — a creative ecosystem u
 ## Personas
 Business owner, music student/parent, event attendee, learner, podcast listener, wellness seeker, job seeker, intern applicant, customer, creative client
 
+## Implemented (v2, Aug 2026 — publish-ready iteration)
+- Real Kingsley Victor founder portrait across Home, About, Founder, Wellness (circular framed treatment)
+- Wellness rebuilt with healer content: Certified Reiki / Angelic Zibu / Candle Healer, Auto Writing, Channelling, Knot Magic, Merkabah Magic & Miracles card image, 6 modalities + 4 experiences + enquiry CTA
+- Detail pages for every clickable item: 11 Agency service pages (/creative-agency/services/:slug) with intro, offerings, approach, who-it's-for; Journal articles (/journal/:id); Live events (/live/:id) with register CTA; Jobs (/careers/job/:id) with apply CTA; Products (/store/:id) with price/discount/add-to-cart; Podcast episodes (/podcast/:id) with notes
+- Seeded publish-ready content: 3 journal articles, 2 jobs, 2 podcast episodes, 3 products (tee, theory workbook, live event ticket), 2 portfolio case studies
+- CORS fixed to explicit FRONTEND_URL; admin write endpoints restricted to content collections
+
 ## Backlog
-- P0: Testing subagent full sweep; portfolio project detail pages
-- P1: Rich admin CRUD editor (currently list-only); resume upload via object storage; Journal article detail page; store payment integration (Stripe)
-- P2: Student login/LMS; event ticketing; Resend email notifications; sitemap.xml + Open Graph; analytics dashboard
+- P0: Stripe checkout for store; resume file upload via object storage
+- P1: Rich admin create/edit UI; Resend email notifications; event ticketing; podcast audio/video players
+- P2: Student login/LMS; certificates; sitemap.xml + robots.txt + Open Graph; analytics events
 
 ## Placeholders
 - Real photography (using curated Unsplash); social links; portfolio projects; podcast episodes; job listings — admin can populate

@@ -32,8 +32,11 @@ export default function Careers() {
         ) : (
           <ul className="divide-y divide-stone-800">
             {jobs.map(j => (
-              <li key={j.id} className="py-6 flex items-center justify-between">
-                <div><div className="font-display text-xl text-cream-50">{j.title}</div><div className="text-stone-500 text-sm mt-1">{j.department} · {j.employment_type} · {j.location}</div></div>
+              <li key={j.id}>
+                <Link to={`/careers/job/${j.id}`} data-testid={`job-${j.id}`} className="py-6 flex items-center justify-between group">
+                  <div><div className="font-display text-xl text-cream-50 group-hover:text-terracotta-400 transition-colors">{j.title}</div><div className="text-stone-500 text-sm mt-1">{j.department} · {j.employment_type} · {j.location}</div></div>
+                  <span className="text-terracotta-400 text-xs uppercase tracking-[0.2em]">View →</span>
+                </Link>
               </li>
             ))}
           </ul>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { api } from "@/lib/api";
 import { JOURNAL_IMG } from "@/data/worlds";
 
@@ -15,14 +16,14 @@ export default function Journal() {
         {items.length === 0 ? <p className="text-stone-500">First articles coming soon.</p> : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {items.map(a => (
-              <article key={a.id} className="border border-stone-800 hover:border-terracotta-500 transition-colors">
+              <Link to={`/journal/${a.id}`} key={a.id} data-testid={`article-${a.id}`} className="block border border-stone-800 hover:border-terracotta-500 transition-colors group">
                 <img src={a.cover || JOURNAL_IMG} alt={a.title} className="aspect-[4/3] w-full object-cover"/>
                 <div className="p-6">
                   <div className="overline mb-2">{a.category}</div>
-                  <div className="font-display text-2xl text-cream-50 mb-2">{a.title}</div>
+                  <div className="font-display text-2xl text-cream-50 mb-2 group-hover:text-terracotta-400 transition-colors">{a.title}</div>
                   <p className="text-stone-400 text-sm">{a.excerpt}</p>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         )}

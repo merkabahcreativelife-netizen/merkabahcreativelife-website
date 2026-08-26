@@ -91,8 +91,10 @@ export default function Home() {
       {/* FOUNDER PREVIEW */}
       <section className="bg-stone-900/50 border-y border-stone-900">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-20 py-24 lg:py-32">
-          <div className="relative aspect-[4/5] overflow-hidden">
-            <img src={FOUNDER_IMG} alt="Kingsley Victor" className="w-full h-full object-cover" />
+          <div className="relative max-w-md mx-auto lg:mx-0">
+            <div className="rounded-full overflow-hidden border border-terracotta-500/30 p-3 bg-stone-900/50">
+              <img src={FOUNDER_IMG} alt="Kingsley Victor" className="w-full aspect-square object-cover rounded-full" />
+            </div>
           </div>
           <div className="flex flex-col justify-center">
             <div className="overline mb-4">The Vision Behind Merkabah</div>

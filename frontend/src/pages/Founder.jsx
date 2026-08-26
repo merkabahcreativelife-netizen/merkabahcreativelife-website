@@ -9,7 +9,12 @@ export default function Founder() {
       <section className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32 grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5">
-            <img src={FOUNDER_IMG} alt="Kingsley Victor" className="w-full aspect-[3/4] object-cover" />
+            <div className="relative">
+              <div className="rounded-full overflow-hidden border border-terracotta-500/30 p-3 bg-stone-900/50">
+                <img src={FOUNDER_IMG} alt="Kingsley Victor" className="w-full aspect-square object-cover rounded-full" />
+              </div>
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-terracotta-500/10 border border-terracotta-500/30" />
+            </div>
           </div>
           <div className="lg:col-span-7 flex flex-col justify-center">
             <div className="overline mb-4">Meet Our Visionary Founder</div>

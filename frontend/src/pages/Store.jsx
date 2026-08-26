@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { api } from "@/lib/api";
 import { toast } from "sonner";
 import { ShoppingBag } from "lucide-react";
@@ -30,9 +31,11 @@ export default function Store() {
           <div className="grid md:grid-cols-3 gap-6">
             {products.map(p => (
               <div key={p.id} className="border border-stone-800 hover:border-terracotta-500 transition-colors">
-                {p.image && <img src={p.image} alt={p.name} className="aspect-square w-full object-cover" />}
+                <Link to={`/store/${p.id}`} data-testid={`product-${p.id}`}>
+                  {p.image && <img src={p.image} alt={p.name} className="aspect-square w-full object-cover" />}
+                </Link>
                 <div className="p-6">
-                  <div className="font-display text-xl text-cream-50 mb-1">{p.name}</div>
+                  <Link to={`/store/${p.id}`} className="font-display text-xl text-cream-50 mb-1 block hover:text-terracotta-400 transition-colors">{p.name}</Link>
                   <p className="text-stone-400 text-sm mb-4">{p.description}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-terracotta-400">₹{p.price}</span>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { api } from "@/lib/api";
 
 export default function Live() {
@@ -21,12 +22,12 @@ export default function Live() {
         {upcoming.length === 0 ? <p className="text-stone-500">No upcoming events yet. Watch this space.</p> : (
           <div className="grid md:grid-cols-2 gap-6">
             {upcoming.map(e => (
-              <div key={e.id} className="border border-stone-800 p-8 hover:border-terracotta-500 transition-colors">
+              <Link to={`/live/${e.id}`} key={e.id} data-testid={`event-${e.id}`} className="block border border-stone-800 p-8 hover:border-terracotta-500 transition-colors">
                 <div className="overline mb-2 text-terracotta-500">{e.date} · {e.time}</div>
                 <div className="font-display text-3xl text-cream-50 mb-2">{e.name}</div>
                 <p className="text-stone-400 mb-3">{e.venue} · {e.location}</p>
                 <p className="text-stone-400 text-sm">{e.description}</p>
-              </div>
+              </Link>
             ))}
           </div>
         )}
