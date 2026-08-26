@@ -104,6 +104,9 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 ## Implemented (v21, Aug 2026 — clients section)
 - "Some of Our Clients" section on Creative Agency: 21 real client names grouped by industry (Jewellery, Automotive, Finance & Banking, FMCG & Retail) in color-accented boxes
 
+## Implemented (v22, Aug 2026 — instructor openings)
+- 5 Academy instructor job openings in Careers: Piano & Keyboard, Guitar, Violin, Drums & Percussion, Vocals — Part-Time, On-site, Electronic City; each with description, responsibilities, requirements, offer
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players
