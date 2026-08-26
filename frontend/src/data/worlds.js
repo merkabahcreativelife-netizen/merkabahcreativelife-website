@@ -18,7 +18,7 @@ export const WORLDS = [
   { key: "courses", name: "Merkabah Courses & Workshops", tagline: "Learn Something That Moves You Forward.",
     desc: "Courses, masterclasses, workshops and practical learning.",
     cta: "Explore Learning", href: "/courses",
-    img: "https://images.unsplash.com/photo-1681404141874-633aa2de7c76?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwxfHxlZGl0b3JpYWwlMjBtYWxlJTIwcG9ydHJhaXQlMjB3YXJtJTIwZGFya3xlbnwwfHx8fDE3ODc3NTg5Mjl8MA&ixlib=rb-4.1.0&q=85" },
+    img: "https://images.unsplash.com/photo-1530099486328-e021101a494a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b3Jrc2hvcCUyMGxlYXJuaW5nJTIwc2Vzc2lvbiUyMGFkdWx0c3xlbnwwfHx8fDE3ODc3NjQ5MjZ8MA&ixlib=rb-4.1.0&q=85" },
   { key: "podcast", name: "Merkabah Podcast", tagline: "Conversations That Move Ideas.",
     desc: "Conversations with artists, creators, entrepreneurs, educators and interesting people.",
     cta: "Listen & Watch", href: "/podcast",
@@ -30,11 +30,11 @@ export const WORLDS = [
   { key: "careers", name: "Merkabah Careers", tagline: "Create Your Next Chapter With Us.",
     desc: "Jobs, internships, apprenticeships, freelance and creative opportunities.",
     cta: "View Opportunities", href: "/careers",
-    img: "https://images.pexels.com/photos/5428669/pexels-photo-5428669.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" },
+    img: "https://images.unsplash.com/photo-1787647561912-660e537b0c65?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMHByb2Zlc3Npb25hbCUyMHRlYW0lMjBvZmZpY2UlMjBtZWV0aW5nfGVufDB8fHx8MTc4Nzc2NDkyNnww&ixlib=rb-4.1.0&q=85" },
   { key: "store", name: "Merkabah Store", tagline: "Curated For The Creative Life.",
     desc: "Merchandise, learning materials, digital products and creative products.",
     cta: "Visit Store", href: "/store",
-    img: "https://images.unsplash.com/photo-1772191399367-91ed8d95664b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzV8MHwxfHNlYXJjaHwyfHxtaW5pbWFsaXN0JTIwcHJvZHVjdCUyMHBhY2thZ2luZyUyMGRhcmt8ZW58MHx8fHwxNzg3NzU4OTI5fDA&ixlib=rb-4.1.0&q=85" },
+    img: "https://images.unsplash.com/photo-1595246007497-15e0ed4b8d96?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwyfHxtaW5pbWFsJTIwcHJvZHVjdCUyMHBhY2thZ2luZyUyMGJveCUyMHN0dWRpb3xlbnwwfHx8fDE3ODc3NjQ5ODN8MA&ixlib=rb-4.1.0&q=85" },
 ];
 
 export const INSTRUMENTS = {

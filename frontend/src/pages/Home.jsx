@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-import WorldCard from "@/components/site/WorldCard";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { WORLDS, HERO_IMG } from "@/data/worlds";
 
 export default function Home() {
@@ -66,8 +65,19 @@ export default function Home() {
               Merkabah is a connected ecosystem. Enter through the door that speaks to you — every path connects back to a shared creative vision.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {WORLDS.map((w) => <WorldCard key={w.key} world={w} />)}
+          <div className="border-t border-cream-200">
+            {WORLDS.map((w, i) => (
+              <Link key={w.key} to={w.href} data-testid={`world-row-${w.key}`}
+                className="group grid grid-cols-[auto_1fr_auto] items-center gap-6 lg:gap-12 py-8 lg:py-10 px-2 lg:px-6 border-b border-cream-200 hover:bg-cream-100/60 transition-colors duration-300">
+                <span className="font-body text-xs lg:text-sm text-ink-mute tracking-widest">{String(i + 1).padStart(2, "0")}</span>
+                <div>
+                  <div className="overline mb-1">{w.tagline}</div>
+                  <h3 className="font-display text-2xl sm:text-4xl lg:text-5xl text-ink group-hover:text-terracotta-600 transition-colors font-light tracking-tight">{w.name}</h3>
+                  <p className="mt-2 text-sm lg:text-base text-ink-mute max-w-2xl">{w.desc}</p>
+                </div>
+                <ArrowUpRight className="text-ink-mute group-hover:text-terracotta-600 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" size={28} />
+              </Link>
+            ))}
           </div>
         </div>
       </section>

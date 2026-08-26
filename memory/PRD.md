@@ -32,6 +32,11 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 - Full theme shift to bright/vibrant creative palette: warm cream base (#faf5ec), ink text (#201812), vibrant coral terracotta (#ef4e1f) + marigold + leaf accent tokens; lighter hero image treatments, multiply grain overlay
 - HTML title + meta description set for launch
 
+## Implemented (v4, Aug 2026 — professional polish)
+- Our Worlds rebuilt as minimal editorial index: numbered rows (01–09), tagline overlines, large Fraunces names, hover arrow interactions — replaces image cards
+- Theme muted to professional premium: brick terracotta accent (#c24b2a), clean off-white canvas, refined borders
+- Photography upgraded to professional stock: workshop session (Courses), modern creative team (Careers), minimal kraft packaging (Store)
+
 ## Backlog
 - P0: Stripe checkout for store; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend email notifications; event ticketing; podcast audio/video players

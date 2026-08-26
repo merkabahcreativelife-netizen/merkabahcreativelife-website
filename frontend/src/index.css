@@ -47,13 +47,13 @@ body {
   mix-blend-mode: multiply;
 }
 
-.overline { font-family: 'Manrope', sans-serif; font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase; color: #d63f12; font-weight: 700; }
+.overline { font-family: 'Manrope', sans-serif; font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase; color: #a63e22; font-weight: 700; }
 
 /* Underline reveal for nav links */
 .nav-link { position: relative; }
 .nav-link::after {
   content: ""; position: absolute; left: 0; bottom: -4px; height: 2px; width: 0;
-  background: #ef4e1f; transition: width 300ms ease;
+  background: #c24b2a; transition: width 300ms ease;
 }
 .nav-link:hover::after, .nav-link.active::after { width: 100%; }
 
@@ -66,7 +66,7 @@ body {
 .reveal-delay-4 { animation-delay: 400ms; }
 
 /* Selection */
-::selection { background: #ef4e1f; color: #faf5ec; }
+::selection { background: #c24b2a; color: #faf5ec; }
 
 /* Hide scrollbar in marquees */
 .no-scrollbar::-webkit-scrollbar { display: none; }
