@@ -88,6 +88,7 @@ export default function Academy() {
                   <Link to={`/academy/${slug}`} className="font-display text-3xl text-ink mt-2 block group-hover:text-terracotta-600 transition-colors">{ins.name}</Link>
                   <p className="mt-3 text-sm text-ink-mute line-clamp-2">{ins.intro}</p>
                   <div className="mt-6 flex items-center gap-5">
+                    {ins.duration && <span className="text-xs font-bold uppercase tracking-[0.15em] bg-violet-700 text-white px-3 py-1.5">{ins.duration}</span>}
                     <Link to={`/academy/${slug}`} className="text-xs uppercase tracking-[0.2em] font-semibold" style={{ color: c }}>Explore Program →</Link>
                     <Link to={`/academy/${slug}#trial`} className="text-xs uppercase tracking-[0.2em] text-ink-mute hover:text-ink transition-colors">Free Trial</Link>
                   </div>

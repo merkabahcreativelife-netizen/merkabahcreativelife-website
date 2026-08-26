@@ -29,6 +29,12 @@ export default function AcademyProgram() {
           <Link to="/academy" data-testid="back-academy" className="text-xs uppercase tracking-[0.25em] text-terracotta-400 hover:text-terracotta-300">← Academy</Link>
           <div className="overline mt-8">{ins.tagline}</div>
           <h1 className="font-display font-light text-5xl sm:text-7xl lg:text-9xl leading-[0.9] tracking-tighter text-ink mt-4">{ins.name}</h1>
+          {ins.duration && (
+            <div className="mt-6 inline-flex items-center gap-3 border border-silver-200 bg-white px-5 py-3" style={{ borderLeft: "3px solid #7c3aed" }}>
+              <span className="font-body text-[10px] tracking-[0.25em] uppercase text-ink-mute">Duration</span>
+              <span className="font-display text-xl text-ink" data-testid="program-duration">{ins.duration}</span>
+            </div>
+          )}
         </div>
       </section>
 

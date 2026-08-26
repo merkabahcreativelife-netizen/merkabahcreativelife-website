@@ -108,7 +108,7 @@ export const INSTRUMENTS = {
       ["Intermediate", "Range expansion, vocal dynamics, style-specific ornamentation, and performance preparation"],
       ["Advanced", "Advanced techniques, improvisation, stagecraft, and recording session fundamentals"],
     ]},
-  production: { name: "Electronic Music Production", tagline: "Produce the Sound of Tomorrow",
+  production: { name: "Electronic Music Production", tagline: "Produce the Sound of Tomorrow", duration: "6 Months",
     img: "https://static.prod-images.emergentagent.com/jobs/bafb9484-1b73-421d-aba4-75def42f6213/images/73a8592b64775d3eb3c86b21d5d3996fe382fb958582a485031bbe50f7862cb7.jpeg",
     intro: "From your first beat to a finished release — our Electronic Music Production program turns music lovers into confident producers using industry-standard tools and workflows.",
     highlights: [
@@ -122,7 +122,7 @@ export const INSTRUMENTS = {
       ["Intermediate", "Sound design, arrangement depth, effects and mixing foundations"],
       ["Advanced", "Full track production, remixing, mastering basics and release preparation"],
     ]},
-  "sound-engineering": { name: "Diploma in Sound Engineering & Recording Arts", tagline: "Master the Craft Behind the Console",
+  "sound-engineering": { name: "Diploma in Sound Engineering & Recording Arts", tagline: "Master the Craft Behind the Console", duration: "12 Months",
     img: "https://static.prod-images.emergentagent.com/jobs/bafb9484-1b73-421d-aba4-75def42f6213/images/7e7300e53488aa64181cd6d4a586c7f2e1fa0fe77f95d9cbfe5a13a9153984fb.jpeg",
     intro: "A career-focused diploma covering recording, mixing and live sound — training the ears and hands behind every great record, film and concert.",
     highlights: [

@@ -95,6 +95,9 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 ## Implemented (v18, Aug 2026 — two new programs)
 - Added Electronic Music Production + Diploma in Sound Engineering & Recording Arts to Academy: full detail pages (highlights, 3-level structure, trial form), generated studio images, cards auto-appear in programs grid
 
+## Implemented (v19, Aug 2026 — program durations)
+- Electronic Music Production = 6 Months, Diploma in Sound Engineering & Recording Arts = 12 Months — shown as duration badge on detail pages and violet chip on program cards
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players
