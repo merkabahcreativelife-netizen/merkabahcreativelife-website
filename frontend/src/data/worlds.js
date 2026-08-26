@@ -108,6 +108,34 @@ export const INSTRUMENTS = {
       ["Intermediate", "Range expansion, vocal dynamics, style-specific ornamentation, and performance preparation"],
       ["Advanced", "Advanced techniques, improvisation, stagecraft, and recording session fundamentals"],
     ]},
+  production: { name: "Electronic Music Production", tagline: "Produce the Sound of Tomorrow",
+    img: "https://static.prod-images.emergentagent.com/jobs/bafb9484-1b73-421d-aba4-75def42f6213/images/73a8592b64775d3eb3c86b21d5d3996fe382fb958582a485031bbe50f7862cb7.jpeg",
+    intro: "From your first beat to a finished release — our Electronic Music Production program turns music lovers into confident producers using industry-standard tools and workflows.",
+    highlights: [
+      ["DAW Fluency", "Master a professional digital audio workstation — recording, editing, arrangement and session workflow from day one."],
+      ["Beat Craft & Sound Design", "Build drum patterns, design synth sounds, work with samples and shape your own sonic signature."],
+      ["Composition for Screens & Clubs", "Learn structure, melody, tension and release — from film cues to dance-floor drops."],
+      ["Release-Ready Skills", "Mixing fundamentals, exporting, and preparing your tracks for streaming platforms and live sets."],
+    ],
+    levels: [
+      ["Beginner", "DAW basics, first loops, beats and simple arrangements"],
+      ["Intermediate", "Sound design, arrangement depth, effects and mixing foundations"],
+      ["Advanced", "Full track production, remixing, mastering basics and release preparation"],
+    ]},
+  "sound-engineering": { name: "Diploma in Sound Engineering & Recording Arts", tagline: "Master the Craft Behind the Console",
+    img: "https://static.prod-images.emergentagent.com/jobs/bafb9484-1b73-421d-aba4-75def42f6213/images/7e7300e53488aa64181cd6d4a586c7f2e1fa0fe77f95d9cbfe5a13a9153984fb.jpeg",
+    intro: "A career-focused diploma covering recording, mixing and live sound — training the ears and hands behind every great record, film and concert.",
+    highlights: [
+      ["Recording Techniques", "Microphone selection and placement, session setup, gain staging and capturing clean, musical performances."],
+      ["Mixing & Mastering", "EQ, compression, spatial effects and balance — take raw sessions to polished, release-ready masters."],
+      ["Live Sound", "PA systems, monitor mixes, feedback control and stage management for concerts and events."],
+      ["Professional Studio Workflow", "Session management, editing discipline, client communication and real industry practices."],
+    ],
+    levels: [
+      ["Foundation", "Audio fundamentals, signal flow, cables and critical listening"],
+      ["Intermediate", "Multi-track recording, console workflow and plugin-based mixing"],
+      ["Advanced", "Full production projects, mastering, and live sound engineering for real events"],
+    ]},
 };
 
 export const HERO_IMG = "https://images.unsplash.com/photo-1581733095033-958d7422b5ce?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMHdhcm0lMjBsaWdodCUyMGNpbmVtYXRpY3xlbnwwfHx8fDE3ODc3NTg5NDB8MA&ixlib=rb-4.1.0&q=85";

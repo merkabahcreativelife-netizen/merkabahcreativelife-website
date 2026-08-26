@@ -92,6 +92,9 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 ## Implemented (v17, Aug 2026 — student gallery)
 - "Our Students" section added to Academy page: 3 real classroom photos with captions, color-accented boxed cards (violet/teal/gold), between programs and certifications
 
+## Implemented (v18, Aug 2026 — two new programs)
+- Added Electronic Music Production + Diploma in Sound Engineering & Recording Arts to Academy: full detail pages (highlights, 3-level structure, trial form), generated studio images, cards auto-appear in programs grid
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players
