@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Lightbulb, Target, Fingerprint, PenTool, Globe, Megaphone, AudioLines, Clapperboard, Ticket, TrendingUp } from "lucide-react";
 import { WORLDS, HERO_IMG, FOUNDER_IMG } from "@/data/worlds";
 
 export default function Home() {
@@ -95,10 +95,15 @@ export default function Home() {
             <div className="grid grid-cols-2 sm:grid-cols-5 gap-y-12 gap-x-4">
               {["Idea","Strategy","Branding","Content","Website","Advertising","Audio","Video","Event","Growth"].map((s, i) => {
                 const accents = ["#7c3aed","#0d9488","#c9a227","#ec4899","#64748b"];
+                const icons = [Lightbulb, Target, Fingerprint, PenTool, Globe, Megaphone, AudioLines, Clapperboard, Ticket, TrendingUp];
                 const c = accents[i % 5];
+                const Icon = icons[i];
                 return (
                   <div key={s} data-testid={`journey-step-${i}`} className="group relative text-center">
-                    <div className="relative z-10 mx-auto w-12 h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center font-display text-base lg:text-lg text-white group-hover:scale-110 transition-transform duration-300" style={{ background: c, boxShadow: `0 0 0 6px #ffffff, 0 12px 28px -8px ${c}80` }}>{String(i + 1).padStart(2, "0")}</div>
+                    <div className="relative z-10 mx-auto w-16 h-16 lg:w-20 lg:h-20 rounded-full flex items-center justify-center text-white group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300" style={{ background: c, boxShadow: `0 0 0 6px #ffffff, 0 14px 32px -8px ${c}90` }}>
+                      <Icon size={26} strokeWidth={1.6} />
+                    </div>
+                    <span className="absolute top-0 left-1/2 translate-x-2 lg:translate-x-4 -translate-y-1 z-20 bg-white border border-silver-200 rounded-full px-2 py-0.5 font-body text-[10px] font-bold tracking-widest shadow-sm" style={{ color: c }}>{String(i + 1).padStart(2, "0")}</span>
                     <div className="mt-4 font-display text-xl lg:text-2xl text-ink group-hover:-translate-y-0.5 transition-transform duration-300">{s}</div>
                     <div className="mt-2 h-[2px] w-8 mx-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: c }} />
                   </div>

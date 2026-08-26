@@ -117,6 +117,9 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 ## Implemented (v25, Aug 2026 — wellness trim)
 - Wellness page trimmed to essentials: hero, 6 healing modalities, Kingsley Victor healer profile; added compact "Before You Book" strip (private sessions / in-person or online / free consultation) + single booking CTA
 
+## Implemented (v26, Aug 2026 — journey icons)
+- Merkabah Difference journey nodes upgraded: Lucide icons inside colored circles (Lightbulb/Target/Fingerprint/PenTool/Globe/Megaphone/AudioLines/Clapperboard/Ticket/TrendingUp), number badges offset on white chips, larger nodes with glow shadows + hover lift
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players
