@@ -37,10 +37,17 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 - Theme muted to professional premium: brick terracotta accent (#c24b2a), clean off-white canvas, refined borders
 - Photography upgraded to professional stock: workshop session (Courses), modern creative team (Careers), minimal kraft packaging (Store)
 
+## Implemented (v5, Aug 2026 — store commerce + pine theme)
+- Full store checkout: persistent cart (localStorage + CartContext with qty controls), /store/checkout with customer form + order summary, /store/order/:id confirmation page with order number (MKB-XXXXXXXX), POST/GET /api/orders, Orders tab in admin dashboard
+- Navbar cart icon with live count badge; store category filters (8 categories); product pages add real items to cart
+- Theme changed to world-class professional palette: ivory canvas, ink text, deep pine green accent (#2f6b4f) across buttons, links, overlines, selection
+- Headlines polished: home hero ("nine disciplines, one parent brand, one standard of craft"), store ("Objects of the creative life")
+- E2E verified: add-to-cart → checkout → order placed → confirmation; order visible in admin Orders tab
+
 ## Backlog
-- P0: Stripe checkout for store; resume file upload via object storage
-- P1: Rich admin create/edit UI; Resend email notifications; event ticketing; podcast audio/video players
-- P2: Student login/LMS; certificates; sitemap.xml + robots.txt + Open Graph; analytics events
+- P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
+- P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players
+- P2: Customer accounts + order history; student login/LMS; certificates; sitemap.xml + robots.txt + Open Graph; analytics events
 
 ## Placeholders
 - Real photography (using curated Unsplash); social links; portfolio projects; podcast episodes; job listings — admin can populate

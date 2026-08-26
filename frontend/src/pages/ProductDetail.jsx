@@ -3,9 +3,11 @@ import { useParams, Link } from "react-router-dom";
 import { api } from "@/lib/api";
 import { ArrowLeft } from "lucide-react";
 import { toast } from "sonner";
+import { useCart } from "@/context/CartContext";
 
 export default function ProductDetail() {
   const { id } = useParams();
+  const { add } = useCart();
   const [p, setP] = useState(null);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -30,7 +32,7 @@ export default function ProductDetail() {
           </div>
           <p className="mt-8 text-ink-soft text-lg leading-relaxed">{p.description}</p>
           <div className="mt-6 text-sm text-ink-mute">{p.in_stock ? "In stock" : "Currently unavailable"}</div>
-          <button onClick={() => toast.success("Added to cart")} data-testid="product-add-cart" disabled={!p.in_stock}
+          <button onClick={() => { add(p); toast.success(`${p.name} added to cart`); }} data-testid="product-add-cart" disabled={!p.in_stock}
             className="mt-10 bg-terracotta-500 hover:bg-terracotta-600 text-white py-4 text-xs uppercase tracking-[0.25em] transition-colors disabled:opacity-50">
             Add to Cart
           </button>

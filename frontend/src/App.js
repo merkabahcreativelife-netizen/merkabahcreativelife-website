@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import { CartProvider } from "@/context/CartContext";
 import Layout from "@/components/site/Layout";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
@@ -19,6 +20,8 @@ import JobDetail from "@/pages/JobDetail";
 import Internships from "@/pages/Internships";
 import Store from "@/pages/Store";
 import ProductDetail from "@/pages/ProductDetail";
+import Checkout from "@/pages/Checkout";
+import OrderConfirmation from "@/pages/OrderConfirmation";
 import Journal from "@/pages/Journal";
 import JournalArticle from "@/pages/JournalArticle";
 import Contact from "@/pages/Contact";
@@ -32,6 +35,7 @@ const LayoutRoute = () => <Layout><Outlet /></Layout>;
 export default function App() {
   return (
     <BrowserRouter>
+      <CartProvider>
       <Routes>
         <Route element={<LayoutRoute />}>
           <Route path="/" element={<Home />} />
@@ -52,6 +56,8 @@ export default function App() {
           <Route path="/careers/internships" element={<Internships />} />
           <Route path="/careers/job/:id" element={<JobDetail />} />
           <Route path="/store" element={<Store />} />
+          <Route path="/store/checkout" element={<Checkout />} />
+          <Route path="/store/order/:id" element={<OrderConfirmation />} />
           <Route path="/store/:id" element={<ProductDetail />} />
           <Route path="/journal" element={<Journal />} />
           <Route path="/journal/:id" element={<JournalArticle />} />
@@ -62,6 +68,7 @@ export default function App() {
         <Route path="/admin" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
       </Routes>
+      </CartProvider>
     </BrowserRouter>
   );
 }

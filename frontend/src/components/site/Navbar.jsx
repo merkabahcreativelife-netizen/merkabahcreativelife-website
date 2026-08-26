@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { Menu, X, Search } from "lucide-react";
+import { Menu, X, Search, ShoppingBag } from "lucide-react";
+import { useCart } from "@/context/CartContext";
 import { WORLDS } from "@/data/worlds";
 
 const NAV = [
@@ -24,6 +25,7 @@ export default function Navbar() {
   const [worlds, setWorlds] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const loc = useLocation();
+  const { count } = useCart();
 
   useEffect(() => {
     const on = () => setScrolled(window.scrollY > 20);
@@ -75,6 +77,10 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <Link to="/search" data-testid="nav-search" className="hidden sm:flex text-ink-soft hover:text-terracotta-400 transition-colors">
               <Search size={18} />
+            </Link>
+            <Link to="/store" data-testid="nav-cart" className="relative hidden sm:flex text-ink-soft hover:text-terracotta-400 transition-colors">
+              <ShoppingBag size={18} />
+              {count > 0 && <span className="absolute -top-2 -right-2 bg-terracotta-500 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center" data-testid="nav-cart-count">{count}</span>}
             </Link>
             <Link to="/creative-agency#enquiry" data-testid="nav-cta"
               className="hidden md:inline-block bg-terracotta-500 hover:bg-terracotta-600 text-white px-6 py-3 text-xs uppercase tracking-[0.2em] font-body transition-colors">

@@ -14,6 +14,7 @@ const TABS = [
   { key: "podcast_episodes", label: "Podcast" },
   { key: "jobs", label: "Jobs" },
   { key: "products", label: "Products" },
+  { key: "orders", label: "Orders" },
   { key: "articles", label: "Journal" },
 ];
 
@@ -55,7 +56,7 @@ export default function AdminDashboard() {
             {items.length === 0 ? <div className="p-6 text-ink-mute text-sm">No records yet.</div> :
               items.map(i => (
                 <div key={i.id} className="p-5 grid md:grid-cols-4 gap-3 text-sm hover:bg-cream-100/40 transition-colors">
-                  <div className="text-ink font-display text-lg">{i.name || i.title || i.full_name || i.email || i.id?.slice(0, 8)}</div>
+                  <div className="text-ink font-display text-lg">{i.name || i.title || i.full_name || i.customer_name || i.order_no || i.email || i.id?.slice(0, 8)}</div>
                   <div className="text-ink-mute">{i.email || i.venue || i.category || i.department || ""}</div>
                   <div className="text-ink-mute truncate">{i.message || i.description || i.excerpt || i.enquiry_type || i.area || ""}</div>
                   <div className="text-ink-mute text-xs">{i.created_at?.slice(0, 10)}</div>

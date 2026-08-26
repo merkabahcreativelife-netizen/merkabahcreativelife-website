@@ -15,7 +15,7 @@ export default function Home() {
             Create. Learn.<br/>Experience. Grow.
           </h1>
           <p className="mt-8 max-w-2xl text-lg text-ink-soft leading-relaxed reveal reveal-delay-2">
-            Merkabah Creative Life is a creative ecosystem where music, media, learning, live experiences, conversations and holistic wellbeing come together.
+            Merkabah Creative Life unites music, media, education and wellbeing within one connected ecosystem — nine disciplines, one parent brand, one standard of craft.
           </p>
           <div className="mt-10 flex flex-wrap gap-4 reveal reveal-delay-3">
             <Link to="#our-worlds" data-testid="hero-cta-explore"

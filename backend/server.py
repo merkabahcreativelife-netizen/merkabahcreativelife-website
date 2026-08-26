@@ -215,7 +215,7 @@ async def get_item(coll: str, item_id: str):
 @api.get("/admin/{coll}")
 async def admin_list(coll: str, admin=Depends(get_current_admin)):
     allowed = COLLECTIONS + ["contact_enquiries", "project_enquiries", "trial_classes",
-                             "applications", "newsletter", "community"]
+                             "applications", "newsletter", "community", "orders"]
     if coll not in allowed:
         raise HTTPException(404, "Unknown collection")
     docs = await db[coll].find({}, {"_id": 0}).sort("created_at", -1).to_list(1000)
@@ -246,6 +246,21 @@ async def admin_delete(coll: str, item_id: str, admin=Depends(get_current_admin)
         raise HTTPException(404, "Unknown collection")
     await db[coll].delete_one({"id": item_id})
     return {"ok": True}
+
+@api.post("/orders")
+async def create_order(body: Dict[str, Any]):
+    doc = {"id": str(uuid.uuid4()), "order_no": f"MKB-{uuid.uuid4().hex[:8].upper()}",
+           "created_at": now_iso(), "status": "Pending Payment", **body}
+    await db.orders.insert_one(doc)
+    doc.pop("_id", None)
+    return doc
+
+@api.get("/orders/{order_id}")
+async def get_order(order_id: str):
+    doc = await db.orders.find_one({"id": order_id}, {"_id": 0})
+    if not doc:
+        raise HTTPException(404, "Not found")
+    return doc
 
 # ---------- Search ----------
 @api.get("/search")
