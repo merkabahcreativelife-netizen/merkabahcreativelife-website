@@ -46,6 +46,10 @@ export const SERVICE_DETAILS = {
     offerings: ["Digital Ads","Radio Advertising","Newspaper / Print Advertising","Promotional Campaigns","Media Planning","Campaign Creative"],
     approach: "Creative and media are planned together from day one. The message shapes the medium; the medium sharpens the message.",
     who: "Brands launching products, entering markets, or ready to move from organic hustle to intentional growth.",
+    partners: {
+      "Print Partners": ["Daily Thanthi","Dhinamalar","Malar Publications","The Hindu"],
+      "Radio Partners": ["Big FM","All India Radio","Suryan FM","Hello FM","Radio Mirchi","Fever FM"],
+    },
   },
   "website-design-development": {
     name: "Website Design & Development",

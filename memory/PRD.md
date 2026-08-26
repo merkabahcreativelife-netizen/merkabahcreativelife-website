@@ -134,6 +134,9 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 ## Implemented (v30, Aug 2026 — story section rewrite)
 - Homepage "01 — More Than a Creative Brand" rewritten: "One ecosystem for everything you imagine." with connected-creativity narrative (brand → anthem → stage → courses; student → class → stage) and founder line
 
+## Implemented (v31, Aug 2026 — advertising partners)
+- Advertising & Media service page now shows "Our Advertising Partners": Print (Daily Thanthi, Dhinamalar, Malar Publications, The Hindu) + Radio (Big FM, All India Radio, Suryan FM, Hello FM, Radio Mirchi, Fever FM) in grouped boxes
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players

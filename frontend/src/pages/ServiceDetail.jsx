@@ -28,6 +28,27 @@ export default function ServiceDetail() {
           </div>
         </div>
       </section>
+      {svc.partners && (
+        <section className="py-20 border-b border-silver-200 max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="overline mb-4">Our Advertising Partners</div>
+          <h2 className="font-display text-3xl lg:text-5xl text-ink font-light tracking-tight mb-12 max-w-3xl">Your brand, on the platforms Tamil Nadu reads and hears.</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {Object.entries(svc.partners).map(([group, names], gi) => (
+              <div key={group} className="border border-silver-200 bg-white p-8" style={{ borderTop: `3px solid ${gi === 0 ? "#c9a227" : "#0d9488"}` }}>
+                <div className="font-body text-[10px] tracking-[0.25em] uppercase font-bold mb-5" style={{ color: gi === 0 ? "#a8861c" : "#0f766e" }}>{group}</div>
+                <div className="flex flex-wrap gap-3">
+                  {names.map(n => (
+                    <span key={n} data-testid={`partner-${n.replace(/[^a-z0-9]/gi, "-").toLowerCase()}`}
+                      className="border border-silver-200 bg-white px-5 py-3 text-sm font-semibold text-ink hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+                      {n}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
       <section className="py-20 max-w-7xl mx-auto px-6 lg:px-8 grid md:grid-cols-2 gap-10">
         <div className="border border-silver-200 p-10">
           <div className="overline mb-4">Our Approach</div>
