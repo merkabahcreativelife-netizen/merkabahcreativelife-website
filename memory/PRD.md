@@ -127,6 +127,10 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 - Site-wide consistency: all card/form borders unified to silver scale; buttons get lift + violet glow on hover; input focus rings; image select disabled
 - Homepage: marquee, stats strip, closing CTA band; journey icons; Our Worlds boxed grid
 
+## Implemented (v29, Aug 2026 — homepage refinement)
+- Hero: italic violet "Grow." accent, bottom quick-nav strip with per-division color dots + scroll cue
+- Numbered section eyebrows (01–05), violet glow hover on world cards, new "From the Journal + Next Live Event" preview section with real API data between founder and closing CTA
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players
