@@ -145,7 +145,34 @@ export default function CreativeAgency() {
         </div>
       </section>
 
-      <section id="portfolio" className="py-24 border-t border-silver-200 bg-cream-100/30">
+      <section className="py-24 border-t border-silver-200 bg-cream-100/30">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="overline mb-4">Some of Our Clients</div>
+          <h2 className="font-display text-4xl lg:text-6xl text-ink font-light tracking-tight leading-[1.05] mb-14 max-w-3xl">Trusted by names you know.</h2>
+          <div className="space-y-10">
+            {[
+              ["Jewellery", ["Malabar Gold & Diamonds","Tanishq","Kalyan Jewellers","GRT Jewellers","Joyalukkas"], "#c9a227"],
+              ["Automotive", ["Maruti Suzuki","Tata Motors","Hyundai","Nissan India","Mahindra","Honda Dealerships","TVS"], "#7c3aed"],
+              ["Finance & Banking", ["Life Insurance Corporation of India","Manappuram Finance","Muthoot Finance","State Bank of India","HDFC Bank"], "#0d9488"],
+              ["FMCG & Retail", ["Hindustan Unilever","ITC","Chennai Silks","Poorvika"], "#ec4899"],
+            ].map(([cat, names, c]) => (
+              <div key={cat}>
+                <div className="font-body text-[10px] tracking-[0.25em] uppercase font-bold mb-4" style={{ color: c }}>{cat}</div>
+                <div className="flex flex-wrap gap-3">
+                  {names.map(n => (
+                    <span key={n} data-testid={`client-${n.replace(/[^a-z0-9]/gi, "-").toLowerCase()}`}
+                      className="border border-silver-200 bg-white px-5 py-3 text-sm font-semibold text-ink hover:shadow-md hover:-translate-y-0.5 transition-all duration-300" style={{ borderLeft: `3px solid ${c}` }}>
+                      {n}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" className="py-24 border-t border-silver-200 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="overline mb-4">Portfolio</div>
           <h2 className="font-display text-4xl lg:text-6xl text-ink font-light tracking-tight leading-[1.05] mb-10 max-w-3xl">Selected work from the ecosystem.</h2>

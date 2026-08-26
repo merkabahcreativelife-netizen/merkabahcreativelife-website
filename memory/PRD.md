@@ -101,6 +101,9 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 ## Implemented (v20, Aug 2026 — detailed program pages)
 - EMP + Sound Engineering pages now fully detailed: who-it's-for, month-by-month curriculum (6 modules each), tools & gear chips, outcomes checklist — rendered via new optional data fields in AcademyProgram
 
+## Implemented (v21, Aug 2026 — clients section)
+- "Some of Our Clients" section on Creative Agency: 21 real client names grouped by industry (Jewellery, Automotive, Finance & Banking, FMCG & Retail) in color-accented boxes
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players
