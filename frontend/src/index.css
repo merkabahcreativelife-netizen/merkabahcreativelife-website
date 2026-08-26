@@ -30,7 +30,7 @@
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  background: #faf5ec;
+  background: #ffffff;
   color: #201812;
   font-family: 'Manrope', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -47,13 +47,13 @@ body {
   mix-blend-mode: multiply;
 }
 
-.overline { font-family: 'Manrope', sans-serif; font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase; color: #265841; font-weight: 700; }
+.overline { font-family: 'Manrope', sans-serif; font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase; color: #6d28d9; font-weight: 700; }
 
 /* Underline reveal for nav links */
 .nav-link { position: relative; }
 .nav-link::after {
   content: ""; position: absolute; left: 0; bottom: -4px; height: 2px; width: 0;
-  background: #2f6b4f; transition: width 300ms ease;
+  background: #7c3aed; transition: width 300ms ease;
 }
 .nav-link:hover::after, .nav-link.active::after { width: 100%; }
 
@@ -66,7 +66,7 @@ body {
 .reveal-delay-4 { animation-delay: 400ms; }
 
 /* Selection */
-::selection { background: #2f6b4f; color: #faf5ec; }
+::selection { background: #7c3aed; color: #ffffff; }
 
 /* Hide scrollbar in marquees */
 .no-scrollbar::-webkit-scrollbar { display: none; }

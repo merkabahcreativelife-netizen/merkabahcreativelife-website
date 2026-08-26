@@ -69,7 +69,7 @@ export default function Home() {
             {WORLDS.map((w, i) => (
               <Link key={w.key} to={w.href} data-testid={`world-row-${w.key}`}
                 className="group grid grid-cols-[auto_1fr_auto] items-center gap-6 lg:gap-12 py-8 lg:py-10 px-2 lg:px-6 border-b border-cream-200 hover:bg-cream-100/60 transition-colors duration-300">
-                <span className="font-body text-xs lg:text-sm text-ink-mute tracking-widest">{String(i + 1).padStart(2, "0")}</span>
+                <span className="font-body text-xs lg:text-sm tracking-widest w-9 h-9 lg:w-11 lg:h-11 flex items-center justify-center text-white shrink-0" style={{ background: w.accent }}>{String(i + 1).padStart(2, "0")}</span>
                 <div>
                   <div className="overline mb-1">{w.tagline}</div>
                   <h3 className="font-display text-2xl sm:text-4xl lg:text-5xl text-ink group-hover:text-terracotta-600 transition-colors font-light tracking-tight">{w.name}</h3>
@@ -88,13 +88,17 @@ export default function Home() {
         <h2 className="font-display text-4xl lg:text-6xl text-ink font-light tracking-tight max-w-4xl leading-[1.05]">
           Most agencies offer services. We offer an entire creative journey.
         </h2>
-        <div className="mt-16 flex flex-wrap gap-x-4 gap-y-6 text-ink font-display text-lg lg:text-2xl">
-          {["Idea","Strategy","Branding","Content","Website","Advertising","Audio","Video","Event","Growth"].map((s, i) => (
-            <span key={s} className="flex items-center gap-4">
-              <span className="text-terracotta-400">{s}</span>
-              {i < 9 && <span className="text-ink-mute">→</span>}
-            </span>
-          ))}
+        <div className="mt-16 grid grid-cols-2 sm:grid-cols-5 gap-3">
+          {["Idea","Strategy","Branding","Content","Website","Advertising","Audio","Video","Event","Growth"].map((s, i) => {
+            const accents = ["#7c3aed","#0d9488","#c9a227","#ec4899","#64748b"];
+            const c = accents[i % 5];
+            return (
+              <div key={s} data-testid={`journey-step-${i}`} className="border border-silver-200 bg-white p-5 text-center hover:-translate-y-1 hover:shadow-lg transition-all duration-300" style={{ borderTop: `3px solid ${c}` }}>
+                <div className="font-body text-[10px] tracking-[0.25em] uppercase" style={{ color: c }}>{String(i + 1).padStart(2, "0")}</div>
+                <div className="font-display text-xl text-ink mt-2">{s}</div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
