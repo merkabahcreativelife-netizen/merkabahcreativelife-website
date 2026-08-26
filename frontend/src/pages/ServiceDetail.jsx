@@ -1,10 +1,10 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { SERVICE_DETAILS } from "@/data/services";
+import { SERVICE_DETAILS, slugify } from "@/data/services";
 
 export default function ServiceDetail() {
   const { slug } = useParams();
-  const svc = SERVICE_DETAILS[slug];
+  const svc = SERVICE_DETAILS[slug] || Object.values(SERVICE_DETAILS).find(s => slugify(s.name) === slug);
   if (!svc) return <Navigate to="/creative-agency" replace />;
   return (
     <>

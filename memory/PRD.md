@@ -72,6 +72,9 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 - Academy certifications rebuilt with complete exam-board detail: RSL (Rockschool), Trinity College London, ABRSM — each a large boxed panel with intro, subjects, grade ladder chips (Debut/Initial → Grade 8), level notes (incl. ABRSM Grade 5 Theory mandatory warning), "Why choose" bullets, "At Merkabah" support checklists, eligibility, Grade Exam vs Performance Certificate syllabus boxes
 - Passport-journey intro with 3 benefit boxes (love performing / learn responsibility / future starts here), Merkabah branding throughout (no third-party academy names)
 
+## Implemented (v12, Aug 2026 — service link fix)
+- Fixed all 11 "Explore Service" links: slug mismatch for &-containing categories (e.g. brand-strategy-and-consultation) resolved via name-slug fallback lookup in ServiceDetail; every category now opens its detail page like Digital Marketing
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players
