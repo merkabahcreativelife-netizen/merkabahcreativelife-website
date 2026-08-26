@@ -140,6 +140,9 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 ## Implemented (v32, Aug 2026 — About copy rewrite)
 - About page story + Why "Merkabah" rewritten professionally: "creativity is not a department — it is a way of living"; name section reframed as "A name that moves upward" with four-movements framing (Ascend→Create→Discover→Transform)
 
+## Implemented (v33, Aug 2026 — Founder page rewrite)
+- Founder page fully rewritten professionally: qualification badges (BBA in Digital Marketing · Diploma in Audio Engineering & Recording Arts), refined story (radio → studio arc), boxed color-coded journey cards, polished expertise/approach sections
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players
