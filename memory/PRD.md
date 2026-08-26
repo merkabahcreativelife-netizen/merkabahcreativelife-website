@@ -56,6 +56,9 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 - Process steps (Discover→Strategize→Create→Grow) as color-coded lift-on-hover boxes; Why Merkabah and client chips boxed with white cards + shadow hover
 - Hero photo swapped to professional team-collaboration image
 
+## Implemented (v8, Aug 2026 — copy dedup)
+- Removed repetitive "Merkabah" prefix from all 9 division names in Our Worlds index + mega menu (Creative Agency, Studios, Academy of Music, Live, Courses & Workshops, Podcast, Holistic Wellness, Careers, Store)
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players
