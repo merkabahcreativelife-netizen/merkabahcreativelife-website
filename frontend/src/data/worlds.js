@@ -39,7 +39,7 @@ export const WORLDS = [
 
 export const INSTRUMENTS = {
   piano: { name: "Piano & Keyboard", tagline: "Your Complete Key to Music",
-    img: "https://images.unsplash.com/photo-1447876576829-25dd6c4b3d21",
+    img: "https://static.prod-images.emergentagent.com/jobs/bafb9484-1b73-421d-aba4-75def42f6213/images/30736c40ed65fc0efec67e2090ff6c54a1ddb1b1fdb28391b4a4f4c1fbe9f952.jpeg",
     intro: "From your very first note to concert-level performance, our Piano & Keyboard program offers a complete musical education that grows with you.",
     highlights: [
       ["Foundational Excellence", "Build proper technique, sight-reading skills, and music theory knowledge from day one."],
@@ -53,7 +53,7 @@ export const INSTRUMENTS = {
       ["Advanced", "Complex pieces, improvisation, and performance mastery"],
     ]},
   guitar: { name: "Guitar", tagline: "Strum Your Story, Solo Your Sound",
-    img: "https://images.unsplash.com/photo-1614355013870-f3916bc15ced?crop=entropy&cs=srgb&fm=jpg&q=85",
+    img: "https://static.prod-images.emergentagent.com/jobs/bafb9484-1b73-421d-aba4-75def42f6213/images/030646dedac2d466242612129d51288190691aa1d37452c95794b076dd892f7a.jpeg",
     intro: "From quiet chords in your room to roaring solos on stage—our Guitar program turns beginners into confident players and players into true musicians.",
     highlights: [
       ["Foundational Fretwork", "Master tuning, basic chords, and strumming patterns from your very first session."],
@@ -67,7 +67,7 @@ export const INSTRUMENTS = {
       ["Advanced", "Lead techniques, improvisation, songwriting, and band dynamics"],
     ]},
   violin: { name: "Violin", tagline: "Where Worlds of Sound Converge",
-    img: "https://images.unsplash.com/photo-1566913485242-694e995731b4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwyfHx2aW9saW5pc3QlMjBkYXJrJTIwbW9vZHklMjB3YXJtfGVufDB8fHx8MTc4Nzc1ODk0MHww&ixlib=rb-4.1.0&q=85",
+    img: "https://static.prod-images.emergentagent.com/jobs/bafb9484-1b73-421d-aba4-75def42f6213/images/c04d4f5f6796e78f95c7f83349165803dc808bae30b8b43dfe9937cb8d2f6a99.jpeg",
     intro: "From the precise artistry of Western concert halls to the soulful improvisations of Indian fusion, our Violin program offers a unique journey across musical traditions.",
     highlights: [
       ["Foundational Excellence", "Master posture, bow hold, and finger placement for clear, beautiful tone production."],
@@ -81,7 +81,7 @@ export const INSTRUMENTS = {
       ["Advanced", "Complex pieces/improvisation, performance preparation, and cross-genre projects"],
     ]},
   drums: { name: "Drums & Percussion", tagline: "Find Your Pulse, Own Your Groove",
-    img: "https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?crop=entropy&cs=srgb&fm=jpg&q=85",
+    img: "https://static.prod-images.emergentagent.com/jobs/bafb9484-1b73-421d-aba4-75def42f6213/images/57686e11b9c481fa67b5769cbd7754c46669066dfc0596d31dfa2211a2052710.jpeg",
     intro: "From the primal heartbeat of a simple backbeat to the intricate conversations of jazz fusion, our Drums & Percussion program transforms rhythm lovers into confident, creative musicians.",
     highlights: [
       ["Foundational Power", "Master grip, posture, and pedal technique on a full acoustic kit from day one."],
@@ -95,7 +95,7 @@ export const INSTRUMENTS = {
       ["Advanced", "Polyrhythms, soloing concepts, improvisation, and studio/performance techniques"],
     ]},
   vocals: { name: "Vocals", tagline: "Discover the Voice Within",
-    img: "https://images.unsplash.com/photo-1576967402682-19976eb930f2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHw0fHxsaXZlJTIwY29uY2VydCUyMHNpbGhvdWV0dGUlMjB3YXJtfGVufDB8fHx8MTc4Nzc1ODkyOXww&ixlib=rb-4.1.0&q=85",
+    img: "https://static.prod-images.emergentagent.com/jobs/bafb9484-1b73-421d-aba4-75def42f6213/images/de335a568b13e62e43b0ba49232e3c9c1e8b76b1a91c5c76e9f7ea506b4960d9.jpeg",
     intro: "Your voice is your signature instrument — unique, powerful, and deeply personal. Our vocal program is designed to nurture, train, and unleash the full potential of your natural sound.",
     highlights: [
       ["Foundational Technique", "Build healthy vocal habits with breath control, posture, and warm-up routines."],

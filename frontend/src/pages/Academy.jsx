@@ -58,7 +58,7 @@ export default function Academy() {
     <>
       {showAdmit && <AdmissionPopup onClose={() => setShowAdmit(false)} onExplore={explore} />}
       <section className="relative min-h-[70vh] flex items-end pb-20 overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1692592313062-4015cd36c04b?crop=entropy&cs=srgb&fm=jpg&q=85" alt="" className="absolute inset-0 w-full h-full object-cover opacity-70" />
+        <img src="https://static.prod-images.emergentagent.com/jobs/bafb9484-1b73-421d-aba4-75def42f6213/images/c4d0a3b1b9d7b9c9133afcaa930a6d86f1ae4b7a30f303c2590c266a9551b734.jpeg" alt="" className="absolute inset-0 w-full h-full object-cover opacity-70" />
         <div className="absolute inset-0 bg-gradient-to-b from-cream-50/30 to-cream-50" />
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
           <div className="overline">Merkabah Academy of Music</div>

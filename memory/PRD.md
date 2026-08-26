@@ -86,6 +86,9 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 ## Implemented (v15, Aug 2026 — admissions popup)
 - Poster-style "Admissions Open" popup on Academy page (shows once per session, 900ms delay): 3-image instrument strip with violet overlay, ADMISSIONS OPEN / Join Now! headline, RSL·Trinity·ABRSM highlights, level chips, "Book Your Free Trial Class" CTA → closes + smooth-scrolls to programs grid
 
+## Implemented (v16, Aug 2026 — academy imagery)
+- Generated 6 professional studio images (Gemini): academy hero, grand piano, guitar duo, violin, drum kit, vocal mic — consistent warm editorial set replacing mixed stock photos across Academy hero, program cards, program detail pages and the admissions popup strip
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players
