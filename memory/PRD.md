@@ -137,6 +137,9 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 ## Implemented (v31, Aug 2026 — advertising partners)
 - Advertising & Media service page now shows "Our Advertising Partners": Print (Daily Thanthi, Dhinamalar, Malar Publications, The Hindu) + Radio (Big FM, All India Radio, Suryan FM, Hello FM, Radio Mirchi, Fever FM) in grouped boxes
 
+## Implemented (v32, Aug 2026 — About copy rewrite)
+- About page story + Why "Merkabah" rewritten professionally: "creativity is not a department — it is a way of living"; name section reframed as "A name that moves upward" with four-movements framing (Ascend→Create→Discover→Transform)
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players

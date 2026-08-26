@@ -29,11 +29,11 @@ export default function About() {
       <section className="py-24 lg:py-32 max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-12 gap-12">
         <div className="lg:col-span-7 space-y-6 text-ink-soft text-lg leading-relaxed">
           <p className="font-display text-2xl lg:text-3xl text-ink font-light leading-snug">
-            Merkabah is your gateway to inspiration and transformation through the profound power of art and music.
+            Merkabah is a creative ecosystem built around one belief: creativity is not a department — it is a way of living.
           </p>
-          <p>We offer online courses, live events, podcasts, unique merchandise and a supportive community — each designed to guide people on a genuine path of self-discovery.</p>
-          <p>Our name, <em className="text-ink">Merkabah</em>, symbolizes spiritual ascent and represents our commitment to growth, creativity and transformation.</p>
-          <p>At Merkabah, music and art are more than entertainment. They are forms of expression, learning, connection and meaningful experience.</p>
+          <p>Across nine connected divisions — from a full-service creative agency and recording studios to a music academy, live events, courses, a podcast, wellness practice and store — we build the spaces where people and brands create, learn, experience and grow.</p>
+          <p>Our name, <em className="text-ink">Merkabah</em>, symbolizes ascent — the discipline of rising a little further with everything you make, learn and share. It is our promise of growth, creativity and transformation, made real through craft.</p>
+          <p>Here, music and art are never decoration. They are how ideas find form, how people find each other, and how work becomes meaning.</p>
         </div>
         <div className="lg:col-span-4 lg:col-start-9">
           <div className="border border-silver-200 bg-white p-8" style={{ borderTop: "4px solid #7c3aed" }}>
@@ -53,10 +53,10 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="overline mb-4">Why "Merkabah"?</div>
           <h2 className="font-display text-4xl lg:text-6xl text-ink font-light leading-tight tracking-tight max-w-3xl">
-            The name is the journey.
+            A name that moves upward.
           </h2>
           <p className="mt-6 text-ink-soft max-w-2xl text-lg leading-relaxed">
-            Merkabah represents the movement of the creative spirit — a symbol of ascent, exploration and personal transformation, welcoming everyone regardless of background.
+            Merkabah stands for ascent — the creative spirit in motion. It is a symbol of rising through craft, curiosity and connection, open to everyone, whatever their starting point. Every project, lesson and performance at Merkabah follows the same four movements:
           </p>
           <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4">
             {NAME_JOURNEY.map((s, i) => {
