@@ -114,6 +114,9 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 ## Implemented (v24, Aug 2026 — About page rewrite)
 - About page fully rewritten: professional copy, editorial story + "At a Glance" fact panel, "The name is the journey" 4-step Ascend→Create→Discover→Transform cards, boxed philosophy pillars, violet/teal vision-mission cards, founder preview with portrait
 
+## Implemented (v25, Aug 2026 — wellness trim)
+- Wellness page trimmed to essentials: hero, 6 healing modalities, Kingsley Victor healer profile; added compact "Before You Book" strip (private sessions / in-person or online / free consultation) + single booking CTA
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players

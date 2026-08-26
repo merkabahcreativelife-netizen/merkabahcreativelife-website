@@ -10,13 +10,6 @@ const MODALITIES = [
   ["Knot Magic", "A symbolic ritual practice — each knot an intention — used to work through transitions, decisions and letting go."],
 ];
 
-const EXPERIENCES = [
-  ["Private Sessions", "One-on-one healing sessions tailored to where you are and what you are moving through."],
-  ["Group Experiences", "Shared circles of sound, stillness and reflection — healing in good company."],
-  ["Workshops", "Half-day immersions in mindfulness, creative wellbeing and spiritual practice."],
-  ["Community Gatherings", "Regular open evenings of music, meditation and conversation under the Merkabah roof."],
-];
-
 export default function Wellness() {
   return (
     <>
@@ -67,18 +60,19 @@ export default function Wellness() {
         </div>
       </section>
 
-      <section className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="overline mb-4">Wellness Experiences</div>
-        <h2 className="font-display text-4xl lg:text-6xl text-ink font-light tracking-tight leading-[1.05] mb-14 max-w-3xl">Choose the door that calls you.</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          {EXPERIENCES.map(([t, d]) => (
-            <div key={t} className="border border-cream-200 p-10 hover:border-terracotta-500 transition-colors">
-              <div className="font-display text-3xl text-ink mb-3">{t}</div>
-              <p className="text-ink-mute leading-relaxed">{d}</p>
+      <section className="py-24 border-t border-silver-200 max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="overline mb-4">Before You Book</div>
+        <div className="grid md:grid-cols-3 gap-5 mb-12">
+          {[["Private Sessions","60-minute one-on-one healing sessions, tailored entirely to where you are.","#7c3aed"],
+            ["In-Person or Online","Sessions at our Electronic City space, or from wherever you are.","#0d9488"],
+            ["Free Consultation","Begin with a short conversation to find the modality that fits.","#c9a227"]].map(([t, d, c]) => (
+            <div key={t} className="border border-silver-200 bg-white p-8" style={{ borderTop: `3px solid ${c}` }}>
+              <div className="font-display text-2xl text-ink mb-2">{t}</div>
+              <p className="text-ink-mute text-sm leading-relaxed">{d}</p>
             </div>
           ))}
         </div>
-        <div className="mt-16 border border-terracotta-500/30 p-10 lg:p-14 flex flex-col md:flex-row md:items-center justify-between gap-8">
+        <div className="border border-terracotta-500/30 p-10 lg:p-14 flex flex-col md:flex-row md:items-center justify-between gap-8">
           <div>
             <div className="font-display text-3xl text-ink font-light">Begin with a conversation.</div>
             <p className="text-ink-mute mt-3 max-w-lg">Tell us what you are carrying, and we will suggest the experience that fits.</p>
