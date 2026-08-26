@@ -111,6 +111,9 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 - 6 agency openings added to Careers: Digital Marketing Manager, Performance Marketing Specialist, Content Marketing Specialist, Web Designer (UI/UX), WordPress Developer, Full-Stack Web Developer — covering Digital Marketing + Website Design & Development services
 - Careers now lists 12 open positions (6 agency + 5 academy instructors + social media)
 
+## Implemented (v24, Aug 2026 — About page rewrite)
+- About page fully rewritten: professional copy, editorial story + "At a Glance" fact panel, "The name is the journey" 4-step Ascend→Create→Discover→Transform cards, boxed philosophy pillars, violet/teal vision-mission cards, founder preview with portrait
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players
