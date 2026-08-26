@@ -30,6 +30,19 @@ export default function Home() {
         </div>
       </section>
 
+      {/* BRAND MARQUEE */}
+      <div className="border-y border-silver-200 bg-white py-5 overflow-hidden" data-testid="brand-marquee">
+        <div className="marquee-inner flex whitespace-nowrap w-max">
+          {[0, 1].map(n => (
+            <div key={n} className="flex items-center gap-10 pr-10 font-display text-2xl lg:text-3xl text-ink">
+              {["Beyond Imagination","Create","Learn","Experience","Grow"].map(w => (
+                <span key={w} className="flex items-center gap-10">{w}<span className="text-terracotta-500 text-base">◆</span></span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* WHAT IS MERKABAH */}
       <section className="py-24 lg:py-40 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-20">
@@ -48,6 +61,14 @@ export default function Home() {
               Discover Our Story <ArrowRight size={16}/>
             </Link>
           </div>
+        </div>
+        <div className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-4">
+          {[["09","Connected Divisions","#7c3aed"],["12+","Years of Craft","#0d9488"],["21+","Brands Served","#c9a227"],["07","Music Programs","#ec4899"]].map(([n, l, c]) => (
+            <div key={l} className="border border-silver-200 bg-white p-7 text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300" style={{ borderTop: `3px solid ${c}` }}>
+              <div className="font-display text-4xl lg:text-5xl text-ink">{n}</div>
+              <div className="font-body text-[10px] tracking-[0.25em] uppercase font-bold mt-2" style={{ color: c }}>{l}</div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -141,6 +162,20 @@ export default function Home() {
               className="mt-8 inline-flex items-center gap-2 text-terracotta-400 hover:text-terracotta-300 text-sm uppercase tracking-[0.2em]">
               Meet Kingsley <ArrowRight size={16}/>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CLOSING CTA */}
+      <section className="bg-violet-700 py-20 lg:py-28" data-testid="home-closing-cta">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row lg:items-center justify-between gap-10">
+          <div>
+            <div className="font-body text-[10px] tracking-[0.28em] uppercase font-bold mb-4" style={{ color: "#ddd6fe" }}>Begin Anywhere</div>
+            <h2 className="font-display text-4xl lg:text-6xl text-white font-light tracking-tight leading-[1.05]">Your journey starts<br/>with one step.</h2>
+          </div>
+          <div className="flex flex-wrap gap-4">
+            <Link to="/creative-agency#enquiry" data-testid="home-cta-project" className="bg-white text-violet-700 hover:bg-cream-100 px-8 py-4 text-xs uppercase tracking-[0.25em] font-bold transition-colors">Start a Project</Link>
+            <Link to="/academy" data-testid="home-cta-academy" className="border border-white/60 text-white hover:bg-white/10 px-8 py-4 text-xs uppercase tracking-[0.25em] transition-colors">Explore the Academy</Link>
           </div>
         </div>
       </section>

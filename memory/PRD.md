@@ -120,6 +120,9 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 ## Implemented (v26, Aug 2026 — journey icons)
 - Merkabah Difference journey nodes upgraded: Lucide icons inside colored circles (Lightbulb/Target/Fingerprint/PenTool/Globe/Megaphone/AudioLines/Clapperboard/Ticket/TrendingUp), number badges offset on white chips, larger nodes with glow shadows + hover lift
 
+## Implemented (v27, Aug 2026 — homepage styling)
+- Homepage reorganized: scrolling brand marquee (Beyond Imagination · Create · Learn · Experience · Grow) under hero, stats strip (09 divisions / 12+ years / 21+ brands / 07 programs), violet closing CTA band ("Your journey starts with one step") before footer
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players
