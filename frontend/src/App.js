@@ -12,6 +12,8 @@ import AcademyProgram from "@/pages/AcademyProgram";
 import Live from "@/pages/Live";
 import EventDetail from "@/pages/EventDetail";
 import Courses from "@/pages/Courses";
+import CourseDetail from "@/pages/CourseDetail";
+import PortfolioDetail from "@/pages/PortfolioDetail";
 import Podcast from "@/pages/Podcast";
 import EpisodeDetail from "@/pages/EpisodeDetail";
 import Wellness from "@/pages/Wellness";
@@ -27,6 +29,7 @@ import JournalArticle from "@/pages/JournalArticle";
 import Contact from "@/pages/Contact";
 import Community from "@/pages/Community";
 import SearchPage from "@/pages/Search";
+import Legal from "@/pages/Legal";
 import AdminLogin from "@/pages/admin/Login";
 import AdminDashboard from "@/pages/admin/Dashboard";
 
@@ -43,12 +46,14 @@ export default function App() {
           <Route path="/founder" element={<Founder />} />
           <Route path="/creative-agency" element={<CreativeAgency />} />
           <Route path="/creative-agency/services/:slug" element={<ServiceDetail />} />
+          <Route path="/creative-agency/work/:id" element={<PortfolioDetail />} />
           <Route path="/studios" element={<Studios />} />
           <Route path="/academy" element={<Academy />} />
           <Route path="/academy/:slug" element={<AcademyProgram />} />
           <Route path="/live" element={<Live />} />
           <Route path="/live/:id" element={<EventDetail />} />
           <Route path="/courses" element={<Courses />} />
+          <Route path="/courses/:id" element={<CourseDetail />} />
           <Route path="/podcast" element={<Podcast />} />
           <Route path="/podcast/:id" element={<EpisodeDetail />} />
           <Route path="/wellness" element={<Wellness />} />
@@ -64,6 +69,10 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/community" element={<Community />} />
           <Route path="/search" element={<SearchPage />} />
+          <Route path="/privacy" element={<Legal page="privacy" />} />
+          <Route path="/terms" element={<Legal page="terms" />} />
+          <Route path="/refund" element={<Legal page="refund" />} />
+          <Route path="/shipping" element={<Legal page="shipping" />} />
         </Route>
         <Route path="/admin" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { api } from "@/lib/api";
 
 const CATS = ["All","Music","Creative Skills","Technology","Digital Media","Business","Personal Development","Special Workshops"];
@@ -23,12 +24,15 @@ export default function Courses() {
         {filtered.length === 0 ? <p className="text-ink-mute mt-10">No courses in this category yet.</p> : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             {filtered.map(c => (
-              <div key={c.id} className="border border-cream-200 p-8 hover:border-terracotta-500 transition-colors">
+              <Link to={`/courses/${c.id}`} key={c.id} data-testid={`course-${c.id}`} className="block border border-silver-200 bg-white p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300" style={{ borderTop: "3px solid #c9a227" }}>
                 <div className="overline mb-2">{c.level} · {c.mode}</div>
                 <div className="font-display text-2xl text-ink mb-2">{c.title}</div>
                 <p className="text-ink-mute text-sm mb-4">{c.description}</p>
-                <div className="text-terracotta-400 text-sm">{c.price}</div>
-              </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-terracotta-600 text-sm font-semibold">{c.price}</span>
+                  <span className="text-xs uppercase tracking-[0.2em] text-ink-mute">View Details →</span>
+                </div>
+              </Link>
             ))}
           </div>
         )}

@@ -75,6 +75,14 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 ## Implemented (v12, Aug 2026 — service link fix)
 - Fixed all 11 "Explore Service" links: slug mismatch for &-containing categories (e.g. brand-strategy-and-consultation) resolved via name-slug fallback lookup in ServiceDetail; every category now opens its detail page like Digital Marketing
 
+## Implemented (v13, Aug 2026 — link sweep complete)
+- Testing agent iteration_2: 30/30 backend + 100% link sweep across all 9 division pages (11/11 service links, portfolio filters + case study pages, course details, podcast guest form, careers, store checkout, admin regression)
+- Agent fixed 2 compile errors during sweep (Podcast.jsx brace, Courses.jsx Link import)
+- Added studios_projects seed block; cleaned portfolio filter logic; built Legal pages (/privacy, /terms, /refund, /shipping) so footer links resolve
+
+## Implemented (v14, Aug 2026 — legal pages fix)
+- Legal pages (/privacy, /terms, /refund, /shipping) now render via explicit routes (React Router v6+ doesn't support regex path params); boxed professional content per page
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players

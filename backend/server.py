@@ -427,6 +427,18 @@ async def seed():
              "published": True, "created_at": now_iso()},
         ])
 
+    if await db.studios_projects.count_documents({}) == 0:
+        await db.studios_projects.insert_many([
+            {"id": str(uuid.uuid4()), "name": "Brand Anthem — Studio Session",
+             "category": "Music Production",
+             "description": "Original brand anthem composed, arranged and mastered in-house — modular stems for film, events and digital.",
+             "published": True, "created_at": now_iso()},
+            {"id": str(uuid.uuid4()), "name": "Podcast Season — Full Production",
+             "category": "Podcast Production",
+             "description": "End-to-end podcast production: recording, editing, sound design, mixing and mastering for a full season.",
+             "published": True, "created_at": now_iso()},
+        ])
+
 @app.on_event("startup")
 async def on_start():
     await seed()

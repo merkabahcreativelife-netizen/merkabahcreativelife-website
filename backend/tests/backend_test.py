@@ -176,3 +176,115 @@ def test_search_music():
 def test_search_min_length():
     r = requests.get(f"{API}/search", params={"q": "a"}, timeout=15)
     assert r.status_code == 422
+
+
+# ---------- New content collections (portfolio, studios, jobs, products, podcast) ----------
+def test_portfolio_projects_seeded():
+    r = requests.get(f"{API}/content/portfolio_projects", timeout=15)
+    assert r.status_code == 200
+    data = r.json()
+    assert len(data) >= 2
+    # each project has case-study fields expected by PortfolioDetail page
+    p = data[0]
+    for k in ("id", "name", "industry", "description"):
+        assert k in p, f"missing {k} in portfolio project"
+
+
+def test_portfolio_project_detail():
+    lst = requests.get(f"{API}/content/portfolio_projects", timeout=15).json()
+    pid = lst[0]["id"]
+    r = requests.get(f"{API}/content/portfolio_projects/{pid}", timeout=15)
+    assert r.status_code == 200
+    assert r.json()["id"] == pid
+
+
+def test_studios_projects_endpoint():
+    # endpoint MUST be accessible (empty list is ok if none seeded)
+    r = requests.get(f"{API}/content/studios_projects", timeout=15)
+    assert r.status_code == 200
+    assert isinstance(r.json(), list)
+
+
+def test_jobs_seeded():
+    r = requests.get(f"{API}/content/jobs", timeout=15)
+    assert r.status_code == 200
+    assert len(r.json()) >= 2
+
+
+def test_job_detail_page_fields():
+    lst = requests.get(f"{API}/content/jobs", timeout=15).json()
+    jid = lst[0]["id"]
+    r = requests.get(f"{API}/content/jobs/{jid}", timeout=15)
+    assert r.status_code == 200
+    j = r.json()
+    for k in ("title", "department", "employment_type", "description"):
+        assert k in j
+
+
+def test_products_seeded():
+    r = requests.get(f"{API}/content/products", timeout=15)
+    assert r.status_code == 200
+    assert len(r.json()) >= 3
+
+
+def test_product_detail():
+    lst = requests.get(f"{API}/content/products", timeout=15).json()
+    pid = lst[0]["id"]
+    r = requests.get(f"{API}/content/products/{pid}", timeout=15)
+    assert r.status_code == 200
+    assert r.json()["id"] == pid
+
+
+def test_podcast_episodes_seeded():
+    r = requests.get(f"{API}/content/podcast_episodes", timeout=15)
+    assert r.status_code == 200
+    assert len(r.json()) >= 2
+
+
+def test_course_detail_endpoint():
+    lst = requests.get(f"{API}/content/courses", timeout=15).json()
+    cid = lst[0]["id"]
+    r = requests.get(f"{API}/content/courses/{cid}", timeout=15)
+    assert r.status_code == 200
+    assert r.json()["id"] == cid
+
+
+# ---------- Orders (store checkout) ----------
+def test_create_and_fetch_order():
+    products = requests.get(f"{API}/content/products", timeout=15).json()
+    payload = {
+        "customer_name": "TEST_Order",
+        "email": "order@example.com",
+        "phone": "7777777777",
+        "address": "123 Test St",
+        "city": "Bengaluru",
+        "items": [{"id": products[0]["id"], "name": products[0]["name"],
+                   "price": products[0].get("discount_price") or products[0]["price"], "qty": 2}],
+        "total": (products[0].get("discount_price") or products[0]["price"]) * 2,
+    }
+    r = requests.post(f"{API}/orders", json=payload, timeout=15)
+    assert r.status_code == 200
+    doc = r.json()
+    assert doc["status"] == "Pending Payment"
+    assert doc["order_no"].startswith("MKB-")
+    g = requests.get(f"{API}/orders/{doc['id']}", timeout=15)
+    assert g.status_code == 200
+    assert g.json()["id"] == doc["id"]
+
+
+def test_orders_admin_list(auth_headers):
+    r = requests.get(f"{API}/admin/orders", headers=auth_headers, timeout=15)
+    assert r.status_code == 200
+    assert isinstance(r.json(), list)
+
+
+# ---------- Podcast Guest form uses /contact with enquiry_type ----------
+def test_podcast_guest_via_contact(auth_headers):
+    payload = {"name": "TEST_Guest", "email": "guest@example.com",
+               "message": "Topic: Music\n\nI have a story", "enquiry_type": "Podcast — Become a Guest"}
+    r = requests.post(f"{API}/contact", json=payload, timeout=15)
+    assert r.status_code == 200
+    doc = r.json()
+    items = _get_admin("contact_enquiries", auth_headers)
+    match = next((x for x in items if x["id"] == doc["id"]), None)
+    assert match and match["enquiry_type"] == "Podcast — Become a Guest"

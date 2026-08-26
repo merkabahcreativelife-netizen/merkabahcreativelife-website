@@ -1,7 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { slugify } from "@/data/services";
 import { api, formatError } from "@/lib/api";
+
+const PORTFOLIO_FILTERS = {
+  "Branding": ["logo","brand","identity"],
+  "Digital Marketing": ["marketing","social media","content"],
+  "Advertising": ["ad","campaign","media planning"],
+  "Websites": ["website","landing","ecommerce","wordpress"],
+  "Audio": ["audio","voice","jingle","anthem","sound","mixing","mastering","radio","composition","arrangement","music"],
+  "Video": ["video","film","coverage","editing"],
+  "Events": ["event","concert","live"],
+  "Social Media": ["social"],
+  "Photography": ["photo"],
+  "Music": ["music","composition","jingle","anthem","arrangement"],
+};
 import { toast } from "sonner";
 
 const CATS = {
@@ -30,6 +43,13 @@ export default function CreativeAgency() {
   const [form, setForm] = useState({ name:"", company:"", email:"", phone:"", website:"", industry:"", services:[], description:"", budget:"", timeline:"", heard_from:"" });
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [projects, setProjects] = useState([]);
+  const [pFilter, setPFilter] = useState("All");
+  useEffect(() => { api.get("/content/portfolio_projects").then(r => setProjects(r.data)).catch(() => {}); }, []);
+  const filteredProjects = pFilter === "All" ? projects : projects.filter(p => {
+    const hay = (p.services || []).join(" ").toLowerCase();
+    return PORTFOLIO_FILTERS[pFilter]?.some(k => hay.includes(k));
+  });
 
   const toggle = (s) => setForm(f => ({ ...f, services: f.services.includes(s) ? f.services.filter(x => x !== s) : [...f.services, s] }));
   const submit = async (e) => {
@@ -122,6 +142,39 @@ export default function CreativeAgency() {
           <div className="mt-8 flex flex-wrap gap-3">
             {CLIENTS.map(c => <span key={c} className="border border-silver-200 bg-white px-5 py-3 text-sm text-ink-soft hover:border-terracotta-500 hover:text-ink transition-colors">{c}</span>)}
           </div>
+        </div>
+      </section>
+
+      <section id="portfolio" className="py-24 border-t border-silver-200 bg-cream-100/30">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="overline mb-4">Portfolio</div>
+          <h2 className="font-display text-4xl lg:text-6xl text-ink font-light tracking-tight leading-[1.05] mb-10 max-w-3xl">Selected work from the ecosystem.</h2>
+          <div className="flex flex-wrap gap-2 mb-10">
+            {["All", ...Object.keys(PORTFOLIO_FILTERS)].map(f => (
+              <button key={f} onClick={() => setPFilter(f)} data-testid={`portfolio-filter-${f.replace(/ /g, "-")}`}
+                className={`px-4 py-2 text-xs uppercase tracking-[0.2em] border transition-colors ${pFilter === f ? "bg-terracotta-500 border-terracotta-500 text-white" : "border-silver-200 bg-white text-ink-mute hover:border-terracotta-500"}`}>
+                {f}
+              </button>
+            ))}
+          </div>
+          {filteredProjects.length === 0 ? (
+            <div className="border border-silver-200 bg-white p-12 text-center text-ink-mute">Projects for this category are being documented. Check back soon.</div>
+          ) : (
+            <div className="grid md:grid-cols-2 gap-6">
+              {filteredProjects.map(p => (
+                <Link to={`/creative-agency/work/${p.id}`} key={p.id} data-testid={`project-${p.id}`}
+                  className="group border border-silver-200 bg-white p-8 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" style={{ borderTop: "3px solid #7c3aed" }}>
+                  <div className="overline mb-2">{p.industry}</div>
+                  <div className="font-display text-2xl lg:text-3xl text-ink group-hover:text-terracotta-600 transition-colors">{p.name}</div>
+                  <p className="mt-3 text-sm text-ink-mute leading-relaxed line-clamp-2">{p.description}</p>
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {(p.services || []).slice(0, 3).map(s => <span key={s} className="text-xs border border-silver-200 px-3 py-1.5 text-ink-mute">{s}</span>)}
+                  </div>
+                  <div className="mt-6 text-xs uppercase tracking-[0.2em] font-semibold text-terracotta-600">View Case Study →</div>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

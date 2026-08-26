@@ -1,0 +1,61 @@
+{
+  "summary": "Link-integrity sweep across all 9 division pages + new sections (portfolio, course detail, guest form, store checkout, studios CMS projects). Backend: 30/30 pytest cases pass (18 existing + 12 new for portfolio_projects, studios_projects, jobs, products, podcast_episodes, orders, course detail, guest-via-contact). Frontend: found and fixed 2 hard compile errors that were making the whole app un-buildable before the sweep began, then completed link sweep — every link tested resolves to a working non-empty page. Studios CMS project grid renders empty because backend seed() does not seed the studios_projects collection (task expected 2 seeded projects).",
+  "backend_issues": {
+    "critical": [],
+    "minor": [
+      {"endpoint": "GET /api/content/studios_projects", "issue": "Collection is registered and endpoint returns [], but backend seed() never populates studios_projects. Task requirement said 2 studios projects should be seeded above the static case studies. Studios page currently shows only the 4 static case studies — the CMS grid section renders nothing."},
+      {"endpoint": "CORS (carry-over from iteration_1)", "issue": "Still uses allow_origins=[FRONTEND_URL] which is now correct — no action."}
+    ]
+  },
+  "frontend_issues": {
+    "ui_bugs": [
+      {"component": "Podcast.jsx", "issue": "File was missing the closing '}' of the GuestForm function — caused a webpack/babel parse error and the entire frontend failed to compile. Fixed by appending '}'.", "selector": "n/a", "priority": "CRITICAL (fixed)"},
+      {"component": "Courses.jsx", "issue": "Used <Link> in JSX without importing it from react-router-dom — /courses page would throw ReferenceError at runtime. Fixed by adding the import.", "selector": "a[data-testid^='course-']", "priority": "CRITICAL (fixed)"}
+    ],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "link_sweep_results": {
+    "division_pages_all_load": true,
+    "creative_agency_service_cards": "11/11 resolve to a real ServiceDetail page (ServiceDetail fallback slugify(name)===slug covers the 10 categories whose SERVICE_DETAILS key differs from slugify(cat name)).",
+    "portfolio_filter_chips": "11 chips all clickable; filter logic runs without error.",
+    "portfolio_project_cards": "2/2 seeded projects → /creative-agency/work/:id case study pages render Brief/Challenge/Strategy/Execution/Outcome + Start a Project CTA.",
+    "studios_service_boxes_and_audio_link": "11 studio service boxes render; studios-audio-link → /creative-agency/services/audio-voice-and-music resolves via ServiceDetail slug fallback.",
+    "studios_cms_projects_grid": "EMPTY — backend seed missing studios_projects (see backend_issues).",
+    "academy_instrument_cards": "5/5 instrument pages load; Free Trial anchor links resolve.",
+    "live_event_cards": "1/1 upcoming event → /live/:id renders.",
+    "courses_category_chips_and_cards": "7 chips clickable; 7 course cards → /courses/:id all render instructor/duration/mode/level/price sidebar + Register Interest CTA.",
+    "podcast_episode_cards": "2/2 episodes → /podcast/:id render.",
+    "podcast_guest_form": "guest-name/email/topic/message → guest-submit → guest-success shown; record persisted to contact_enquiries with enquiry_type='Podcast — Become a Guest' (verified via admin GET).",
+    "wellness_cta": "Enquire/Book CTA → /contact resolves.",
+    "careers_job_cards_and_internships": "2/2 job cards → /careers/job/:id render; internships-cta → /careers/internships resolves.",
+    "store": "9 category chips clickable; 3 product cards → /store/:id render; add-to-cart increments count; cart panel opens; checkout button navigates to /store/checkout; place order → /store/order/:id renders with order_no and Status: Pending Payment.",
+    "admin_login_regression": "Login page loads at /admin (verified visually + POST /api/auth/login returns valid JWT in backend suite)."
+  },
+  "test_report_links": [
+    "/app/backend/tests/backend_test.py",
+    "/app/test_reports/pytest/pytest_results.xml"
+  ],
+  "action_items": [
+    "Add studios_projects seeding to backend/server.py seed() — 2 projects with fields id/name/category/description matching what Studios.jsx renders. This is explicitly called out in the review request.",
+    "(Out of scope but noted from prior iteration) Legal pages /privacy /terms /refund /shipping are referenced by the footer but no routes exist — they 404 silently by falling through the layout Route. Not covered in this sweep."
+  ],
+  "critical_code_review_comments": [
+    "CreativeAgency.jsx portfolio filter is functional but the .split(' ').some(() => ...) is dead-code weirdness — the some() callback ignores its argument so it collapses to a single boolean; readability nit, no functional bug.",
+    "ServiceDetail.jsx correctly falls back on slugify(name)===slug — good; but the SERVICE_DETAILS keys are inconsistent with slugify (e.g. 'brand-strategy-consultation' vs 'brand-strategy-and-consultation'). Recommend normalizing keys to slugify(name) to remove the need for the Object.values scan.",
+    "Podcast.jsx / Courses.jsx compile bugs caught here — please add a lint pass (eslint --max-warnings 0) to CI to prevent unbuildable commits reaching preview.",
+    "seed() has grown large — worth splitting into per-collection seed helpers if any more content types are added."
+  ],
+  "updated_files": [
+    "/app/frontend/src/pages/Podcast.jsx (appended missing closing brace)",
+    "/app/frontend/src/pages/Courses.jsx (added Link import)",
+    "/app/backend/tests/backend_test.py (added portfolio/studios/jobs/products/podcast/orders/course-detail/guest tests, 12 new)"
+  ],
+  "success_rate": {"backend": "100% (30/30)", "frontend": "100% link sweep after 2 compile fixes"},
+  "test_credentials": "admin merkabahcreativelife@gmail.com / Merkabah@2026 (from /app/memory/test_credentials.md) — works.",
+  "seed_data_creation": "None created outside test fixtures. Note: backend seed() populates admin + 5 courses + 1 event + 3 articles + 2 jobs + 2 podcast episodes + 3 products + 2 portfolio_projects. It does NOT seed studios_projects — action required.",
+  "retest_needed": true,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "All 9 division pages, service detail slug fallback, portfolio detail, course detail, guest form, store→checkout→order flow verified. If main agent adds studios_projects seed, just visit /studios and confirm 2 project cards render above the 4 static case studies (data-testid='studios-project-<uuid>').",
+  "rca of the issue": "Compile failures RCA: Podcast.jsx GuestForm inline function was written without its closing brace (last line was ');' terminating the return statement of GuestForm, but no '}' closed the function body). Courses.jsx was refactored to use <Link> for card navigation but the import of Link from react-router-dom was not added. Both fixed with minimal edits and frontend recompiled successfully. Studios CMS-empty RCA: seed() in backend/server.py has an if-block for portfolio_projects but no matching block for studios_projects, so the collection stays empty forever unless populated via /api/admin/studios_projects POST — needs a seed block."
+}
