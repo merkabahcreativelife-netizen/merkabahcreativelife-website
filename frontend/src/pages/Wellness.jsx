@@ -2,12 +2,9 @@ import { Link } from "react-router-dom";
 import { FOUNDER_IMG } from "@/data/worlds";
 
 const MODALITIES = [
-  ["Reiki Healing", "Gentle, hands-on energy healing that calms the nervous system, releases stored tension and restores your natural sense of balance."],
-  ["Angelic Zibu Healing", "A symbolic energy practice working with angelic sigils — a quiet, focused modality for emotional clarity and inner guidance."],
-  ["Candle Healing", "An ancient contemplative practice using flame, intention and ritual to mark release, renewal and new beginnings."],
-  ["Auto Writing", "A guided intuitive practice that helps you access your own deeper knowing — putting words to what you feel but cannot yet say."],
-  ["Channelling", "Focused intuitive sessions for navigating difficult seasons with clarity, perspective and a sense of direction."],
-  ["Knot Magic", "A symbolic ritual practice — each knot an intention — used to work through transitions, decisions and letting go."],
+  ["Reiki Healing", "Gentle, hands-on energy healing that calms the nervous system, releases stored tension and restores your natural sense of balance.", "#7c3aed"],
+  ["Yoga", "Guided asana and breathwork that builds strength and flexibility while bringing you back into a calmer relationship with your body.", "#0d9488"],
+  ["Meditation", "Simple, guided practices to quiet the mind, sharpen focus and return to stillness — wherever your day has taken you.", "#c9a227"],
 ];
 
 export default function Wellness() {
@@ -27,10 +24,10 @@ export default function Wellness() {
 
       <section className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
         <div className="overline mb-4">Healing Modalities</div>
-        <h2 className="font-display text-4xl lg:text-6xl text-ink font-light tracking-tight leading-[1.05] mb-14 max-w-3xl">Ancient practices, held with a modern heart.</h2>
+        <h2 className="font-display text-4xl lg:text-6xl text-ink font-light tracking-tight leading-[1.05] mb-14 max-w-3xl">Three practices. One still centre.</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {MODALITIES.map(([t, d]) => (
-            <div key={t} className="border border-silver-200 p-8 hover:border-terracotta-500 transition-colors" data-testid={`wellness-modality-${t.toLowerCase().replace(/ /g, "-")}`}>
+          {MODALITIES.map(([t, d, c]) => (
+            <div key={t} className="border border-silver-200 bg-white p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300" style={{ borderTop: `3px solid ${c}` }} data-testid={`wellness-modality-${t.toLowerCase().replace(/ /g, "-")}`}>
               <div className="font-display text-2xl text-ink mb-4">{t}</div>
               <p className="text-ink-mute leading-relaxed text-sm">{d}</p>
             </div>

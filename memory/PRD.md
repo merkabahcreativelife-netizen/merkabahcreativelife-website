@@ -143,6 +143,9 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 ## Implemented (v33, Aug 2026 — Founder page rewrite)
 - Founder page fully rewritten professionally: qualification badges (BBA in Digital Marketing · Diploma in Audio Engineering & Recording Arts), refined story (radio → studio arc), boxed color-coded journey cards, polished expertise/approach sections
 
+## Implemented (v34, Aug 2026 — wellness modalities simplified)
+- Wellness modalities reduced to 3: Reiki Healing (kept), Yoga, Meditation — removed Angelic Zibu, Candle Healing, Auto Writing, Channelling, Knot Magic; cards now color-accented boxes; heading "Three practices. One still centre."
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players
