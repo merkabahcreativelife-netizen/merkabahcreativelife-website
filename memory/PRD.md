@@ -146,6 +146,9 @@ Business owner, music student/parent, event attendee, learner, podcast listener,
 ## Implemented (v34, Aug 2026 — wellness modalities simplified)
 - Wellness modalities reduced to 3: Reiki Healing (kept), Yoga, Meditation — removed Angelic Zibu, Candle Healing, Auto Writing, Channelling, Knot Magic; cards now color-accented boxes; heading "Three practices. One still centre."
 
+## Implemented (v35, Aug 2026 — wellness guide content update)
+- Guide section aligned to simplified offerings: credentials now "Certified Reiki Healer · Yoga & Meditation Practitioner"; bio reframed around reiki/yoga/meditation; quote changed to "Healing begins the moment you give yourself permission to pause."
+
 ## Backlog
 - P0: Stripe/Razorpay online payment on checkout; resume file upload via object storage
 - P1: Rich admin create/edit UI; Resend order/form email notifications; event ticketing; podcast audio/video players

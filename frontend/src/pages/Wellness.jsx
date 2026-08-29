@@ -46,12 +46,12 @@ export default function Wellness() {
           <div>
             <div className="overline mb-4">Your Guide</div>
             <h2 className="font-display text-4xl lg:text-5xl text-ink font-light tracking-tight leading-tight">Kingsley Victor</h2>
-            <p className="mt-3 text-terracotta-400 uppercase tracking-[0.2em] text-xs">Certified Reiki Healer · Angelic Zibu Healer · Candle Healer</p>
+            <p className="mt-3 text-terracotta-400 uppercase tracking-[0.2em] text-xs">Certified Reiki Healer · Yoga &amp; Meditation Practitioner</p>
             <div className="mt-8 space-y-5 text-ink-soft leading-relaxed">
-              <p>Kingsley has been engaged in spiritual arts practice for more than three and a half years, providing clients with clarity and divine direction through life's more difficult passages.</p>
-              <p>A media professional with over five years of corporate experience, he carries an unusual combination: the grounded professionalism of the creative industry and the quiet depth of a lifelong spiritual calling.</p>
-              <p>Since his undergraduate years he has pursued reiki and angelology, and his intuitive abilities in auto writing, channelling and knot magic have helped many navigate uncertain times with a renewed sense of self.</p>
-              <p className="font-display text-xl italic text-ink">"He always nurtured a natural wish to uplift others through his spiritual development."</p>
+              <p>Kingsley has practiced energy healing and contemplative disciplines for more than three and a half years, guiding clients toward calm, clarity and renewed balance through life's more difficult seasons.</p>
+              <p>A media professional with over five years of corporate experience, he carries an unusual combination: the grounded professionalism of the creative industry and the quiet depth of a lifelong wellness calling.</p>
+              <p>His practice centres on reiki, yoga and meditation — simple, honest disciplines that help people slow down, breathe deeper and return to themselves.</p>
+              <p className="font-display text-xl italic text-ink">"Healing begins the moment you give yourself permission to pause."</p>
             </div>
           </div>
         </div>
